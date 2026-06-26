@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="tokens.css">
+<title>Metropolitan Detail — Button Options</title>
+<meta name="design_doc_mode" content="canvas">
+<style>
+  .cbtn{ position:relative; display:inline-flex; align-items:center; justify-content:center; font-family:var(--md-font-body); font-weight:600; font-size:13px; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; cursor:pointer; border:none; }
+  .cbtn > span{ position:relative; z-index:2; display:inline-flex; align-items:center; gap:10px; }
+  /* 1 solid skew */
+  .b-solid{ background:var(--md-red); color:#fff; padding:16px 32px; border-radius:2px; transform:skewX(-8.5deg); transition:background .25s var(--md-ease); }
+  .b-solid:hover{ background:var(--md-red-hover); }
+  .b-solid > span{ transform:skewX(8.5deg); }
+  /* 2 outline skew */
+  .b-out{ background:transparent; color:#fff; padding:15px 30px; border-radius:2px; border:1px solid rgba(255,255,255,.5); transform:skewX(-8.5deg); transition:background .25s var(--md-ease), border-color .25s; }
+  .b-out:hover{ background:#fff; color:var(--md-ink); border-color:#fff; }
+  .b-out > span{ transform:skewX(8.5deg); }
+  /* 3 diagonal fill wipe */
+  .b-wipe{ background:transparent; color:var(--md-ink); padding:16px 32px; border-radius:2px; border:1px solid var(--md-ink); transform:skewX(-8.5deg); overflow:hidden; transition:color .3s var(--md-ease); }
+  .b-wipe > span{ transform:skewX(8.5deg); }
+  .b-wipe::before{ content:""; position:absolute; inset:0; background:var(--md-red); transform:translateX(-103%); transition:transform .35s var(--md-ease); z-index:1; }
+  .b-wipe:hover{ color:#fff; border-color:var(--md-red); }
+  .b-wipe:hover::before{ transform:translateX(0); }
+  /* 4 arrow slide */
+  .b-arrow{ background:var(--md-red); color:#fff; padding:16px 30px; border-radius:2px; transform:skewX(-8.5deg); transition:background .25s; }
+  .b-arrow:hover{ background:var(--md-red-hover); }
+  .b-arrow > span{ transform:skewX(8.5deg); }
+  .b-arrow .arr{ display:inline-block; transition:transform .3s var(--md-ease); }
+  .b-arrow:hover .arr{ transform:translateX(5px); }
+  /* 5 sheen sweep */
+  .b-sheen{ background:var(--md-red); color:#fff; padding:16px 32px; border-radius:2px; transform:skewX(-8.5deg); overflow:hidden; }
+  .b-sheen > span{ transform:skewX(8.5deg); }
+  .b-sheen::after{ content:""; position:absolute; top:-30%; left:0; width:40%; height:160%; background:linear-gradient(115deg, transparent 35%, rgba(255,255,255,.5) 50%, transparent 65%); transform:translateX(-200%); z-index:1; }
+  .b-sheen:hover::after{ transform:translateX(360%); transition:transform .7s var(--md-ease); }
+  /* 6 corner brackets */
+  .b-bracket{ background:transparent; color:#fff; padding:17px 32px; border-radius:0; transition:color .25s; }
+  .b-bracket::before, .b-bracket::after{ content:""; position:absolute; width:14px; height:14px; transition:all .3s var(--md-ease); }
+  .b-bracket::before{ top:0; left:0; border-top:2px solid var(--md-red); border-left:2px solid var(--md-red); }
+  .b-bracket::after{ bottom:0; right:0; border-bottom:2px solid var(--md-red); border-right:2px solid var(--md-red); }
+  .b-bracket:hover::before, .b-bracket:hover::after{ width:calc(100% - 0px); height:calc(100% - 0px); }
+  /* 7 split tab */
+  .b-split{ background:var(--md-red); color:#fff; padding:16px 22px 16px 28px; border-radius:2px; transform:skewX(-8.5deg); transition:background .25s; }
+  .b-split:hover{ background:var(--md-red-hover); }
+  .b-split > span{ transform:skewX(8.5deg); }
+  .b-split .tab{ margin-left:16px; padding-left:16px; border-left:1px solid rgba(255,255,255,.4); }
+  /* 8 underline slash */
+  .b-under{ background:transparent; color:var(--md-ink); padding:8px 0; border-radius:0; }
+  .b-under .ln{ position:absolute; left:0; bottom:0; height:2px; width:0; background:var(--md-red); transition:width .3s var(--md-ease); }
+  .b-under:hover .ln{ width:100%; }
+  /* 9 notch */
+  .b-notch{ background:var(--md-red); color:#fff; padding:16px 30px 16px 38px; border-radius:2px; transform:skewX(-8.5deg); transition:background .25s; }
+  .b-notch::before{ content:""; position:absolute; left:0; top:0; bottom:0; width:10px; background:rgba(0,0,0,.22); }
+  .b-notch:hover{ background:var(--md-red-hover); }
+  .b-notch > span{ transform:skewX(8.5deg); }
+  /* 10 fill up */
+  .b-fill{ background:transparent; color:var(--md-ink); padding:16px 32px; border-radius:2px; border:1px solid var(--md-ink); overflow:hidden; transition:color .3s var(--md-ease); }
+  .b-fill::before{ content:""; position:absolute; left:0; bottom:0; width:100%; height:0; background:var(--md-red); transition:height .32s var(--md-ease); z-index:1; }
+  .b-fill:hover{ color:#fff; border-color:var(--md-red); }
+  .b-fill:hover::before{ height:100%; }
+</style>
+</helmet>
+
+<!-- frame helper: each option = label + sample on bg -->
+<!-- Row 1 -->
+<div style="position:absolute; left:60px; top:80px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">01 &middot; Solid skew (primary)</div>
+  <div style="background:var(--md-ink); padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.14);"><a class="cbtn b-solid"><span>Schedule Appointment</span></a></div>
+</div>
+<div style="position:absolute; left:480px; top:80px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">02 &middot; Ghost outline skew</div>
+  <div style="background:var(--md-ink); padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.14);"><a class="cbtn b-out"><span>Schedule Appointment</span></a></div>
+</div>
+<div style="position:absolute; left:900px; top:80px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">03 &middot; Diagonal fill wipe</div>
+  <div style="background:#fff; padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.1); border:1px solid var(--md-border);"><a class="cbtn b-wipe"><span>Schedule</span></a></div>
+</div>
+
+<!-- Row 2 -->
+<div style="position:absolute; left:60px; top:300px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">04 &middot; Arrow slide</div>
+  <div style="background:var(--md-ink); padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.14);"><a class="cbtn b-arrow"><span>Schedule <span class="arr">&rarr;</span></span></a></div>
+</div>
+<div style="position:absolute; left:480px; top:300px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">05 &middot; Sheen sweep (film motif)</div>
+  <div style="background:var(--md-ink); padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.14);"><a class="cbtn b-sheen"><span>Schedule Appointment</span></a></div>
+</div>
+<div style="position:absolute; left:900px; top:300px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">06 &middot; Corner brackets</div>
+  <div style="background:var(--md-ink); padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.14);"><a class="cbtn b-bracket"><span>Schedule</span></a></div>
+</div>
+
+<!-- Row 3 -->
+<div style="position:absolute; left:60px; top:520px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">07 &middot; Split tab</div>
+  <div style="background:var(--md-ink); padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.14);"><a class="cbtn b-split"><span>Schedule <span class="tab">&rarr;</span></span></a></div>
+</div>
+<div style="position:absolute; left:480px; top:520px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">08 &middot; Underline slash (text)</div>
+  <div style="background:#fff; padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.1); border:1px solid var(--md-border);"><a class="cbtn b-under"><span style="display:inline-flex; align-items:center; gap:10px;"><span style="width:22px; height:2px; background:var(--md-red); transform:skewX(-8.5deg); display:inline-block;"></span>Schedule Appointment</span><span class="ln"></span></a></div>
+</div>
+<div style="position:absolute; left:900px; top:520px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">09 &middot; Notch accent</div>
+  <div style="background:var(--md-ink); padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.14);"><a class="cbtn b-notch"><span>Schedule Appointment</span></a></div>
+</div>
+
+<!-- Row 4 -->
+<div style="position:absolute; left:60px; top:740px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">10 &middot; Fill-up</div>
+  <div style="background:#fff; padding:48px; display:flex; justify-content:center; box-shadow:0 1px 3px rgba(0,0,0,.1); border:1px solid var(--md-border);"><a class="cbtn b-fill"><span>Schedule</span></a></div>
+</div>
+<div style="position:absolute; left:480px; top:740px; width:800px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">Hover any button &middot; all on-brand (8.5&deg; tilt, red accent, 2px radius)</div>
+  <div style="background:var(--md-surface); border:1px solid var(--md-border); padding:30px 34px;">
+    <p style="font-size:14px; line-height:1.6; color:var(--md-muted); margin:0;">Each option uses the brand system: the recurring 8.5&deg; skew, brand red as the only accent, sharp 2px corners, and a quiet hover. Pick a primary and a secondary and I will wire them across the site (currently the site uses 01 solid skew + a ghost outline).</p>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

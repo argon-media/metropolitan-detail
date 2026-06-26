@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="tokens.css">
+<title>Metropolitan Detail — MD Express / Separate Location Options</title>
+<meta name="design_doc_mode" content="canvas">
+<style>
+  .mcap{ font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px; }
+  .frame{ position:relative; overflow:hidden; background:#000; }
+  .frame img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  .eb{ display:inline-flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .eb span:first-child{ width:26px; height:2px; background:var(--md-red); display:inline-block; }
+  .eb span:last-child{ font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; }
+  .emblem{ filter:brightness(0) invert(1); }
+  .cta{ display:inline-flex; align-items:stretch; text-decoration:none; }
+  .cta .l{ background:var(--md-red); color:#fff; padding:14px 24px; font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; }
+  .cta .t{ background:var(--md-red); color:#fff; padding:0 16px; display:inline-flex; align-items:center; border-left:1px solid rgba(255,255,255,.4); }
+  .ghost{ display:inline-flex; align-items:center; border:1px solid rgba(255,255,255,.4); color:#fff; padding:14px 22px; font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; }
+  .map{ width:100%; height:100%; border:0; display:block; min-height:180px; }
+  .hours div{ display:flex; justify-content:space-between; font-size:13.5px; padding:7px 0; border-bottom:1px solid rgba(255,255,255,.1); }
+  iframe.map{ filter:grayscale(.2); }
+</style>
+</helmet>
+
+<!-- 01 image left, info right (dark) -->
+<div style="position:absolute; left:60px; top:80px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">01 &middot; Image + info card (dark)</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; background:#15161a; min-height:440px;">
+    <div class="frame"><img src="uploads/ceramic.webp"></div>
+    <div style="padding:54px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="eb"><span></span><span style="color:rgba(255,255,255,.55);">A Separate Location</span></div>
+      <img src="uploads/md-express-emblem-white-100x100.svg" class="emblem" style="height:60px; margin-bottom:22px; align-self:flex-start;">
+      <p style="font-size:15.5px; line-height:1.7; color:rgba(255,255,255,.72); margin:0 0 24px; max-width:44ch;">Our hand wash and ceramic maintenance spot using CarPro products, inside the Redmond Town Center parking garage. Drop off, go shop, pick up freshly washed.</p>
+      <div style="font-size:14px; color:rgba(255,255,255,.6); margin-bottom:24px;">16501 NE 76th St, Redmond, WA</div>
+      <div style="display:flex; gap:14px;"><a href="#" class="cta"><span class="l">Visit MD Express</span><span class="t">&rarr;</span></a><a href="#" class="ghost">Book a Wash</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- 02 info left, map right (dark) -->
+<div style="position:absolute; left:1440px; top:80px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">02 &middot; Info + live map (dark)</div>
+  <div style="display:grid; grid-template-columns:1.1fr .9fr; background:#15161a; min-height:440px;">
+    <div style="padding:54px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="eb"><span></span><span style="color:rgba(255,255,255,.55);">A Separate Location</span></div>
+      <img src="uploads/md-express-emblem-white-100x100.svg" class="emblem" style="height:58px; margin-bottom:22px; align-self:flex-start;">
+      <p style="font-size:15.5px; line-height:1.7; color:rgba(255,255,255,.72); margin:0 0 26px; max-width:42ch;">Convenient hand wash and ceramic-maintenance washes with CarPro products, inside the Redmond Town Center parking garage.</p>
+      <div style="display:flex; gap:14px;"><a href="#" class="cta"><span class="l">Visit MD Express</span><span class="t">&rarr;</span></a><a href="#" class="ghost">Book a Wash</a></div>
+    </div>
+    <div class="frame"><iframe class="map" src="https://www.google.com/maps?q=Redmond+Town+Center+16501+NE+76th+St+Redmond+WA&output=embed" loading="lazy"></iframe></div>
+  </div>
+</div>
+
+<!-- 03 three column: image / details / hours (dark) -->
+<div style="position:absolute; left:60px; top:600px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">03 &middot; Image + details + hours (dark)</div>
+  <div style="background:#15161a; padding:54px;">
+    <div style="display:flex; align-items:center; gap:24px; margin-bottom:34px; flex-wrap:wrap;"><img src="uploads/md-express-emblem-white-100x100.svg" class="emblem" style="height:56px;"><div class="eb" style="margin:0;"><span></span><span style="color:rgba(255,255,255,.55);">A Separate Location</span></div></div>
+    <div style="display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:34px; align-items:start;">
+      <div class="frame" style="aspect-ratio:4/3; border-radius:10px;"><img src="uploads/interior.webp"></div>
+      <div><div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; margin-bottom:12px;">Metropolitan Detail Express</div><p style="font-size:14px; line-height:1.65; color:rgba(255,255,255,.65); margin:0 0 18px;">Hand wash and ceramic-maintenance washes with CarPro products. Drop off, shop, pick up.</p><div style="font-size:14px; color:rgba(255,255,255,.6);">16501 NE 76th St<br>Redmond Town Center garage</div></div>
+      <div><div style="font-weight:500; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:12px;">Hours</div><div class="hours" style="color:rgba(255,255,255,.7);"><div><span>Mon&ndash;Fri</span><span>8:00 &ndash; 5:00</span></div><div><span>Sat &amp; Sun</span><span>Closed</span></div></div><a href="#" class="cta" style="margin-top:20px;"><span class="l">Book a Wash</span><span class="t">&rarr;</span></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 full-bleed image, overlay card (dark) -->
+<div style="position:absolute; left:1440px; top:600px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">04 &middot; Full-bleed image + overlay</div>
+  <div class="frame" style="min-height:460px;">
+    <img src="uploads/ceramic.webp" style="opacity:.6;">
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(10,10,12,.9), rgba(10,10,12,.3) 70%, transparent);"></div>
+    <div style="position:relative; z-index:2; padding:54px; max-width:520px; min-height:460px; display:flex; flex-direction:column; justify-content:center;">
+      <img src="uploads/md-express-emblem-white-100x100.svg" class="emblem" style="height:62px; margin-bottom:22px; align-self:flex-start;">
+      <p style="font-size:16px; line-height:1.7; color:rgba(255,255,255,.82); margin:0 0 18px; max-width:40ch;">A convenient hand wash inside the Redmond Town Center garage. Drop off, shop, and pick up freshly washed.</p>
+      <div style="display:flex; gap:24px; margin-bottom:26px; font-size:13.5px; color:rgba(255,255,255,.7);"><span>Mon&ndash;Fri 8&ndash;5</span><span>16501 NE 76th St</span></div>
+      <div style="display:flex; gap:14px;"><a href="#" class="cta"><span class="l">Visit MD Express</span><span class="t">&rarr;</span></a><a href="#" class="ghost">Book a Wash</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 map left big, info right (dark) -->
+<div style="position:absolute; left:60px; top:1160px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">05 &middot; Big map + compact info</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; background:#15161a; min-height:420px;">
+    <div class="frame"><iframe class="map" src="https://www.google.com/maps?q=Redmond+Town+Center+16501+NE+76th+St+Redmond+WA&output=embed" loading="lazy"></iframe></div>
+    <div style="padding:54px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="eb"><span></span><span style="color:rgba(255,255,255,.55);">MD Express</span></div>
+      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; letter-spacing:-0.02em; color:#fff; margin:0 0 16px;">Find us at Redmond Town Center.</h2>
+      <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,.7); margin:0 0 22px; max-width:40ch;">Hand wash and ceramic maintenance with CarPro products, inside the parking garage.</p>
+      <div class="hours" style="color:rgba(255,255,255,.7); max-width:280px; margin-bottom:24px;"><div><span>Mon&ndash;Fri</span><span>8:00 &ndash; 5:00</span></div><div><span>Sat &amp; Sun</span><span>Closed</span></div></div>
+      <a href="#" class="cta" style="align-self:flex-start;"><span class="l">Book a Wash</span><span class="t">&rarr;</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- 06 centered emblem + map below (dark) -->
+<div style="position:absolute; left:1440px; top:1160px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">06 &middot; Centered emblem + map strip</div>
+  <div style="background:#15161a; padding:54px; text-align:center;">
+    <img src="uploads/md-express-emblem-white-100x100.svg" class="emblem" style="height:70px; margin-bottom:20px;">
+    <p style="font-size:16px; line-height:1.65; color:rgba(255,255,255,.72); margin:0 auto 12px; max-width:54ch;">A separate location for hand wash and ceramic maintenance, using CarPro products, inside the Redmond Town Center parking garage.</p>
+    <div style="font-size:14px; color:rgba(255,255,255,.55); margin-bottom:26px;">16501 NE 76th St, Redmond &middot; Mon&ndash;Fri 8&ndash;5</div>
+    <div style="display:flex; gap:14px; justify-content:center; margin-bottom:30px;"><a href="#" class="cta"><span class="l">Visit MD Express</span><span class="t">&rarr;</span></a><a href="#" class="ghost">Book a Wash</a></div>
+    <div class="frame" style="height:220px;"><iframe class="map" src="https://www.google.com/maps?q=Redmond+Town+Center+16501+NE+76th+St+Redmond+WA&output=embed" loading="lazy"></iframe></div>
+  </div>
+</div>
+
+<!-- 07 light variant, image + info -->
+<div style="position:absolute; left:60px; top:1720px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">07 &middot; Light variant</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; background:#fff; border:1px solid var(--md-border); min-height:420px;">
+    <div style="padding:54px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="eb"><span></span><span style="color:var(--md-muted);">A Separate Location</span></div>
+      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; letter-spacing:-0.02em; color:var(--md-ink); margin:0 0 8px;">Metropolitan Detail Express</h2>
+      <p style="font-size:15px; line-height:1.65; color:#3a3a3a; margin:0 0 22px; max-width:42ch;">Hand wash and ceramic-maintenance washes with CarPro products, inside the Redmond Town Center parking garage.</p>
+      <div style="display:flex; gap:34px; margin-bottom:26px; font-size:14px; color:var(--md-muted);"><div><div style="font-weight:600; color:var(--md-ink); margin-bottom:4px;">Location</div>16501 NE 76th St</div><div><div style="font-weight:600; color:var(--md-ink); margin-bottom:4px;">Hours</div>Mon&ndash;Fri 8&ndash;5</div></div>
+      <div style="display:flex; gap:14px;"><a href="#" class="cta"><span class="l">Visit MD Express</span><span class="t">&rarr;</span></a><a href="#" style="display:inline-flex; align-items:center; border:1px solid var(--md-ink); color:var(--md-ink); padding:14px 22px; font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; text-decoration:none;">Book a Wash</a></div>
+    </div>
+    <div class="frame"><img src="uploads/interior.webp"></div>
+  </div>
+</div>
+
+<!-- 08 stacked: image top, info+map row (dark) -->
+<div style="position:absolute; left:1440px; top:1720px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">08 &middot; Image banner + info/map row</div>
+  <div style="background:#15161a;">
+    <div class="frame" style="height:200px;"><img src="uploads/ceramic.webp" style="opacity:.85;"><div style="position:absolute; inset:0; display:flex; align-items:center; padding:0 48px; background:linear-gradient(90deg, rgba(10,10,12,.8), transparent);"><img src="uploads/md-express-emblem-white-100x100.svg" class="emblem" style="height:58px;"></div></div>
+    <div style="display:grid; grid-template-columns:1.3fr 1fr; gap:0; border-top:1px solid rgba(255,255,255,.08);">
+      <div style="padding:40px 48px;"><p style="font-size:15px; line-height:1.7; color:rgba(255,255,255,.72); margin:0 0 18px; max-width:46ch;">Convenient hand wash and ceramic-maintenance washes with CarPro products. Drop off, shop, pick up freshly washed.</p><div style="display:flex; gap:30px; font-size:13.5px; color:rgba(255,255,255,.6); margin-bottom:22px;"><span>16501 NE 76th St</span><span>Mon&ndash;Fri 8&ndash;5</span></div><div style="display:flex; gap:14px;"><a href="#" class="cta"><span class="l">Visit MD Express</span><span class="t">&rarr;</span></a><a href="#" class="ghost">Book a Wash</a></div></div>
+      <div class="frame" style="min-height:220px; border-left:1px solid rgba(255,255,255,.08);"><iframe class="map" src="https://www.google.com/maps?q=Redmond+Town+Center+16501+NE+76th+St+Redmond+WA&output=embed" loading="lazy"></iframe></div>
+    </div>
+  </div>
+</div>
+
+<!-- 09 red accent panel (distinct sub-brand) -->
+<div style="position:absolute; left:60px; top:2280px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">09 &middot; Red accent sub-brand panel</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; min-height:420px; background:#15161a;">
+    <div style="background:var(--md-red); padding:54px; display:flex; flex-direction:column; justify-content:center;">
+      <img src="uploads/md-express-emblem-white-100x100.svg" class="emblem" style="height:64px; margin-bottom:24px; align-self:flex-start;">
+      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.02em; color:#fff; margin:0 0 16px;">A wash that fits your day.</h2>
+      <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,.88); margin:0 0 24px; max-width:40ch;">Drop off at the Redmond Town Center garage, shop, and pick up freshly washed.</p>
+      <a href="#" style="background:#fff; color:var(--md-red); padding:15px 26px; font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; text-decoration:none; align-self:flex-start;">Book a Wash &rarr;</a>
+    </div>
+    <div style="padding:48px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-weight:500; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:16px;">Location &amp; Hours</div>
+      <div style="font-size:15px; line-height:1.7; color:rgba(255,255,255,.7); margin-bottom:18px;">16501 NE 76th St<br>Redmond Town Center parking garage</div>
+      <div class="hours" style="color:rgba(255,255,255,.7); max-width:300px;"><div><span>Mon&ndash;Fri</span><span>8:00 &ndash; 5:00</span></div><div><span>Sat &amp; Sun</span><span>Closed</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 10 minimal split, big type + map (dark) -->
+<div style="position:absolute; left:1440px; top:2280px; width:1320px;">
+  <div data-drags-parent="1" class="mcap">10 &middot; Minimal big-type + map</div>
+  <div style="display:grid; grid-template-columns:1.2fr .8fr; background:#15161a; min-height:420px;">
+    <div style="padding:56px; display:flex; flex-direction:column; justify-content:center;">
+      <div class="eb"><span></span><span style="color:rgba(255,255,255,.55);">A Separate Location</span></div>
+      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:40px; line-height:1.05; letter-spacing:-0.02em; color:#fff; margin:0 0 18px; max-width:14ch;">Hand wash, the easy way.</h2>
+      <p style="font-size:15px; line-height:1.65; color:rgba(255,255,255,.68); margin:0 0 8px; max-width:42ch;">Metropolitan Detail Express, inside Redmond Town Center. CarPro products, drop off and pick up.</p>
+      <div style="font-size:13.5px; color:rgba(255,255,255,.5); margin-bottom:26px;">16501 NE 76th St &middot; Mon&ndash;Fri 8&ndash;5</div>
+      <div style="display:flex; gap:14px;"><a href="#" class="cta"><span class="l">Visit MD Express</span><span class="t">&rarr;</span></a><a href="#" class="ghost">Book a Wash</a></div>
+    </div>
+    <div class="frame"><iframe class="map" src="https://www.google.com/maps?q=Redmond+Town+Center+16501+NE+76th+St+Redmond+WA&output=embed" loading="lazy"></iframe></div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

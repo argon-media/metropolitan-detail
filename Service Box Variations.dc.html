@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="tokens.css">
+<title>Metropolitan Detail — Service Box Variations</title>
+<meta name="design_doc_mode" content="canvas">
+<style>
+  .v-figure:hover .v-img { transform: scale(1.05); }
+  .v-figure { overflow: hidden; }
+</style>
+</helmet>
+
+<!-- ===== V1 · Image-top card (dark) ===== -->
+<div style="position:absolute; left:60px; top:80px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">01 &middot; Image-top card (dark)</div>
+  <div style="background:var(--md-ink); border:1px solid var(--md-border-dark); box-shadow:0 1px 3px rgba(0,0,0,.14);">
+    <div class="v-figure"><img class="v-img" src="uploads/IMG_6740-13.jpg" alt="PPF" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .7s var(--md-ease);"></div>
+    <div style="padding:28px 26px 30px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="width:24px; height:2px; background:var(--md-red); transform:skewX(-8.5deg); display:inline-block;"></span><span style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.55);">Service 01</span></div>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:23px; line-height:1.2; margin:0 0 12px; color:#fff;">Paint Protection Film</h3>
+      <p style="font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.68); margin:0 0 24px;">STEK DYNOshield, cut and fit to each panel. Clarity, gloss, and a self healing topcoat.</p>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:13px 24px; border-radius:2px; text-decoration:none; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:transparent; border:1px solid rgba(255,255,255,0.38); padding:12px 22px; border-radius:2px; text-decoration:none; transition:background .25s, border-color .25s;" style-hover="background:rgba(255,255,255,0.08); border-color:#fff;"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Learn More</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== V2 · Image-top card (light) ===== -->
+<div style="position:absolute; left:510px; top:80px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">02 &middot; Image-top card (light)</div>
+  <div style="background:#fff; border:1px solid var(--md-border); box-shadow:0 1px 3px rgba(0,0,0,.1);">
+    <div class="v-figure"><img class="v-img" src="uploads/IMG_3591-3.jpg" alt="Ceramic" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .7s var(--md-ease);"></div>
+    <div style="padding:28px 26px 30px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="width:24px; height:2px; background:var(--md-red); transform:skewX(-8.5deg); display:inline-block;"></span><span style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:var(--md-muted);">Service 01</span></div>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:23px; line-height:1.2; margin:0 0 12px; color:var(--md-ink);">Paint Protection Film</h3>
+      <p style="font-size:14.5px; line-height:1.6; color:var(--md-muted); margin:0 0 24px;">STEK DYNOshield, cut and fit to each panel. Clarity, gloss, and a self healing topcoat.</p>
+      <div style="display:flex; gap:18px; align-items:center;">
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:13px 24px; border-radius:2px; text-decoration:none; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+        <a href="#" style="font:600 12.5px/1 var(--md-font-body); letter-spacing:.04em; text-transform:uppercase; color:var(--md-red); text-decoration:none;">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== V3 · Full-bleed overlay (dark) ===== -->
+<div style="position:absolute; left:960px; top:80px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">03 &middot; Full-bleed overlay</div>
+  <div class="v-figure" style="position:relative; height:480px; box-shadow:0 1px 3px rgba(0,0,0,.14); border:1px solid var(--md-border-dark);">
+    <img class="v-img" src="uploads/IMG_3587-1.jpg" alt="PPF" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s var(--md-ease);">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.2) 40%, rgba(10,10,10,.92) 100%);"></div>
+    <div style="position:absolute; left:0; right:0; bottom:0; padding:30px 28px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:13px;"><span style="width:24px; height:2px; background:var(--md-red); transform:skewX(-8.5deg); display:inline-block;"></span><span style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.7);">Service 01</span></div>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:25px; line-height:1.15; margin:0 0 10px; color:#fff;">Paint Protection Film</h3>
+      <p style="font-size:14px; line-height:1.55; color:rgba(255,255,255,0.78); margin:0 0 22px; max-width:30ch;">STEK DYNOshield, fit to each panel for clarity, gloss, and self healing.</p>
+      <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:14px 28px; border-radius:2px; text-decoration:none; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== V4 · Wide split (dark) ===== -->
+<div style="position:absolute; left:1410px; top:80px; width:600px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">04 &middot; Wide split (dark)</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; background:var(--md-ink); border:1px solid var(--md-border-dark); box-shadow:0 1px 3px rgba(0,0,0,.14); min-height:330px;">
+    <div class="v-figure"><img class="v-img" src="uploads/IMG_3604-10.jpg" alt="Tint" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .7s var(--md-ease);"></div>
+    <div style="padding:36px 34px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="width:24px; height:2px; background:var(--md-red); transform:skewX(-8.5deg); display:inline-block;"></span><span style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.55);">Service 01</span></div>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:26px; line-height:1.18; margin:0 0 14px; color:#fff;">Paint Protection Film</h3>
+      <p style="font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.68); margin:0 0 26px;">STEK DYNOshield, cut and fit to each panel for clarity, gloss, and a self healing topcoat.</p>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:13px 26px; border-radius:2px; text-decoration:none; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:transparent; border:1px solid rgba(255,255,255,0.38); padding:12px 24px; border-radius:2px; text-decoration:none; transition:background .25s, border-color .25s;" style-hover="background:rgba(255,255,255,0.08); border-color:#fff;"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Learn More</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== V5 · Numeral-forward (dark, no image) ===== -->
+<div style="position:absolute; left:60px; top:780px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">05 &middot; Numeral-forward (no photo)</div>
+  <div style="position:relative; background:var(--md-ink); border:1px solid var(--md-border-dark); box-shadow:0 1px 3px rgba(0,0,0,.14); padding:34px 28px 32px; overflow:hidden; min-height:300px;">
+    <div style="position:absolute; top:-30px; right:6px; font-family:var(--md-font-display); font-weight:700; font-size:170px; line-height:1; color:transparent; -webkit-text-stroke:1px rgba(255,255,255,0.12); pointer-events:none;">01</div>
+    <div style="position:relative;">
+      <span style="display:inline-block; width:40px; height:3px; background:var(--md-red); transform:skewX(-8.5deg); margin-bottom:26px;"></span>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:24px; line-height:1.2; margin:0 0 14px; color:#fff; max-width:14ch;">Paint Protection Film</h3>
+      <p style="font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.68); margin:0 0 28px; max-width:34ch;">STEK DYNOshield, cut and fit to each panel. Clarity, gloss, and a self healing topcoat.</p>
+      <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:14px 28px; border-radius:2px; text-decoration:none; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== V6 · Diagonal-mask image (dark) ===== -->
+<div style="position:absolute; left:510px; top:780px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">06 &middot; Diagonal mask + peel</div>
+  <div style="background:var(--md-ink); border:1px solid var(--md-border-dark); box-shadow:0 1px 3px rgba(0,0,0,.14);">
+    <div class="v-figure" style="position:relative; clip-path:polygon(0 0, 100% 0, 100% 86%, 0 100%);"><img class="v-img" src="uploads/IMG_6740-13.jpg" alt="PPF" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .7s var(--md-ease);"><span style="position:absolute; top:0; right:0; width:34px; height:34px; background:linear-gradient(225deg, rgba(255,255,255,.34), rgba(255,255,255,0)); clip-path:polygon(100% 0, 0 0, 100% 100%);"></span></div>
+    <div style="padding:24px 26px 30px;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:13px;"><span style="width:24px; height:2px; background:var(--md-red); transform:skewX(-8.5deg); display:inline-block;"></span><span style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.55);">Service 01</span></div>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:23px; line-height:1.2; margin:0 0 12px; color:#fff;">Paint Protection Film</h3>
+      <p style="font-size:14.5px; line-height:1.6; color:rgba(255,255,255,0.68); margin:0 0 24px;">STEK DYNOshield, fit to each panel. Clarity, gloss, and a self healing topcoat.</p>
+      <div style="display:flex; gap:18px; align-items:center;">
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:13px 24px; border-radius:2px; text-decoration:none; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+        <a href="#" style="font:600 12.5px/1 var(--md-font-body); letter-spacing:.04em; text-transform:uppercase; color:#fff; text-decoration:none;">Learn more &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== V7 · Icon-led (light) ===== -->
+<div style="position:absolute; left:960px; top:780px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">07 &middot; Icon-led (light)</div>
+  <div style="background:#fff; border:1px solid var(--md-border); box-shadow:0 1px 3px rgba(0,0,0,.1); padding:36px 30px 34px; min-height:300px;">
+    <div style="width:52px; height:52px; border:1px solid var(--md-border); display:flex; align-items:center; justify-content:center; margin-bottom:24px;">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D5001C" stroke-width="1.7"><path d="M12 2.5l7 2.6v5.4c0 4.6-3 8-7 9.5-4-1.5-7-4.9-7-9.5V5.1l7-2.6z"/><path d="M9 12l2.2 2.2L15.5 10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:23px; line-height:1.2; margin:0 0 12px; color:var(--md-ink);">Paint Protection Film</h3>
+    <p style="font-size:14.5px; line-height:1.6; color:var(--md-muted); margin:0 0 26px;">STEK DYNOshield, cut and fit to each panel. Clarity, gloss, and a self healing topcoat.</p>
+    <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:transparent; border:1px solid var(--md-ink); padding:13px 26px; border-radius:2px; text-decoration:none; transition:background .25s, color .25s;" style-hover="background:var(--md-ink);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--md-ink);">Learn More</span></a>
+  </div>
+</div>
+
+<!-- ===== V8 · Wide horizontal (light, diagonal image right) ===== -->
+<div style="position:absolute; left:1410px; top:780px; width:600px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">08 &middot; Wide horizontal (light)</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; background:#fff; border:1px solid var(--md-border); box-shadow:0 1px 3px rgba(0,0,0,.1); min-height:330px;">
+    <div style="padding:36px 32px; display:flex; flex-direction:column; justify-content:center;">
+      <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="width:24px; height:2px; background:var(--md-red); transform:skewX(-8.5deg); display:inline-block;"></span><span style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:var(--md-muted);">Service 01</span></div>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:25px; line-height:1.18; margin:0 0 14px; color:var(--md-ink);">Paint Protection Film</h3>
+      <p style="font-size:14.5px; line-height:1.6; color:var(--md-muted); margin:0 0 26px;">STEK DYNOshield, cut and fit to each panel for clarity, gloss, and a self healing topcoat.</p>
+      <div style="display:flex; gap:12px; align-items:center;">
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:13px 26px; border-radius:2px; text-decoration:none; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+        <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:transparent; border:1px solid var(--md-ink); padding:12px 24px; border-radius:2px; text-decoration:none; transition:background .25s, color .25s;" style-hover="background:var(--md-ink);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--md-ink);">Learn More</span></a>
+      </div>
+    </div>
+    <div class="v-figure" style="clip-path:polygon(12% 0, 100% 0, 100% 100%, 0 100%);"><img class="v-img" src="uploads/IMG_3606-11.jpg" alt="Correction" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .7s var(--md-ease);"></div>
+  </div>
+</div>
+
+<!-- ===== V9 · Overlay, content revealed (dark) ===== -->
+<div style="position:absolute; left:60px; top:1470px; width:380px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">09 &middot; Overlay, panel base</div>
+  <div class="v-figure" style="position:relative; height:440px; box-shadow:0 1px 3px rgba(0,0,0,.14); border:1px solid var(--md-border-dark);">
+    <img class="v-img" src="uploads/IMG_3600-7.jpg" alt="Studio" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .7s var(--md-ease);">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.1), rgba(10,10,10,.55) 55%, rgba(10,10,10,.95));"></div>
+    <div style="position:absolute; left:0; right:0; bottom:0; padding:28px 26px; border-top:2px solid var(--md-red);">
+      <div style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:10px;">Service 01</div>
+      <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:24px; line-height:1.2; margin:0 0 10px; color:#fff;">Paint Protection Film</h3>
+      <p style="font-size:14px; line-height:1.55; color:rgba(255,255,255,0.78); margin:0 0 20px; max-width:32ch;">STEK DYNOshield, fit to each panel for clarity, gloss, and self healing.</p>
+      <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:#fff; padding:13px 26px; border-radius:2px; text-decoration:none; transition:background .25s;" style-hover="background:var(--md-red);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--md-ink);">Schedule</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== V10 · Red left-accent bar (light) ===== -->
+<div style="position:absolute; left:510px; top:1470px; width:600px;">
+  <div data-drags-parent="1" style="font:600 12px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:#555; margin-bottom:12px;">10 &middot; Red accent bar (light)</div>
+  <div style="display:flex; align-items:stretch; background:#fff; border:1px solid var(--md-border); box-shadow:0 1px 3px rgba(0,0,0,.1);">
+    <div style="width:6px; background:var(--md-red); transform:skewX(-8.5deg); margin:18px 0 18px 18px;"></div>
+    <div style="flex:1; padding:32px 34px; display:flex; align-items:center; justify-content:space-between; gap:28px; flex-wrap:wrap;">
+      <div style="flex:1; min-width:240px;">
+        <div style="font:500 11px/1 var(--md-font-body); letter-spacing:.16em; text-transform:uppercase; color:var(--md-muted); margin-bottom:12px;">Service 01</div>
+        <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:24px; line-height:1.18; margin:0 0 10px; color:var(--md-ink);">Paint Protection Film</h3>
+        <p style="font-size:14.5px; line-height:1.6; color:var(--md-muted); margin:0; max-width:42ch;">STEK DYNOshield, cut and fit to each panel for clarity, gloss, and a self healing topcoat.</p>
+      </div>
+      <a href="#" style="display:inline-flex; transform:skewX(-8.5deg); background:var(--md-red); padding:15px 30px; border-radius:2px; text-decoration:none; flex-shrink:0; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);"><span style="display:inline-block; transform:skewX(8.5deg); font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule</span></a>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

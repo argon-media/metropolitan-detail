@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="tokens.css">
+<title>Metropolitan Detail — Design System</title>
+</helmet>
+
+<div data-screen-label="Style Guide" style="background:var(--md-white); color:var(--md-ink); font-family:var(--md-font-body); min-height:100%;">
+
+  <!-- Live sticky header (transparent over hero, solidifies on scroll) -->
+  <header ref="{{ headerRef }}" style="position:sticky; top:0; z-index:50; background:transparent; border-bottom:1px solid transparent; transition:background .4s var(--md-ease), border-color .4s var(--md-ease), backdrop-filter .4s var(--md-ease);">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter); height:74px; display:flex; align-items:center; justify-content:space-between;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span style="width:9px; height:9px; background:var(--md-red); display:inline-block;"></span>
+        <span style="font-family:var(--md-font-display); font-weight:700; font-size:16px; letter-spacing:.01em; color:var(--md-white);">METROPOLITAN&nbsp;DETAIL</span>
+      </div>
+      <nav style="display:flex; align-items:center; gap:34px;">
+        <span style="font-size:14px; font-weight:500; color:rgba(255,255,255,0.78);">Services</span>
+        <span style="font-size:14px; font-weight:500; color:rgba(255,255,255,0.78);">Work</span>
+        <span style="font-size:14px; font-weight:500; color:rgba(255,255,255,0.78);">About</span>
+        <span style="font-family:var(--md-font-body); font-weight:600; font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--md-white); background:var(--md-red); padding:11px 20px; border-radius:var(--md-radius-btn);">Book now</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Masthead -->
+  <section style="background:var(--md-ink); color:var(--md-white); margin-top:-74px; padding:152px 0 110px;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:28px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:rgba(255,255,255,0.62);">Design System · v1</span>
+      </div>
+      <h1 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h1); letter-spacing:var(--md-tracking-tight); line-height:1.02; margin:0 0 26px; max-width:16ch;">Metropolitan Detail</h1>
+      <p style="font-size:21px; line-height:1.55; color:rgba(255,255,255,0.74); max-width:54ch; margin:0;">The shared visual language for every page. Black, white, and grayscale do the work. Red is the punctuation, used only for action and emphasis.</p>
+      <div style="display:flex; gap:48px; margin-top:54px; flex-wrap:wrap;">
+        <div><div style="font-family:var(--md-font-display); font-weight:600; font-size:28px;">Sora</div><div style="font-size:13px; color:rgba(255,255,255,0.55); margin-top:4px;">Display</div></div>
+        <div><div style="font-family:var(--md-font-display); font-weight:600; font-size:28px;">Inter</div><div style="font-size:13px; color:rgba(255,255,255,0.55); margin-top:4px;">Body / UI</div></div>
+        <div><div style="font-family:var(--md-font-display); font-weight:600; font-size:28px; color:var(--md-red);">#D5001C</div><div style="font-size:13px; color:rgba(255,255,255,0.55); margin-top:4px;">Brand red</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 · Color -->
+  <section data-reveal="out" style="background:var(--md-white); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:var(--md-muted);">01 · Color</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.08; margin:0 0 14px;">Mostly monochrome</h2>
+      <p style="font-size:var(--md-body); line-height:1.6; color:var(--md-muted); max-width:56ch; margin:0 0 56px;">Nine tokens. Eight of them are neutral. Red appears sparingly, with intent: primary CTAs, active states, and a single accent line.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:1px; background:var(--md-border); border:1px solid var(--md-border);">
+        <div style="background:var(--md-white); padding:0;"><div style="height:128px; background:#0A0A0A;"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">Ink</div><div style="font-family:var(--md-font-body); font-size:13px; color:var(--md-muted); margin-top:6px;">#0A0A0A</div><div style="font-family:var(--md-font-body); font-size:12px; color:#9a9a9a; margin-top:2px;">--md-ink</div></div></div>
+        <div style="background:var(--md-white);"><div style="height:128px; background:#000000;"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">True black</div><div style="font-size:13px; color:var(--md-muted); margin-top:6px;">#000000</div><div style="font-size:12px; color:#9a9a9a; margin-top:2px;">--md-black</div></div></div>
+        <div style="background:var(--md-white);"><div style="height:128px; background:#FFFFFF; border-bottom:1px solid var(--md-border);"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">Paper</div><div style="font-size:13px; color:var(--md-muted); margin-top:6px;">#FFFFFF</div><div style="font-size:12px; color:#9a9a9a; margin-top:2px;">--md-white</div></div></div>
+        <div style="background:var(--md-white);"><div style="height:128px; background:#F4F4F4; border-bottom:1px solid var(--md-border);"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">Surface</div><div style="font-size:13px; color:var(--md-muted); margin-top:6px;">#F4F4F4</div><div style="font-size:12px; color:#9a9a9a; margin-top:2px;">--md-surface</div></div></div>
+        <div style="background:var(--md-white);"><div style="height:128px; background:#D5001C;"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">Brand red</div><div style="font-size:13px; color:var(--md-muted); margin-top:6px;">#D5001C</div><div style="font-size:12px; color:#9a9a9a; margin-top:2px;">--md-red</div></div></div>
+        <div style="background:var(--md-white);"><div style="height:128px; background:#A8000F;"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">Red pressed</div><div style="font-size:13px; color:var(--md-muted); margin-top:6px;">#A8000F</div><div style="font-size:12px; color:#9a9a9a; margin-top:2px;">--md-red-hover</div></div></div>
+        <div style="background:var(--md-white);"><div style="height:128px; background:#6B6B6B;"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">Muted text</div><div style="font-size:13px; color:var(--md-muted); margin-top:6px;">#6B6B6B</div><div style="font-size:12px; color:#9a9a9a; margin-top:2px;">--md-muted</div></div></div>
+        <div style="background:var(--md-white);"><div style="height:128px; background:#E5E5E5;"></div><div style="padding:18px 18px 22px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px;">Hairline</div><div style="font-size:13px; color:var(--md-muted); margin-top:6px;">#E5E5E5</div><div style="font-size:12px; color:#9a9a9a; margin-top:2px;">--md-border</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 · Typography -->
+  <section data-reveal="out" style="background:var(--md-surface); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:var(--md-muted);">02 · Typography</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.08; margin:0 0 14px;">Sora & Inter</h2>
+      <p style="font-size:var(--md-body); line-height:1.6; color:var(--md-muted); max-width:56ch; margin:0 0 56px;">Sora carries the headlines with tight tracking. Inter handles body and UI. No serifs, no scripts, no decoration.</p>
+
+      <div style="border-top:1px solid var(--md-border);">
+        <div style="display:grid; grid-template-columns:230px 1fr; gap:40px; padding:34px 0; border-bottom:1px solid var(--md-border); align-items:baseline;">
+          <div style="font-size:13px; color:var(--md-muted); line-height:1.7;">H1 · Display<br>Sora 700 · 64 / -0.02em</div>
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h1); letter-spacing:var(--md-tracking-tight); line-height:1.04;">Showroom finish</div>
+        </div>
+        <div style="display:grid; grid-template-columns:230px 1fr; gap:40px; padding:34px 0; border-bottom:1px solid var(--md-border); align-items:baseline;">
+          <div style="font-size:13px; color:var(--md-muted); line-height:1.7;">H2 · Section<br>Sora 600 · 44 / -0.02em</div>
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.1;">Paint correction & ceramic coating</div>
+        </div>
+        <div style="display:grid; grid-template-columns:230px 1fr; gap:40px; padding:34px 0; border-bottom:1px solid var(--md-border); align-items:baseline;">
+          <div style="font-size:13px; color:var(--md-muted); line-height:1.7;">H3 · Subhead<br>Sora 600 · 28</div>
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h3); line-height:1.2;">A measured, methodical process</div>
+        </div>
+        <div style="display:grid; grid-template-columns:230px 1fr; gap:40px; padding:34px 0; border-bottom:1px solid var(--md-border); align-items:baseline;">
+          <div style="font-size:13px; color:var(--md-muted); line-height:1.7;">Body<br>Inter 400 · 17</div>
+          <div style="font-family:var(--md-font-body); font-weight:400; font-size:var(--md-body); line-height:1.65; max-width:60ch;">Every vehicle is assessed under controlled lighting before work begins. We document the condition of the paint, then correct it in stages so the result holds up in daylight, not just in the bay.</div>
+        </div>
+        <div style="display:grid; grid-template-columns:230px 1fr; gap:40px; padding:34px 0; border-bottom:1px solid var(--md-border); align-items:baseline;">
+          <div style="font-size:13px; color:var(--md-muted); line-height:1.7;">Small / caption<br>Inter 400 · 14</div>
+          <div style="font-family:var(--md-font-body); font-weight:400; font-size:var(--md-small); line-height:1.6; color:var(--md-muted);">Redmond, WA · By appointment</div>
+        </div>
+        <div style="display:grid; grid-template-columns:230px 1fr; gap:40px; padding:34px 0; align-items:baseline;">
+          <div style="font-size:13px; color:var(--md-muted); line-height:1.7;">Eyebrow / label<br>Inter 500 · 12 · 0.12em</div>
+          <div style="font-family:var(--md-font-body); font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:var(--md-ink);">Our Services</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 · Buttons -->
+  <section data-reveal="out" style="background:var(--md-white); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:var(--md-muted);">03 · Buttons</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.08; margin:0 0 14px;">Action, two ways</h2>
+      <p style="font-size:var(--md-body); line-height:1.6; color:var(--md-muted); max-width:56ch; margin:0 0 52px;">2px radius, flat, no shadow. Primary is the only place red is filled. Hover is a clear shift to the pressed red.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--md-border); border:1px solid var(--md-border);">
+        <div style="background:var(--md-white); padding:48px;">
+          <div style="font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--md-muted); margin-bottom:26px;">On light</div>
+          <div style="display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
+            <button style="font-family:var(--md-font-body); font-weight:600; font-size:14px; letter-spacing:.03em; color:var(--md-white); background:var(--md-red); border:none; padding:15px 30px; border-radius:var(--md-radius-btn); cursor:pointer; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">Book a detail</button>
+            <button style="font-family:var(--md-font-body); font-weight:600; font-size:14px; letter-spacing:.03em; color:var(--md-ink); background:transparent; border:1px solid var(--md-ink); padding:14px 29px; border-radius:var(--md-radius-btn); cursor:pointer; transition:background .25s var(--md-ease), color .25s var(--md-ease);" style-hover="background:var(--md-ink); color:var(--md-white);">View services</button>
+          </div>
+        </div>
+        <div style="background:var(--md-ink); padding:48px;">
+          <div style="font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:26px;">On dark</div>
+          <div style="display:flex; gap:18px; align-items:center; flex-wrap:wrap;">
+            <button style="font-family:var(--md-font-body); font-weight:600; font-size:14px; letter-spacing:.03em; color:var(--md-white); background:var(--md-red); border:none; padding:15px 30px; border-radius:var(--md-radius-btn); cursor:pointer; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">Book a detail</button>
+            <button style="font-family:var(--md-font-body); font-weight:600; font-size:14px; letter-spacing:.03em; color:var(--md-white); background:transparent; border:1px solid var(--md-border-dark); padding:14px 29px; border-radius:var(--md-radius-btn); cursor:pointer; transition:background .25s var(--md-ease), border-color .25s var(--md-ease);" style-hover="background:rgba(255,255,255,0.08); border-color:rgba(255,255,255,0.4);">View services</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 · Service cards -->
+  <section data-reveal="out" style="background:var(--md-surface); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:var(--md-muted);">04 · Service card</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.08; margin:0 0 14px;">Photography first</h2>
+      <p style="font-size:var(--md-body); line-height:1.6; color:var(--md-muted); max-width:56ch; margin:0 0 52px;">Image on top, sharp corners, a hairline border, and a subtle lift on hover. Drop real photos into the slots below.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:28px;">
+        <article style="background:var(--md-white); border:1px solid var(--md-border); border-radius:var(--md-radius-card); overflow:hidden; cursor:pointer; transition:transform .35s var(--md-ease), box-shadow .35s var(--md-ease), border-color .35s var(--md-ease);" style-hover="transform:translateY(-4px); box-shadow:0 8px 26px rgba(0,0,0,0.07); border-color:#d4d4d4;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="card-paint" shape="rect" placeholder="Drop a real photo" style="display:block; width:100%; height:230px;" hint-size="100%,230px"></x-import>
+          <div style="padding:28px 26px 30px;">
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:22px; line-height:1.2; margin:0 0 12px;">Paint correction</h3>
+            <p style="font-size:15px; line-height:1.6; color:var(--md-muted); margin:0 0 20px;">Multi-stage polishing to remove swirls and oxidation, restoring clarity and depth to the finish.</p>
+            <span style="font-family:var(--md-font-body); font-weight:600; font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--md-ink); display:inline-flex; align-items:center; gap:8px; transition:color .25s var(--md-ease);" style-hover="color:var(--md-red);">View service <span style="color:var(--md-red);">→</span></span>
+          </div>
+        </article>
+        <article style="background:var(--md-white); border:1px solid var(--md-border); border-radius:var(--md-radius-card); overflow:hidden; cursor:pointer; transition:transform .35s var(--md-ease), box-shadow .35s var(--md-ease), border-color .35s var(--md-ease);" style-hover="transform:translateY(-4px); box-shadow:0 8px 26px rgba(0,0,0,0.07); border-color:#d4d4d4;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="card-ceramic" shape="rect" placeholder="Drop a real photo" style="display:block; width:100%; height:230px;" hint-size="100%,230px"></x-import>
+          <div style="padding:28px 26px 30px;">
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:22px; line-height:1.2; margin:0 0 12px;">Ceramic coating</h3>
+            <p style="font-size:15px; line-height:1.6; color:var(--md-muted); margin:0 0 20px;">A durable protective layer that adds gloss and makes routine washing faster and gentler on the paint.</p>
+            <span style="font-family:var(--md-font-body); font-weight:600; font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--md-ink); display:inline-flex; align-items:center; gap:8px; transition:color .25s var(--md-ease);" style-hover="color:var(--md-red);">View service <span style="color:var(--md-red);">→</span></span>
+          </div>
+        </article>
+        <article style="background:var(--md-white); border:1px solid var(--md-border); border-radius:var(--md-radius-card); overflow:hidden; cursor:pointer; transition:transform .35s var(--md-ease), box-shadow .35s var(--md-ease), border-color .35s var(--md-ease);" style-hover="transform:translateY(-4px); box-shadow:0 8px 26px rgba(0,0,0,0.07); border-color:#d4d4d4;">
+          <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="card-ppf" shape="rect" placeholder="Drop a real photo" style="display:block; width:100%; height:230px;" hint-size="100%,230px"></x-import>
+          <div style="padding:28px 26px 30px;">
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:22px; line-height:1.2; margin:0 0 12px;">Paint protection film</h3>
+            <p style="font-size:15px; line-height:1.6; color:var(--md-muted); margin:0 0 20px;">Clear film over high-impact panels to guard against rock chips and road debris on daily-driven cars.</p>
+            <span style="font-family:var(--md-font-body); font-weight:600; font-size:13px; letter-spacing:.04em; text-transform:uppercase; color:var(--md-ink); display:inline-flex; align-items:center; gap:8px; transition:color .25s var(--md-ease);" style-hover="color:var(--md-red);">View service <span style="color:var(--md-red);">→</span></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 · Header behavior -->
+  <section data-reveal="out" style="background:var(--md-white); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:var(--md-muted);">05 · Sticky header</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.08; margin:0 0 14px;">Transparent, then solid</h2>
+      <p style="font-size:var(--md-body); line-height:1.6; color:var(--md-muted); max-width:56ch; margin:0 0 48px;">Over the hero the header is transparent. On scroll it solidifies to near-black with a dark hairline. The header at the top of this page is the live version. Scroll to see it shift.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+        <div>
+          <div style="font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--md-muted); margin-bottom:14px;">At rest · over hero</div>
+          <div style="position:relative; height:180px; background:#1c1c1c; overflow:hidden; border:1px solid var(--md-border);">
+            <div style="position:absolute; inset:0; background:linear-gradient(135deg,#2a2a2a,#0e0e0e);"></div>
+            <div style="position:relative; display:flex; align-items:center; justify-content:space-between; padding:0 26px; height:60px;">
+              <span style="font-family:var(--md-font-display); font-weight:700; font-size:14px; color:#fff;">METROPOLITAN DETAIL</span>
+              <span style="font-family:var(--md-font-body); font-weight:600; font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:#fff; background:var(--md-red); padding:9px 16px; border-radius:var(--md-radius-btn);">Book now</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--md-muted); margin-bottom:14px;">On scroll · solidified</div>
+          <div style="position:relative; height:180px; background:var(--md-surface); overflow:hidden; border:1px solid var(--md-border);">
+            <div style="display:flex; align-items:center; justify-content:space-between; padding:0 26px; height:60px; background:rgba(10,10,10,0.95); border-bottom:1px solid var(--md-border-dark);">
+              <span style="font-family:var(--md-font-display); font-weight:700; font-size:14px; color:#fff;">METROPOLITAN DETAIL</span>
+              <span style="font-family:var(--md-font-body); font-weight:600; font-size:12px; letter-spacing:.04em; text-transform:uppercase; color:#fff; background:var(--md-red); padding:9px 16px; border-radius:var(--md-radius-btn);">Book now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 · Layout, spacing & motion -->
+  <section data-reveal="out" style="background:var(--md-ink); color:var(--md-white); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:rgba(255,255,255,0.62);">06 · Layout & motion</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.08; margin:0 0 48px;">Space and restraint</h2>
+
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:48px;">
+        <div style="border-top:1px solid var(--md-border-dark); padding-top:26px;">
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:34px; margin-bottom:10px;">1280<span style="font-size:18px; color:rgba(255,255,255,0.5);">px</span></div>
+          <div style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.66);">Max content width on a 12-column grid, with comfortable gutters.</div>
+        </div>
+        <div style="border-top:1px solid var(--md-border-dark); padding-top:26px;">
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:34px; margin-bottom:10px;">96–128<span style="font-size:18px; color:rgba(255,255,255,0.5);">px</span></div>
+          <div style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.66);">Vertical rhythm between sections. Negative space carries the design.</div>
+        </div>
+        <div style="border-top:1px solid var(--md-border-dark); padding-top:26px;">
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:34px; margin-bottom:10px;">0–2<span style="font-size:18px; color:rgba(255,255,255,0.5);">px</span></div>
+          <div style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.66);">Corner radius. Sharp on cards and sections, 2px on buttons and inputs.</div>
+        </div>
+      </div>
+
+      <div style="margin-top:60px; border-top:1px solid var(--md-border-dark); padding-top:34px; display:flex; gap:48px; flex-wrap:wrap; align-items:center;">
+        <div style="max-width:46ch;">
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:20px; margin-bottom:10px;">Scroll reveals</div>
+          <div style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.66);">Sections fade and slide up gently as they enter view. Smooth, not bouncy. Every section on this page used it.</div>
+        </div>
+        <div style="display:flex; gap:12px;">
+          <span style="width:64px; height:64px; background:rgba(255,255,255,0.07); border:1px solid var(--md-border-dark);"></span>
+          <span style="width:64px; height:64px; background:rgba(255,255,255,0.07); border:1px solid var(--md-border-dark);"></span>
+          <span style="width:64px; height:64px; background:var(--md-red);"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 · House rules -->
+  <section data-reveal="out" style="background:var(--md-white); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter);">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="width:34px; height:2px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:var(--md-eyebrow); letter-spacing:var(--md-tracking-eyebrow); text-transform:uppercase; color:var(--md-muted);">07 · House rules</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); letter-spacing:var(--md-tracking-tight); line-height:1.08; margin:0 0 48px;">Non-negotiables</h2>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--md-border); border:1px solid var(--md-border);">
+        <div style="background:var(--md-white); padding:36px 30px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; margin-bottom:10px;">No em-dashes</div><div style="font-size:15px; line-height:1.6; color:var(--md-muted);">Use periods, commas, or restructure. Em-dashes appear nowhere in copy.</div></div>
+        <div style="background:var(--md-white); padding:36px 30px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; margin-bottom:10px;">No hype words</div><div style="font-size:15px; line-height:1.6; color:var(--md-muted);">Avoid premier, elite, world-class, unmatched, industry-leading. Plain, confident copy.</div></div>
+        <div style="background:var(--md-white); padding:36px 30px;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; margin-bottom:10px;">Real only</div><div style="font-size:15px; line-height:1.6; color:var(--md-muted);">Real photos and real reviews. No invented stats, no fabricated testimonials.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:var(--md-black); color:rgba(255,255,255,0.6); padding:46px 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 var(--md-gutter); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+      <div style="display:flex; align-items:center; gap:11px;">
+        <span style="width:8px; height:8px; background:var(--md-red); display:inline-block;"></span>
+        <span style="font-family:var(--md-font-display); font-weight:700; font-size:14px; color:#fff;">METROPOLITAN DETAIL</span>
+      </div>
+      <div style="font-size:13px;">Design System v1 · Redmond, WA</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return { headerRef: this._headerRef || (this._headerRef = React.createRef()) };
+  }
+
+  componentDidMount() {
+    // Scroll reveals
+    const reveal = () => document.querySelectorAll('[data-reveal]').forEach(el => el.setAttribute('data-reveal', 'in'));
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries, obs) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.setAttribute('data-reveal', 'in'); obs.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+      document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+      // Safety net: reveal everything after 1.6s in case observer never fires (scaled host, etc.)
+      this._fallback = setTimeout(reveal, 1600);
+    } else {
+      reveal();
+    }
+
+    // Sticky header: transparent over hero -> solid near-black on scroll
+    const onScroll = () => {
+      const h = this._headerRef && this._headerRef.current;
+      if (!h) return;
+      const y = window.scrollY || document.documentElement.scrollTop || (document.scrollingElement && document.scrollingElement.scrollTop) || 0;
+      if (y > 40) {
+        h.style.background = 'rgba(10,10,10,0.95)';
+        h.style.borderBottomColor = 'rgba(255,255,255,0.12)';
+        h.style.backdropFilter = 'saturate(140%) blur(10px)';
+        h.style.webkitBackdropFilter = 'saturate(140%) blur(10px)';
+      } else {
+        h.style.background = 'transparent';
+        h.style.borderBottomColor = 'transparent';
+        h.style.backdropFilter = 'none';
+        h.style.webkitBackdropFilter = 'none';
+      }
+    };
+    this._onScroll = onScroll;
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._fallback) clearTimeout(this._fallback);
+  }
+}
+</script>
+</body>
+</html>

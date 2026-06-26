@@ -1,0 +1,79 @@
+/* ============================================================
+   METROPOLITAN DETAIL — Design System Tokens
+   Premium automotive appearance brand · Redmond, WA
+   Load this file in each page's <helmet>:
+     <link rel="stylesheet" href="tokens.css">
+   Then reference tokens from inline styles, e.g.
+     style="color: var(--md-ink); font-family: var(--md-font-display)"
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* --- Color: red / black / white. Red is punctuation, not paint. --- */
+  --md-ink:          #0A0A0A;              /* primary dark bg / body text on light */
+  --md-black:        #000000;              /* photo + video overlays */
+  --md-white:        #FFFFFF;              /* primary light bg */
+  --md-surface:      #F4F4F4;              /* alternating sections, cards on light */
+  --md-red:          #D5001C;              /* primary CTA, active states, key accent */
+  --md-red-hover:    #A8000F;              /* red hover / pressed */
+  --md-muted:        #6B6B6B;              /* secondary copy, labels */
+  --md-border:       #E5E5E5;              /* hairline border on light */
+  --md-border-dark:  rgba(255,255,255,0.12); /* hairline border on dark */
+
+  /* --- Type --- */
+  --md-font-display: 'Sora', system-ui, -apple-system, sans-serif;
+  --md-font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  --md-h1: 64px;
+  --md-h2: 44px;
+  --md-h3: 28px;
+  --md-body: 17px;
+  --md-small: 14px;
+  --md-eyebrow: 12px;
+
+  --md-tracking-tight: -0.02em;   /* large display sizes */
+  --md-tracking-eyebrow: 0.12em;  /* uppercase labels */
+
+  /* --- Layout & spacing --- */
+  --md-maxw: 1360px;
+  --md-gutter: 40px;
+  --md-section-y: 112px;          /* generous vertical rhythm (96-128) */
+  --md-radius-btn: 2px;           /* max radius anywhere */
+  --md-radius-card: 0px;          /* sharp corners */
+  --md-hairline: 1px;
+
+  /* --- Motion (subtle, smooth, not bouncy) --- */
+  --md-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --md-reveal-dur: 0.7s;
+}
+
+/* Responsive type scale-down for mobile */
+@media (max-width: 768px) {
+  :root {
+    --md-h1: 38px;
+    --md-h2: 30px;
+    --md-h3: 22px;
+    --md-body: 16px;
+    --md-section-y: 72px;
+    --md-gutter: 22px;
+  }
+}
+
+/* Base resets (the only blanket rules; everything else is inline) */
+* { box-sizing: border-box; }
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body { margin: 0; font-family: var(--md-font-body); color: var(--md-ink); background: var(--md-white); }
+
+/* Scroll-reveal: sections start hidden, JS flips data-reveal="in" */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity var(--md-reveal-dur) var(--md-ease),
+              transform var(--md-reveal-dur) var(--md-ease);
+  will-change: opacity, transform;
+}
+[data-reveal="in"] { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+}
