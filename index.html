@@ -9,30 +9,27 @@
 <x-dc>
 <helmet>
 <link rel="stylesheet" href="tokens.css">
-<title>Metropolitan Detail | Paint Protection, Ceramic Coatings & Tint in Redmond, WA</title>
-<meta name="description" content="STEK paint protection film, CarPro ceramic coatings, window tint, and paint correction for new cars in Redmond, WA. Two decades protecting Eastside vehicles. Licensed and insured.">
+<title>Metropolitan Detail | Paint Protection, Ceramic Coatings &amp; Tint in Redmond, WA</title>
 <link rel="canonical" href="https://metropolitandetail.argon-devsite.com/">
-<meta name="theme-color" content="#0a0a0a">
 <meta name="robots" content="index, follow">
-<!-- Open Graph / Facebook -->
+<meta name="theme-color" content="#0a0a0a">
 <meta property="og:site_name" content="Metropolitan Detail">
-<meta property="og:type" content="website">
 <meta property="og:url" content="https://metropolitandetail.argon-devsite.com/">
-<meta property="og:title" content="Metropolitan Detail | New Car Protection in Redmond, WA">
-<meta property="og:description" content="STEK paint protection film, CarPro ceramic coatings, window tint, and paint correction. Two decades on the Eastside.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/og-share.jpg">
 <meta property="og:image:secure_url" content="https://metropolitandetail.argon-devsite.com/uploads/og-share.jpg">
-<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="Metropolitan Detail | Paint Protection, Ceramic Coatings &amp;amp; Tint in Redmond, WA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Metropolitan Detail | Paint Protection, Ceramic Coatings &amp;amp; Tint in Redmond, WA">
+<meta name="twitter:description" content="Metropolitan Detail protects and preserves new cars on the Eastside. STEK paint protection film, CarPro ceramic coatings, window tint, and paint correction in Redmond, WA. Licensed and insured.">
+<meta name="twitter:image" content="https://metropolitandetail.argon-devsite.com/uploads/og-share.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="A new car protected by Metropolitan Detail in Redmond, WA">
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Metropolitan Detail | New Car Protection in Redmond, WA">
-<meta name="twitter:description" content="STEK paint protection film, CarPro ceramic coatings, window tint, and paint correction. Two decades on the Eastside.">
-<meta name="twitter:image" content="https://metropolitandetail.argon-devsite.com/uploads/og-share.jpg">
-<meta name="twitter:image:alt" content="A new car protected by Metropolitan Detail in Redmond, WA">
+<meta name="description" content="Metropolitan Detail protects and preserves new cars on the Eastside. STEK paint protection film, CarPro ceramic coatings, window tint, and paint correction in Redmond, WA. Licensed and insured.">
+<meta property="og:title" content="Metropolitan Detail | New Car Protection in Redmond, WA">
+<meta property="og:description" content="STEK paint protection film, CarPro ceramic coatings, window tint, and paint correction. Two decades on the Eastside.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/IMG_3587-1.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   @keyframes mdHeroFilm { 0% { transform: translateX(-130%) skewX(-8.5deg); opacity:0; } 18%{opacity:1;} 100% { transform: translateX(150%) skewX(-8.5deg); opacity:0; } }
@@ -75,15 +72,15 @@
   .md-marq-track img{ display:block; width:360px; height:260px; object-fit:cover; transition:transform .8s var(--md-ease); }
   /* Services: sticky stack, one visible at a time */
   /* Services: boxed, one per view, fade in on scroll */
-  .svc-band{ max-width:var(--md-maxw); margin:0 auto; padding:48px 40px; min-height:84vh; display:flex; align-items:center; opacity:0; transform:translateY(48px); transition:opacity .9s var(--md-ease), transform .9s var(--md-ease); }
+  .svc-band{ max-width:var(--md-maxw); margin:0 auto; padding:26px 40px; min-height:auto; display:flex; align-items:center; opacity:0; transform:translateY(30px); transition:opacity .45s var(--md-ease), transform .45s var(--md-ease); }
   .svc-band[data-reveal="in"]{ opacity:1; transform:none; }
   .svc-band .md-row{ width:100%; }
   .svc-band .md-media-col{ position:relative; overflow:hidden; border-radius:14px; }
   .svc-band .md-img{ display:block; width:100%; height:100%; min-height:360px; object-fit:cover; }
   .svc-band .md-figure:hover .md-img{ transform:scale(1.04); }
-  .svc-cert{ display:inline-flex; align-items:center; gap:9px; align-self:flex-start; background:rgba(213,0,28,0.09); border:1px solid rgba(213,0,28,0.35); color:var(--md-red); font:700 11px/1 var(--md-font-body); letter-spacing:.13em; text-transform:uppercase; padding:9px 15px; border-radius:999px; margin-bottom:24px; opacity:0; transform:translateY(12px); transition:opacity .6s var(--md-ease), transform .6s var(--md-ease); }
-  .svc-cert::before{ content:""; width:6px; height:6px; border-radius:50%; background:var(--md-red); }
-  .svc-band[data-reveal="in"] .svc-cert{ opacity:1; transform:none; transition-delay:.15s; }
+  .svc-cert{ display:inline-flex; align-items:center; gap:14px; align-self:flex-start; color:var(--md-red); font:700 11px/1 var(--md-font-body); letter-spacing:.13em; text-transform:uppercase; padding:0; margin-bottom:24px; opacity:0; transform:translateY(12px); transition:opacity .35s var(--md-ease), transform .35s var(--md-ease); }
+  .svc-cert img{ height:50px; width:auto; display:block; flex:none; background:#fff; padding:6px; border-radius:6px; }
+  .svc-band[data-reveal="in"] .svc-cert{ opacity:1; transform:none; transition-delay:.06s; }
   /* Process: JS-driven progress bar 0 -> 100 */
   .proc-line-fill{ width:0; }
   .proc-step{ opacity:.3; transition:opacity .5s var(--md-ease); }
@@ -101,8 +98,8 @@
   .txt-fade.in{ opacity:1; transform:none; }
   @media (prefers-reduced-motion: reduce){ .txt-fade{ opacity:1 !important; transform:none !important; } }
   @media (max-width: 1120px) {
-    .md-nav-desktop { display:none; }
-    .md-burger { display:inline-flex; }
+    .md-nav-desktop { display:none !important; }
+    .md-burger { display:inline-flex !important; }
   }
   @media (max-width: 900px) {
     .md-row { grid-template-columns:1fr !important; }
@@ -146,6 +143,25 @@
 }
 </script>
 <script src="https://www.youtube.com/iframe_api"></script>
+<style>
+  .md-nav-desktop{ display:flex; align-items:center; gap:2px; }
+  .md-nav-desktop .nav-link{ display:inline-flex; align-items:center; gap:7px; font-family:var(--md-font-body); font-weight:600; font-size:13px; letter-spacing:.01em; color:rgba(255,255,255,0.9); text-decoration:none; padding:9px 12px; border-radius:2px; white-space:nowrap; transition:color .2s var(--md-ease), background .2s var(--md-ease); cursor:pointer; }
+  .md-nav-desktop .nav-link:hover{ color:#fff; background:rgba(255,255,255,0.06); }
+  .nav-item{ position:relative; }
+  .nav-caret{ display:inline-block; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:5px solid currentColor; opacity:.6; transition:transform .25s var(--md-ease); }
+  .nav-item:hover .nav-caret{ transform:rotate(180deg); }
+  .nav-menu{ position:absolute; top:calc(100% + 6px); left:0; min-width:238px; background:#0e0e0e; border:1px solid var(--md-border-dark); padding:8px; display:flex; flex-direction:column; gap:1px; opacity:0; visibility:hidden; transform:translateY(8px); transition:opacity .22s var(--md-ease), transform .22s var(--md-ease), visibility .22s; z-index:130; box-shadow:0 24px 60px rgba(0,0,0,0.55); }
+  .nav-item:hover .nav-menu{ opacity:1; visibility:visible; transform:none; }
+  .nav-menu a{ display:flex; align-items:center; justify-content:space-between; gap:18px; padding:11px 14px; font-family:var(--md-font-body); font-weight:600; font-size:13.5px; color:rgba(255,255,255,0.82); text-decoration:none; white-space:nowrap; transition:background .18s var(--md-ease), color .18s var(--md-ease); }
+  .nav-menu a:hover{ background:rgba(255,255,255,0.07); color:#fff; }
+  .nav-sub{ position:relative; }
+  .nav-caret-r{ display:inline-block; width:0; height:0; border-top:4px solid transparent; border-bottom:4px solid transparent; border-left:5px solid var(--md-red); }
+  .nav-submenu{ position:absolute; top:-9px; left:100%; min-width:190px; background:#0e0e0e; border:1px solid var(--md-border-dark); padding:8px; display:flex; flex-direction:column; gap:1px; opacity:0; visibility:hidden; transform:translateX(8px); transition:opacity .22s var(--md-ease), transform .22s var(--md-ease), visibility .22s; z-index:140; box-shadow:0 24px 60px rgba(0,0,0,0.55); }
+  .nav-sub:hover .nav-submenu{ opacity:1; visibility:visible; transform:none; }
+  .md-nav-desktop{ min-width:0; }
+  @media (max-width:1240px){ .hdr-phone{ display:none !important; } .md-nav-desktop{ gap:0; } .md-nav-desktop .nav-link{ padding:8px 6px; font-size:12.5px; } }
+  @media (max-width:1120px){ .md-nav-desktop .nav-link{ padding:6px 4px; font-size:11px; letter-spacing:0; } .hdr-logo{ height:16px !important; } }
+</style>
 </helmet>
 
 <div data-screen-label="Metropolitan Detail Home" style="background:var(--md-ink); color:var(--md-white); font-family:var(--md-font-body); overflow-x:hidden;">
@@ -155,17 +171,40 @@
 
   <!-- ============ STICKY HEADER ============ -->
   <header ref="{{ headerRef }}" style="position:fixed; top:0; left:0; width:100%; z-index:90; background:transparent; border-bottom:1px solid transparent; transition:background .4s var(--md-ease), border-color .4s var(--md-ease), backdrop-filter .4s var(--md-ease);">
-    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; position:relative;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; height:76px; display:grid; grid-template-columns:1fr auto 1fr; grid-auto-flow:dense; align-items:center; gap:20px;">
+      <!-- SAVED HAMBURGER + POP-UP MENU LAYOUT (hidden by request; nav links now live in the bar). To bring the hamburger + pop-up back, paste this button in as the first child of the header row — it opens the <sc-if value="{{ menuOpen }}"> overlay preserved below:
       <button onClick="{{ openMenu }}" aria-label="Open menu" style="display:inline-flex; align-items:center; gap:11px; background:transparent; border:none; cursor:pointer; padding:6px 2px; color:#fff;">
         <span style="display:inline-flex; flex-direction:column; gap:4px;"><span style="width:22px; height:2px; background:#fff;"></span><span style="width:22px; height:2px; background:#fff;"></span><span style="width:22px; height:2px; background:#fff;"></span></span>
         <span style="font-size:14px; font-weight:500; letter-spacing:.02em;">Menu</span>
       </button>
-      <a href="#home" aria-label="Metropolitan Detail home" style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:flex; align-items:center;">
-        <img src="uploads/md-logo-white-2018.svg" alt="Metropolitan Detail" style="height:42px; width:auto; display:block;">
+      -->
+      <button class="md-burger" onClick="{{ openMenu }}" aria-label="Open menu" style="grid-column:1; justify-self:start; align-items:center; justify-content:center; width:44px; height:44px; background:transparent; border:none; cursor:pointer; padding:0; color:#fff;"><span style="display:flex; flex-direction:column; gap:5px;"><span style="width:24px; height:2px; background:#fff; border-radius:2px;"></span><span style="width:24px; height:2px; background:#fff; border-radius:2px;"></span><span style="width:24px; height:2px; background:#fff; border-radius:2px;"></span></span></button>
+      <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center; justify-self:center; grid-column:2;">
+        <img src="uploads/md-script-white.svg" alt="Metropolitan Detail" class="hdr-logo" style="height:20px; width:auto; display:block;">
       </a>
-      <div style="display:flex; align-items:center; gap:16px;">
-        <a href="tel:+14252336068" style="display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--md-white); text-decoration:none; white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg>(425) 233-6068</a>
-        <a href="#contact" class="md-cta sm"><span class="l">Schedule</span><span class="t"><span class="arr">&rarr;</span></span></a>
+      <nav class="md-nav-desktop" aria-label="Primary" style="grid-column:1; justify-self:start;">
+        <div class="nav-item">
+          <span class="nav-link">Paint Protection Film <span class="nav-caret"></span></span>
+          <div class="nav-menu">
+            <a href="/paint-protection-film">DYNOshield</a>
+            <a href="/dynomatte">DYNOmatte</a>
+            <a href="/color-change">Color Change</a>
+          </div>
+        </div>
+        <div class="nav-item">
+          <span class="nav-link">Blog <span class="nav-caret"></span></span>
+          <div class="nav-menu">
+            <a href="/blog">Blog</a>
+            <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" style="white-space:normal; max-width:320px;">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
+          </div>
+        </div>
+        <a href="/faq" class="nav-link">FAQ</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/get-a-quote" class="nav-link">Get a Quote</a>
+      </nav>
+      <div style="display:flex; align-items:center; gap:14px; justify-self:end; grid-column:3;">
+        <a href="tel:+14252336068" class="hdr-phone" style="display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--md-white); text-decoration:none; white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg>(425) 233-6068</a>
+        <a href="/get-a-quote" class="md-cta sm"><span class="l">Schedule</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
   </header>
@@ -174,21 +213,24 @@
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
     <div style="position:fixed; inset:0; z-index:100; background:var(--md-ink); display:flex; flex-direction:column; padding:26px 28px;">
       <div style="display:flex; align-items:center; justify-content:space-between; height:48px; margin-bottom:42px;">
-        <img src="uploads/md-logo-white-2018.svg" alt="Metropolitan Detail" style="height:44px;">
-        <button onClick="{{ closeMenu }}" aria-label="Close menu" style="width:44px; height:44px; background:transparent; border:1px solid var(--md-border-dark); border-radius:2px; color:#fff; font-size:22px; cursor:pointer;">&#215;</button>
+        <img src="uploads/md-script-white.svg" alt="Metropolitan Detail" style="height:22px;">
+        <button onClick="{{ closeMenu }}" aria-label="Close menu" style="width:44px; height:44px; background:transparent; border:1px solid var(--md-border-dark); border-radius:2px; color:#fff; font-size:22px; cursor:pointer;">×</button>
       </div>
-      <nav style="display:flex; flex-direction:column; gap:4px;">
-        <a href="#ppf" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:24px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid var(--md-border-dark);">Paint Protection Film</a>
-        <a href="#ceramic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:24px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid var(--md-border-dark);">Ceramic Coatings</a>
-        <a href="#tint" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:24px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid var(--md-border-dark);">Window Tint</a>
-        <a href="#correction" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:24px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid var(--md-border-dark);">Paint Correction</a>
-        <a href="#portfolio" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:24px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid var(--md-border-dark);">Portfolio</a>
-        <a href="#about" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:24px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid var(--md-border-dark);">About</a>
-        <a href="#contact" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:24px; color:#fff; text-decoration:none; padding:12px 0; border-bottom:1px solid var(--md-border-dark);">Contact</a>
+      <nav style="display:flex; flex-direction:column; gap:2px;">
+        <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:6px 0 6px;">Paint Protection Film</div>
+        <a href="/paint-protection-film" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">DYNOshield</a>
+        <a href="/dynomatte" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">DYNOmatte</a>
+        <a href="/color-change" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Color Change</a>
+        <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:22px 0 6px;">Explore</div>
+        <a href="/blog" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Blog</a>
+        <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
+        <a href="/faq" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">FAQ</a>
+        <a href="/contact" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Contact</a>
+        <a href="/get-a-quote" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Get a Quote</a>
       </nav>
       <div style="margin-top:auto; display:flex; flex-direction:column; gap:14px;">
         <a href="tel:+14252336068" style="font-size:18px; font-weight:600; color:#fff; text-decoration:none;">(425) 233-6068</a>
-        <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex; justify-content:center; background:var(--md-red); padding:16px; border-radius:2px; text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule Appointment</a>
+        <a href="/get-a-quote" onClick="{{ closeMenu }}" style="display:inline-flex; justify-content:center; background:var(--md-red); padding:16px; border-radius:2px; text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule Appointment</a>
       </div>
     </div>
   </sc-if>
@@ -196,7 +238,7 @@
   <!-- ============ HERO ============ -->
   <section id="home" data-screen-label="Hero" style="position:relative; min-height:100vh; display:flex; align-items:flex-end; overflow:hidden; background:#000;">
     <img src="uploads/IMG_3587-1.jpg" alt="Freshly protected vehicle in the Metropolitan Detail studio" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-    <video id="md-hero-video" data-clip data-start="4" data-end="66" autoplay muted loop playsinline preload="auto" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; pointer-events:none;">
+    <video id="md-hero-video" data-clip="" data-start="4" data-end="66" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; pointer-events:none;">
       <source src="https://3cricket.argon-devsite.com/YTDown_YouTube_Purosangue-Finale_Media_PKZSoNN7gpQ_001_1080p.mp4" type="video/mp4">
     </video>
     <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.72) 0%, rgba(0,0,0,.28) 38%, rgba(0,0,0,.55) 78%, rgba(10,10,10,.96) 100%);"></div>
@@ -204,9 +246,9 @@
     <!-- film reveal on load -->
     <span style="position:absolute; top:-20%; left:0; width:55%; height:140%; pointer-events:none; background:linear-gradient(115deg, transparent 38%, rgba(255,255,255,.22) 48%, rgba(255,255,255,.05) 54%, transparent 66%); animation:mdHeroFilm 1.9s cubic-bezier(.22,.61,.36,1) .25s both;"></span>
     <div class="md-hero-inner" style="position:relative; z-index:2; width:100%; max-width:var(--md-maxw); margin:0 auto; padding:0 40px 92px;">
-      <h1 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h1); line-height:1.02; letter-spacing:var(--md-tracking-tight); margin:0 0 22px; max-width:18ch; animation:mdFadeUp .85s var(--md-ease) .26s both;">Twenty Years of<br>Doing It Right.</h1>
+      <h1 style="font-family: var(--md-font-display); font-weight: 700; font-size: var(--md-h1); line-height: 1.02; letter-spacing: var(--md-tracking-tight); margin: 0 0 22px; max-width: 18ch; animation: mdFadeUp .85s var(--md-ease) .26s both; width: 664px; height: 118px"><div>Precision Detailing You Can Trust.</div></h1>
       <div class="md-dualcta" style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; animation:mdFadeUp .85s var(--md-ease) .54s both;">
-        <a href="#contact" class="md-cta lg"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">&rarr;</span></span></a>
+        <a href="/get-a-quote" class="md-cta lg"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
     <div style="position:absolute; bottom:26px; left:50%; transform:translateX(-50%); z-index:2; display:flex; flex-direction:column; align-items:center; gap:8px; animation:mdFloat 2.4s ease-in-out infinite;">
@@ -220,8 +262,8 @@
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
       <div style="text-align:center; font-weight:700; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--md-ink); margin-bottom:38px;">Certified &amp; Authorized Installer</div>
       <div class="md-3col" style="display:grid; grid-template-columns:repeat(3,1fr); align-items:center;">
-        <div style="display:flex; align-items:center; justify-content:center; height:96px;"><img src="uploads/BlackLabel_B_W_1-768x940.png" alt="STEK Black Label Installer" style="height:84px; width:auto; display:block;"></div>
-        <div style="display:flex; align-items:center; justify-content:center; height:96px; border-left:1px solid var(--md-border); border-right:1px solid var(--md-border);"><img src="uploads/Untitled_Project_4__1_-removebg-preview.png" alt="CarPro CQuartz" style="height:46px; width:auto; display:block;"></div>
+        <div style="display:flex; align-items:center; justify-content:center; height:96px;"><img src="uploads/Untitled_Project_4__1_-removebg-preview.png" alt="CarPro CQuartz" style="height:46px; width:auto; display:block;"></div>
+        <div style="display:flex; align-items:center; justify-content:center; height:96px; border-left:1px solid var(--md-border); border-right:1px solid var(--md-border);"><img src="uploads/BlackLabel_B_W_1-768x940.png" alt="STEK Black Label Installer" style="height:84px; width:auto; display:block;"></div>
         <div style="display:flex; align-items:center; justify-content:center; height:96px;"><img src="uploads/Dr_ColorChip_Logo-removebg-preview.png" alt="Dr. ColorChip" style="height:52px; width:auto; display:block;"></div>
       </div>
     </div>
@@ -245,12 +287,12 @@
           <span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span>
         </div>
         <div class="svc-copy" style="padding:60px clamp(40px,5.5vw,84px); display:flex; flex-direction:column; justify-content:center;">
-          <span class="svc-cert">STEK Black Label Certified</span>
+          <span class="svc-cert"><img src="uploads/BlackLabel_B_W_1-768x940.png" alt="STEK Black Label">STEK Black Label Certified</span>
           <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:42px; line-height:1.05; letter-spacing:-0.02em; margin:0 0 20px; color:var(--svc-fg);">Paint Protection Film</h3>
-          <p style="font-size:16px; line-height:1.65; color:var(--svc-muted); max-width:46ch; margin:0 0 28px;">Custom, near seamless installs that keep clarity and gloss. A self healing topcoat takes light marks out with heat, and the hydrophobic finish makes washing easier.</p>
+          <div style="font-size:16px; line-height:1.65; color:var(--svc-muted); max-width:46ch; margin:0 0 28px;"><div>STEK Black Label Certified installers are hand-selected and trained directly by STEK for flawless, factory-level installs, a distinction only a small number of shops nationwide have earned.</div><div><br></div>Custom, near seamless installs that keep clarity and gloss. A self healing topcoat takes light marks out with heat, and the hydrophobic finish makes washing easier.</div>
           <div style="display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
-            <a href="#contact" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">&rarr;</span></span></a>
-            <a href="#contact" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
+            <a href="/get-a-quote" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">→</span></span></a>
+            <a href="/paint-protection-film" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
           </div>
         </div>
       </div>
@@ -260,12 +302,12 @@
     <div id="ceramic" class="svc-band" data-reveal="out" data-film="out">
       <div class="md-row" style="display:grid; grid-template-columns:50% 50%; min-height:420px; align-items:stretch; transition:grid-template-columns .55s var(--md-ease);" style-hover="grid-template-columns:43% 57%;">
         <div class="svc-copy" style="padding:60px clamp(40px,5.5vw,84px); display:flex; flex-direction:column; justify-content:center;">
-          <span class="svc-cert">CarPro CQuartz Reserve</span>
+          <span class="svc-cert"><img src="uploads/Untitled_Project_4__1_-removebg-preview.png" alt="CarPro" style="height:34px;">CarPro CQuartz Reserve</span>
           <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:42px; line-height:1.05; letter-spacing:-0.02em; margin:0 0 20px; color:var(--svc-fg);">Ceramic Coatings</h3>
-          <p style="font-size:16px; line-height:1.65; color:var(--svc-muted); max-width:46ch; margin:0 0 28px;">A ceramic coating bonds to your paint for lasting gloss and easy maintenance. We correct the swirls and scratches first, so the finish looks its best before the coating ever goes on.</p>
+          <p style="font-size:16px; line-height:1.65; color:var(--svc-muted); max-width:46ch; margin:0 0 28px;">A ceramic coating bonds to your paint for lasting gloss and easy maintenance. We correct the swirls and scratches first, so the finish looks its best before the coating ever goes on. <br><br>We also offer ceramic coating for wheels, glass, and plastics, giving your whole vehicle the same lasting protection.</p>
           <div style="display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
-            <a href="#contact" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">&rarr;</span></span></a>
-            <a href="#contact" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
+            <a href="/get-a-quote" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">→</span></span></a>
+            <a href="/ceramic-coatings" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
           </div>
         </div>
         <div class="md-media-col md-figure" style="position:relative; overflow:hidden; cursor:pointer;">
@@ -283,12 +325,12 @@
           <span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span>
         </div>
         <div class="svc-copy" style="padding:60px clamp(40px,5.5vw,84px); display:flex; flex-direction:column; justify-content:center;">
-          <span class="svc-cert">STEK Authorized Installer</span>
+          <span class="svc-cert"><img src="uploads/BlackLabel_B_W_1-768x940.png" alt="STEK">STEK Authorized Installer</span>
           <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:42px; line-height:1.05; letter-spacing:-0.02em; margin:0 0 20px; color:var(--svc-fg);">Window Tint</h3>
           <p style="font-size:16px; line-height:1.65; color:var(--svc-muted); max-width:46ch; margin:0 0 28px;">Premium STEK ceramic tint that keeps your cabin cooler, cuts glare, and blocks 99 percent of UV rays. Better comfort on every drive, and lasting protection for your skin and your interior.</p>
           <div style="display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
-            <a href="#contact" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">&rarr;</span></span></a>
-            <a href="#contact" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
+            <a href="/get-a-quote" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">→</span></span></a>
+            <a href="/window-tint" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
           </div>
         </div>
       </div>
@@ -302,8 +344,8 @@
           <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:42px; line-height:1.05; letter-spacing:-0.02em; margin:0 0 20px; color:var(--svc-fg);">Paint Correction</h3>
           <p style="font-size:16px; line-height:1.65; color:var(--svc-muted); max-width:46ch; margin:0 0 28px;">Bring back the depth and clarity your paint had when it was new. Through careful multi stage polishing, we remove swirls and scratches at the source instead of masking them, so the shine is real and it lasts.</p>
           <div style="display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
-            <a href="#contact" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">&rarr;</span></span></a>
-            <a href="#contact" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
+            <a href="/get-a-quote" class="md-cta"><span class="l">Schedule</span><span class="t"><span class="arr">→</span></span></a>
+            <a href="/paint-correction" class="md-link-underline" style="position:relative; font:600 12.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; color:var(--svc-fg); text-decoration:none;">Learn More</a>
           </div>
         </div>
         <div class="md-media-col md-figure" style="position:relative; overflow:hidden; cursor:pointer;">
@@ -328,8 +370,8 @@
         <div style="display:flex; flex-direction:column; align-items:flex-end; gap:20px;">
           <a href="#portfolio" class="md-link-underline" style="position:relative; font-size:13px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--sf-fg); text-decoration:none; padding-bottom:6px;">View Full Portfolio</a>
           <div style="display:flex; align-items:center; gap:10px;">
-            <button onClick="{{ galPrev }}" aria-label="Scroll left" style="width:46px; height:46px; border:1px solid var(--sf-border); background:transparent; color:var(--sf-fg); cursor:pointer; font-size:16px; transition:background .25s var(--md-ease), border-color .25s;">&larr;</button>
-            <button onClick="{{ galNext }}" aria-label="Scroll right" style="width:46px; height:46px; border:none; background:var(--md-red); color:#fff; cursor:pointer; font-size:16px; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">&rarr;</button>
+            <button onClick="{{ galPrev }}" aria-label="Scroll left" style="width:46px; height:46px; border:1px solid var(--sf-border); background:transparent; color:var(--sf-fg); cursor:pointer; font-size:16px; transition:background .25s var(--md-ease), border-color .25s;">←</button>
+            <button onClick="{{ galNext }}" aria-label="Scroll right" style="width:46px; height:46px; border:none; background:var(--md-red); color:#fff; cursor:pointer; font-size:16px; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">→</button>
           </div>
         </div>
       </div>
@@ -373,7 +415,7 @@
         </a>
       </div>
       <div style="display:flex; justify-content:center; margin-top:44px;">
-        <a href="#portfolio" class="md-cta"><span class="l">View Full Portfolio</span><span class="t"><span class="arr">&rarr;</span></span></a>
+        <a href="#portfolio" class="md-cta"><span class="l">View Full Portfolio</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
   </section>
@@ -391,15 +433,15 @@
       <!-- Summary card -->
       <div style="border:1px solid var(--md-border); background:#fff; padding:34px 36px; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap; margin-bottom:22px;">
         <div style="display:flex; align-items:center; gap:28px;">
-          <div style="font-family:var(--md-font-display); font-weight:700; font-size:58px; line-height:.9; color:var(--md-ink);">5.0</div>
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:58px; line-height:.9; color:var(--md-ink);">4.9</div>
           <div>
-            <div style="color:#FFC400; font-size:18px; letter-spacing:3px; margin-bottom:8px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <div style="font-size:14px; color:var(--md-muted);"><span style="color:var(--md-ink); font-weight:600;">Rated on Google</span> &middot; live count from profile</div>
+            <div style="color:#FFC400; font-size:18px; letter-spacing:3px; margin-bottom:8px;">★★★★★</div>
+            <div style="font-size:14px; color:var(--md-muted);"><span style="color:var(--md-ink); font-weight:600;">Rated on Google</span> · 112+ reviews</div>
             <div style="display:flex; align-items:center; gap:8px; margin-top:8px; color:var(--md-muted); font-size:13px;"><span style="width:14px; height:14px; background:var(--md-red); display:inline-block;"></span>STEK &amp; CarPro certified installer in Redmond</div>
           </div>
         </div>
         <div style="display:flex; align-items:center; gap:11px; color:var(--md-muted); font-size:14px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"/></svg>
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg>
           Powered by Google
         </div>
       </div>
@@ -408,34 +450,34 @@
       <div style="position:relative; overflow:hidden;">
         <div class="rev-track" ref="{{ revTrackRef }}">
           <div class="rev-card"><div style="border:1px solid var(--md-border); background:#fff; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#7a4a3a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">P</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Pruitt</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">3 reviews &middot; 2 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"/></svg></div>
-            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#7a4a3a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">P</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Pruitt</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">3 reviews · 2 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
             <p style="font-size:15px; line-height:1.65; color:#2a2a2a; margin:0;">Metropolitan Detail is fantastic to work with and do incredible work. We have taken 4 different vehicles (different makes and models) to Metropolitan Detail and recommend friends and family. They are our first call after buying a vehicle.</p>
           </div></div>
           <div class="rev-card"><div style="border:1px solid var(--md-border); background:#fff; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#3a5a7a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">H</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Harsha Lella</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">Local Guide &middot; a week ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"/></svg></div>
-            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#3a5a7a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">H</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Harsha Lella</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">Local Guide · a week ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
             <p style="font-size:15px; line-height:1.65; color:#2a2a2a; margin:0;">Best in town. I took my brand new car for detailing to another shop and they made a lot of swirls. Took it to Metropolitan and these guys were amazing. They detailed and polished it and removed 90% of the swirls. Folks here are passionate about what they do and that shows in the output.</p>
           </div></div>
           <div class="rev-card"><div style="border:1px solid var(--md-border); background:#fff; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#8a6a5a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">C</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Carlos Cortes</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">2 reviews &middot; 3 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"/></svg></div>
-            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#8a6a5a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">C</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Carlos Cortes</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">2 reviews · 3 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
             <p style="font-size:15px; line-height:1.65; color:#2a2a2a; margin:0;">I recently had my truck fully detailed and ceramic coated by the team at Metropolitan and I couldn't be happier with the results. The attention to detail was amazing and the quality of the ceramic coating really shows. The service was professional and the whole experience was smooth from start to finish.</p>
           </div></div>
           <div class="rev-card"><div style="border:1px solid var(--md-border); background:#fff; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
-            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#a83a5a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">R</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Regan Karlewicz</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">Local Guide &middot; a year ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"/></svg></div>
-            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#a83a5a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">R</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Regan Karlewicz</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">Local Guide · a year ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+            <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
             <p style="font-size:15px; line-height:1.65; color:#2a2a2a; margin:0;">Very skilled team, extremely professional and knowledgeable. Charles answered all of my questions via email and was very flexible with scheduling around delivery delays. They applied front end, roof, rocker panel and wheel well PPF, a ceramic coating and window tints on my new M2. It came out excellent and I would highly recommend bringing your car here.</p>
           </div></div>
         </div>
       </div>
       <div style="display:flex; align-items:center; gap:10px; margin-top:26px;">
-        <button onClick="{{ revPrev }}" aria-label="Previous review" style="width:46px; height:46px; border:1px solid var(--md-border); background:transparent; color:var(--md-ink); cursor:pointer; font-size:16px; transition:background .25s var(--md-ease), border-color .25s;" style-hover="background:#f0f0f0; border-color:var(--md-ink);">&larr;</button>
-        <button onClick="{{ revNext }}" aria-label="Next review" style="width:46px; height:46px; border:none; background:var(--md-red); color:#fff; cursor:pointer; font-size:16px; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">&rarr;</button>
+        <button onClick="{{ revPrev }}" aria-label="Previous review" style="width:46px; height:46px; border:1px solid var(--md-border); background:transparent; color:var(--md-ink); cursor:pointer; font-size:16px; transition:background .25s var(--md-ease), border-color .25s;" style-hover="background:#f0f0f0; border-color:var(--md-ink);">←</button>
+        <button onClick="{{ revNext }}" aria-label="Next review" style="width:46px; height:46px; border:none; background:var(--md-red); color:#fff; cursor:pointer; font-size:16px; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">→</button>
       </div>
 
       <div style="margin-top:34px;">
-        <a href="https://www.google.com/maps/search/?api=1&query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" class="md-cta"><span class="l">Read Google Reviews</span><span class="t"><span class="arr">&rarr;</span></span></a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" class="md-cta"><span class="l">Read Google Reviews</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
   </section>
@@ -485,7 +527,7 @@
   <section data-screen-label="Core Values" style="position:relative; background:#0A0A0A;">
     <div style="position:relative; height:60vh; min-height:440px; overflow:hidden;">
       <img src="uploads/IMG_3608-13.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-      <video id="md-values-video" data-clip data-start="4" data-end="38" autoplay muted loop playsinline preload="auto" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none;">
+      <video id="md-values-video" data-clip="" data-start="4" data-end="38" autoplay="" muted="" loop="" playsinline="" preload="auto" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; pointer-events:none;">
         <source src="https://3cricket.argon-devsite.com/YTDown_YouTube_GENESIS-G70-Protected-with-Ceramics-and-_Media_-JB8ks5Mrgw_001_1080p.mp4" type="video/mp4">
       </video>
       <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.4) 0%, rgba(0,0,0,.2) 42%, rgba(10,10,10,.82) 100%);"></div>
@@ -493,22 +535,22 @@
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; position:relative; z-index:3;">
       <div data-reveal="out" class="md-4col" style="transform:translateY(-48px); margin-bottom:-20px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--md-border-dark); border:1px solid var(--md-border-dark);">
         <div style="background:#0A0A0A; padding:34px 28px 36px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D5001C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M16 4a4 4 0 1 1-8 0M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="12" cy="8" r="4"/></svg>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D5001C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M16 4a4 4 0 1 1-8 0M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path><circle cx="12" cy="8" r="4"></circle></svg>
           <div style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:#fff; margin-bottom:10px;">Skilled Team</div>
           <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.6);">With over 20 years in the industry, our detail specialists deliver exceptional work. From Beetles to Bentleys, your vehicle is in good hands.</div>
         </div>
         <div style="background:#0A0A0A; padding:34px 28px 36px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D5001C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D5001C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"></path></svg>
           <div style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:#fff; margin-bottom:10px;">Quality</div>
           <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.6);">We strive to always be the best. Our goal is not to finish as many cars as possible, but to deliver the best result possible. Quality over quantity.</div>
         </div>
         <div style="background:#0A0A0A; padding:34px 28px 36px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D5001C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M5 11h14v5H5zM5 16v2M19 16v2"/><circle cx="7.5" cy="13.5" r="1"/><circle cx="16.5" cy="13.5" r="1"/></svg>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#D5001C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M5 11h14v5H5zM5 16v2M19 16v2"></path><circle cx="7.5" cy="13.5" r="1"></circle><circle cx="16.5" cy="13.5" r="1"></circle></svg>
           <div style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:#fff; margin-bottom:10px;">Loaner Car</div>
           <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.6);">We understand time is important, which is why we can provide you with one of our free loaner cars. Based on availability.</div>
         </div>
         <div style="background:var(--md-red); padding:34px 28px 36px;">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M12 3l7 2.5v5c0 4.4-3 7.7-7 9.2-4-1.5-7-4.8-7-9.2v-5L12 3z"/><path d="M9 12l2 2 4-4.5"/></svg>
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><path d="M12 3l7 2.5v5c0 4.4-3 7.7-7 9.2-4-1.5-7-4.8-7-9.2v-5L12 3z"></path><path d="M9 12l2 2 4-4.5"></path></svg>
           <div style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:#fff; margin-bottom:10px;">Certified &amp; Insured</div>
           <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.85);">As a STEK Black Label shop and CarPro CQuartz Reserve installer, our work is backed by manufacturer certification and a 10 year PPF warranty. Fully licensed and insured.</div>
         </div>
@@ -525,7 +567,7 @@
       </div>
       <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.05; letter-spacing:var(--md-tracking-tight); color:#fff; margin:0 auto 18px; max-width:20ch;">Drop off, grab a free loaner, drive away protected.</h2>
       <p style="font-size:17px; line-height:1.6; color:rgba(255,255,255,0.7); margin:0 auto 32px; max-width:54ch;">Quality work takes time, and you should not have to wait around for it. We keep a small free fleet, based on availability, so your day keeps moving.</p>
-      <a href="#contact" class="md-cta" style="display:inline-flex;"><span class="l">Ask About Availability</span><span class="t"><span class="arr">&rarr;</span></span></a>
+      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="/get-a-quote" class="md-cta" style="display:inline-flex;"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a><a onClick="{{ openLoaner }}" role="button" tabindex="0" style="display:inline-flex; align-items:center; gap:11px; padding:16px 26px; border:1px solid rgba(255,255,255,0.28); border-radius:2px; color:#fff; text-decoration:none; font-family:var(--md-font-body); font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer; transition:border-color .25s, background .25s;" style-hover="border-color:#fff; background:rgba(255,255,255,0.08);"><span style="display:inline-flex; width:22px; height:22px; border-radius:50%; background:var(--md-red); align-items:center; justify-content:center; flex:none;"><span style="width:0; height:0; border-left:7px solid #fff; border-top:5px solid transparent; border-bottom:5px solid transparent; margin-left:2px;"></span></span>Watch the Loaner Tour</a></div>
       <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:840px; margin:52px auto 0;">
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img src="uploads/APNQkAFSPZWLCsuB9J3BdO_83KGZHoMO0rl2oy-HttFOWa3VeoXQQyReN-_ZBTzzuNR60vlV-CWTWsV4Yxlr2iAyVK476kkdYR7BJkO5KUoYQsKEVYQoZymnw4oGZvpWmD0bjYaXhHHk=s870-k-no.png" alt="Metropolitan Detail loaner car fleet" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img src="uploads/APNQkAH6G3nlaoSi1Jy6PusI0bHq3kjvdT7f7muSzkHVEs_BqKOmzZ7RpNJcmzItAI89AQnO4IkiBZ5vvHq_u4NDmdz5f0JXgIdp3Q8OXyZoEDCRLmohUh0SJNFZVvJHmaegmdzIHtqi=s870-k-no.png" alt="Metropolitan Detail courtesy loaner vehicle" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
@@ -547,7 +589,7 @@
         </div>
         <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:50ch; margin:0 0 18px;">Metropolitan Detail has spent two decades focused on new car protection in Redmond, serving drivers across Bellevue and Seattle. The work is quality over quantity. We take the cars we can do right, and we stand behind what leaves the studio.</p>
         <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:50ch; margin:0 0 30px;">Quality, trust, craftsmanship, and customer service are not slogans here. They show up in how panels are wrapped, how paint is read under light, and how we treat the keys you hand us.</p>
-        <a href="#about" class="md-cta"><span class="l">More About Us</span><span class="t"><span class="arr">&rarr;</span></span></a>
+        <a href="#about" class="md-cta"><span class="l">More About Us</span><span class="t"><span class="arr">→</span></span></a>
       </div>
       <div class="md-media-col md-figure" style="position:relative; cursor:pointer;">
         <div style="position:relative; overflow:hidden; aspect-ratio:4/3.4;">
@@ -565,7 +607,7 @@
         <img src="uploads/md-express-emblem-white-100x100.svg" alt="Metropolitan Detail Express" style="height:60px; width:auto; display:block;">
         <div style="display:flex; align-items:center; gap:12px;">
           <span style="display:inline-block; width:26px; height:2px; background:var(--md-red);"></span>
-          <span style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55);">A Separate Location</span>
+          <span style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55);">LOOKING FOR A HAND WASH?</span>
         </div>
       </div>
       <div class="md-3col" style="display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:40px; align-items:start;">
@@ -574,19 +616,19 @@
           <div style="font-family:var(--md-font-display); font-weight:600; font-size:21px; color:#fff; margin-bottom:14px;">Metropolitan Detail Express</div>
           <p style="font-size:14.5px; line-height:1.7; color:rgba(255,255,255,0.65); margin:0 0 22px; max-width:38ch;">Keep your car looking sharp between details at our express hand wash center in Redmond Town Center. Schedule online, hand off your keys, and enjoy the shops and restaurants while we take care of the wash.</p>
           <div style="display:flex; align-items:flex-start; gap:11px; color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.6;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:3px;"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:3px;"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
             <span>16501 NE 76th St<br>Redmond, WA 98052</span>
           </div>
           <div style="display:flex; gap:14px; margin-top:26px; flex-wrap:wrap;">
-            <a href="https://www.metropolitandetailexpress.com/" target="_blank" rel="noopener" class="md-cta"><span class="l">Visit MD Express</span><span class="t"><span class="arr">&rarr;</span></span></a>
+            <a href="https://www.metropolitandetailexpress.com/" target="_blank" rel="noopener" class="md-cta"><span class="l">Visit MD Express</span><span class="t"><span class="arr">→</span></span></a>
           </div>
         </div>
         <div style="border-left:1px solid var(--md-border-dark); padding-left:40px;">
           <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
             <span style="font-weight:600; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Hours of Operation</span>
           </div>
-          <div style="display:flex; justify-content:space-between; font-size:14.5px; color:rgba(255,255,255,0.75); padding:12px 0; border-bottom:1px solid var(--md-border-dark);"><span>Monday &ndash; Friday</span><span style="font-weight:600; color:#fff;">8am &ndash; 5pm</span></div>
+          <div style="display:flex; justify-content:space-between; font-size:14.5px; color:rgba(255,255,255,0.75); padding:12px 0; border-bottom:1px solid var(--md-border-dark);"><span>Monday – Friday</span><span style="font-weight:600; color:#fff;">8am – 5pm</span></div>
           <div style="display:flex; justify-content:space-between; font-size:14.5px; color:rgba(255,255,255,0.75); padding:12px 0;"><span>Saturday &amp; Sunday</span><span style="color:rgba(255,255,255,0.5);">Closed</span></div>
         </div>
       </div>
@@ -603,7 +645,7 @@
       <div class="md-cta-panel" style="position:absolute; right:clamp(40px,7vw,108px); top:50%; transform:translateY(-50%); background:#0A0A0A; border:1px solid var(--md-border-dark); padding:clamp(34px,4vw,50px); max-width:440px;">
         <div style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:16px;">Built on two decades of trust</div>
         <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(28px,3.4vw,36px); line-height:1.08; letter-spacing:-0.02em; color:#fff; margin:0 0 26px;">Bring us your car. We’ll take it from here.</h2>
-        <a href="#contact" class="md-cta lg"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">&rarr;</span></span></a>
+        <a href="/get-a-quote" class="md-cta lg"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
   </section>
@@ -611,30 +653,38 @@
   <!-- ============ FOOTER ============ -->
   <footer id="contact" data-reveal="out" style="background:var(--md-ink); border-top:1px solid var(--md-border-dark); padding:72px 0 36px;">
     <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr 1.2fr 1.2fr; gap:40px;">
-      <div><div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:20px;">Services</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="#ppf" class="foot-link">Paint Protection Film</a><a href="#ceramic" class="foot-link">Ceramic Coatings</a><a href="#tint" class="foot-link">Window Tint</a><a href="#correction" class="foot-link">Paint Correction</a></div></div>
-      <div><div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:20px;">Company</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="#about" class="foot-link">About</a><a href="#portfolio" class="foot-link">Portfolio</a><a href="#watch" class="foot-link">Watch</a><a href="#contact" class="foot-link">Contact</a></div></div>
-      <div><div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:20px;">Contact</div><div style="display:flex; flex-direction:column; gap:14px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link" style="display:flex; align-items:flex-start; gap:11px; line-height:1.5;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span>8539 152nd Ave NE<br>Redmond, WA 98052</span></a><a href="tel:+14252336068" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--md-red)" style="flex:none;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg><span>(425) 233-6068</span></a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg><span>info@metropolitandetail.com</span></a><div style="display:flex; align-items:flex-start; gap:11px; font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.5); margin-top:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Mon&ndash;Fri 8:00 AM &ndash; 5:00 PM<br>Sat &amp; Sun Closed</span></div></div></div>
-      <div><div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom:20px;">Find Us</div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:200px; border:0; display:block;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
+      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Services</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/paint-protection-film" class="foot-link">DYNOshield</a><a href="/dynomatte" class="foot-link">DYNOmatte</a><a href="/color-change" class="foot-link">Color Change</a></div></div>
+      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Company</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" class="foot-link">Blog</a><a href="/faq" class="foot-link">FAQ</a><a href="/contact" class="foot-link">Contact</a><a href="/get-a-quote" class="foot-link">Get a Quote</a></div></div>
+      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Contact</div><div style="display:flex; flex-direction:column; gap:14px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link" style="display:flex; align-items:flex-start; gap:11px; line-height:1.5;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>8539 152nd Ave NE<br>Redmond, WA 98052</span></a><a href="tel:+14252336068" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--md-red)" style="flex:none;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg><span>(425) 233-6068</span></a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 7l8 6 8-6"></path></svg><span>info@metropolitandetail.com</span></a><div style="display:flex; align-items:flex-start; gap:11px; font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.5); margin-top:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Mon–Fri 8:00 AM – 5:00 PM<br>Sat &amp; Sun Closed</span></div></div></div>
+      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Find Us</div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:200px; border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
     </div>
     <div style="max-width:var(--md-maxw); margin:56px auto 0; padding:0 40px;">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:30px; flex-wrap:wrap; border-top:1px solid var(--md-border-dark); padding-top:36px;">
-        <div style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(52px,8vw,104px); line-height:.86; letter-spacing:-0.03em; color:#fff;">Metropolitan<span style="color:var(--md-red);">.</span></div>
+      <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-script-white.svg" alt="Metropolitan Detail" style="height: clamp(34px,5vw,58px); width: 350px; display: block"></a>
         <div style="display:flex; flex-direction:column; align-items:flex-end; gap:18px;">
-          <a href="https://www.google.com/maps/search/?api=1&query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#fff; border-radius:2px; padding:9px 16px; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"/><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"/><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"/></svg><span style="color:#FFC400; font-size:14px; letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="width:1px; height:14px; background:#e0e0e0;"></span><span style="font-size:12.5px; font-weight:600; color:#0A0A0A; white-space:nowrap;">Reviewed on Google</span></a>
-          <div style="display:flex; gap:12px;"><a href="https://www.facebook.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Facebook" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.5-1.5h1.6V3.6c-.28-.04-1.24-.12-2.36-.12-2.33 0-3.93 1.42-3.93 4.04v2.25H7.5V13h2.81v8h3.19z"/></svg></a><a href="https://www.instagram.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Instagram" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a><a href="https://www.youtube.com/@metropolitandetail" target="_blank" rel="noopener" aria-label="YouTube" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M22 8.2a2.6 2.6 0 0 0-1.8-1.8C18.6 6 12 6 12 6s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.7 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.8C5.4 18 12 18 12 18s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22.3 12 27 27 0 0 0 22 8.2zM10 15V9l5.2 3L10 15z"/></svg></a><a href="https://www.yelp.com/biz/metropolitan-detail-redmond" target="_blank" rel="noopener" aria-label="Yelp" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12.3 2.1c-1.6.4-2 .8-2 2.4 0 .5.1 3.6.2 6.9.1 4 .2 6.2.4 6.6.3.6 1.1.8 1.8.4.3-.1 1.6-1.6 3-3.4 2.9-3.7 3-3.9 2.2-4.9-.3-.4-1.3-.8-4.3-1.9-4.4-1.6-4.6-1.6-5.5-1.3zM4.8 11.3c-.7.5-.7 1.5-.1 2.1.3.3 1.3.7 3 1.2 2.6.8 2.9.8 3.4.4.7-.6.6-1.6-.3-2.2-1-.7-4.9-2.2-5.4-2-.2 0-.5.3-.6.5zM12.6 16.6c-.6.3-.7.7-.5 3.1.2 2.5.3 2.8.9 3.1.7.3 1.2.1 1.7-.8 1.3-2.2 1.5-3 1-3.6-.5-.7-2.4-1.4-3.1-1.2zM18.7 15.2c-.4.1-1.4.9-2.6 2-1.6 1.5-1.8 1.8-1.6 2.4.3.8 1 1 2 .6 2.4-.8 4-1.6 4.2-2.1.4-.9-.4-3-1.3-3-.2 0-.5 0-.7.1z"/></svg></a></div>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#fff; border-radius:2px; padding:9px 16px; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:14px; letter-spacing:1px;">★★★★★</span><span style="width:1px; height:14px; background:#e0e0e0;"></span><span style="font-size:12.5px; font-weight:600; color:#0A0A0A; white-space:nowrap;">4.9 · 112+ reviews</span></a>
+          <div style="display:flex; gap:12px;"><a href="https://www.facebook.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Facebook" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.5-1.5h1.6V3.6c-.28-.04-1.24-.12-2.36-.12-2.33 0-3.93 1.42-3.93 4.04v2.25H7.5V13h2.81v8h3.19z"></path></svg></a><a href="https://www.instagram.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Instagram" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></a><a href="https://www.youtube.com/@metropolitandetail" target="_blank" rel="noopener" aria-label="YouTube" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M22 8.2a2.6 2.6 0 0 0-1.8-1.8C18.6 6 12 6 12 6s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.7 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.8C5.4 18 12 18 12 18s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22.3 12 27 27 0 0 0 22 8.2zM10 15V9l5.2 3L10 15z"></path></svg></a><a href="https://www.yelp.com/biz/metropolitan-detail-redmond" target="_blank" rel="noopener" aria-label="Yelp" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12.3 2.1c-1.6.4-2 .8-2 2.4 0 .5.1 3.6.2 6.9.1 4 .2 6.2.4 6.6.3.6 1.1.8 1.8.4.3-.1 1.6-1.6 3-3.4 2.9-3.7 3-3.9 2.2-4.9-.3-.4-1.3-.8-4.3-1.9-4.4-1.6-4.6-1.6-5.5-1.3zM4.8 11.3c-.7.5-.7 1.5-.1 2.1.3.3 1.3.7 3 1.2 2.6.8 2.9.8 3.4.4.7-.6.6-1.6-.3-2.2-1-.7-4.9-2.2-5.4-2-.2 0-.5.3-.6.5zM12.6 16.6c-.6.3-.7.7-.5 3.1.2 2.5.3 2.8.9 3.1.7.3 1.2.1 1.7-.8 1.3-2.2 1.5-3 1-3.6-.5-.7-2.4-1.4-3.1-1.2zM18.7 15.2c-.4.1-1.4.9-2.6 2-1.6 1.5-1.8 1.8-1.6 2.4.3.8 1 1 2 .6 2.4-.8 4-1.6 4.2-2.1.4-.9-.4-3-1.3-3-.2 0-.5 0-.7.1z"></path></svg></a></div>
         </div>
       </div>
     </div>
     <div style="max-width:var(--md-maxw); margin:34px auto 0; padding:24px 40px 0; border-top:1px solid var(--md-border-dark); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
-      <span style="font-size:12.5px; color:rgba(255,255,255,0.45);">&copy; 2026 Metropolitan Detail. Celebrating 20 years.</span>
+      <span style="font-size:12.5px; color:rgba(255,255,255,0.45);">© 2026 Metropolitan Detail. Celebrating 20 years.</span>
     </div>
   </footer>
+
+  <!-- ============ LOANER VIDEO MODAL ============ -->
+  <div id="loaner-video" onClick="{{ closeLoaner }}" style="display:none; position:fixed; inset:0; z-index:200; background:rgba(0,0,0,0.86); align-items:center; justify-content:center; padding:24px;">
+    <div onClick="{{ stopProp }}" style="position:relative; width:100%; max-width:960px; aspect-ratio:16/9;">
+      <button onClick="{{ closeLoaner }}" aria-label="Close video" style="position:absolute; top:-46px; right:0; width:40px; height:40px; background:transparent; border:1px solid rgba(255,255,255,0.4); border-radius:2px; color:#fff; font-size:22px; line-height:1; cursor:pointer;">×</button>
+      <div data-frame style="position:absolute; inset:0; background:#000; border-radius:8px; overflow:hidden;"></div>
+    </div>
+  </div>
 
   <!-- ============ STICKY MOBILE BOTTOM BAR ============ -->
   <div class="md-bottombar" style="position:fixed; bottom:0; left:0; width:100%; z-index:80; border-top:1px solid var(--md-border-dark); background:rgba(10,10,10,0.96); backdrop-filter:blur(8px);">
     <div style="display:flex;">
-      <a href="tel:+14252336068" style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:16px; text-decoration:none; color:#fff; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; border-right:1px solid var(--md-border-dark);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"/></svg>Call Now</a>
-      <a href="#contact" style="flex:1; display:flex; align-items:center; justify-content:center; padding:16px; text-decoration:none; color:#fff; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; background:var(--md-red);">Schedule</a>
+      <a href="tel:+14252336068" style="flex:1; display:flex; align-items:center; justify-content:center; gap:8px; padding:16px; text-decoration:none; color:#fff; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; border-right:1px solid var(--md-border-dark);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg>Call Now</a>
+      <a href="/get-a-quote" style="flex:1; display:flex; align-items:center; justify-content:center; padding:16px; text-decoration:none; color:#fff; font-size:13px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; background:var(--md-red);">Schedule</a>
     </div>
   </div>
 
@@ -676,6 +726,9 @@ class Component extends DCLogic {
       menuOpen: this.state.menuOpen,
       openMenu: () => this.setState({ menuOpen: true }),
       closeMenu: () => this.setState({ menuOpen: false }),
+      openLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML='<iframe title="Free loaner cars at Metropolitan Detail" src="https://www.youtube-nocookie.com/embed/sA5xTSn3Om0?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>'; m.style.display='flex'; },
+      closeLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML=''; m.style.display='none'; },
+      stopProp: (e) => { if(e && e.stopPropagation) e.stopPropagation(); },
     };
   }
 
