@@ -254,7 +254,7 @@
     </div>
     <div class="md-row" style="max-width:var(--md-maxw); margin:64px auto 0; padding:0 40px; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
       <div><h3 style="font-family:var(--md-font-display); font-weight:600; font-size:28px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 16px; color:var(--sf-fg);">Protect factory matte paint</h3><p style="font-size:16px; line-height:1.7; color:var(--sf-muted); max-width:48ch; margin:0 0 26px;">Matte paint is genuinely difficult to own. You cannot polish it, you cannot wax it, and one careless wash can leave a shiny patch that will not come out. DYNOmatte protects it properly, and because the film's texture matches factory matte, we can cover just the front of the car with no visible line where the film ends and your paint begins. That is not something you can do with most films, and it is why matte owners come to us.</p><div><a href="/get-a-quote" class="md-cta"><span class="l">Request a Quote</span><span class="t"><span class="arr">→</span></span></a></div></div>
-      <div class="md-media-col md-figure" style="position:relative; overflow:hidden; border-radius:14px; aspect-ratio:4/3.2; cursor:pointer;"><img class="md-img" src="uploads/Tesla00010.jpeg" alt="Factory matte paint protected with DYNOmatte" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .8s var(--md-ease);"><span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span></div>
+      <div class="md-media-col md-figure" style="position:relative; overflow:hidden; border-radius:14px; aspect-ratio:4/3.2; cursor:pointer;"><img class="md-img" src="uploads/IMG_6705-4-ce6e7108.jpg" alt="Factory matte paint protected with DYNOmatte" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .8s var(--md-ease);"><span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span></div>
     </div>    </section></div>
   
 
@@ -337,7 +337,7 @@
           <ul class="svc-bullets"><li>Every painted panel covered</li><li>Custom, near seamless install</li></ul>
           <div><a href="/get-a-quote" class="md-cta"><span class="l">Request an Estimate</span><span class="t"><span class="arr">→</span></span></a></div>
         </div>
-        <div class="md-media-col md-figure" style="position:relative; overflow:hidden; cursor:pointer; display:flex; align-items:center; justify-content:center;"><img class="md-img" src="uploads/Tesla00010-48534c3d.jpeg" alt="Full body satin DYNOmatte finish on a matte black Tesla" style="display:block; width:100%; height:auto; min-height:560px; max-height:560px; object-fit:cover; border-radius:10px; transition:transform .8s var(--md-ease);"><span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span></div>
+        <div class="md-media-col md-figure" style="position:relative; overflow:hidden; cursor:pointer; display:flex; align-items:center; justify-content:center;"><img class="md-img" src="uploads/Mercedes00012-dc8c0878.jpeg" alt="Full body satin DYNOmatte finish on a matte gray Mercedes-AMG SL" style="display:block; width:100%; height:auto; min-height:560px; max-height:560px; object-fit:cover; border-radius:10px; transition:transform .8s var(--md-ease);"><span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span></div>
       </div>
     </div>
   </section>
@@ -679,14 +679,14 @@ class Component extends DCLogic {
       menuOpen: this.state.menuOpen,
       openMenu: () => this.setState({ menuOpen: true }),
       closeMenu: () => this.setState({ menuOpen: false }),
-      openLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML='<iframe title="Free loaner cars at Metropolitan Detail" src="https://www.youtube-nocookie.com/embed/sA5xTSn3Om0?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>'; m.style.display='flex'; },
+      openLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML='<iframe title="Free loaner cars at Metropolitan Detail" src="https://www.youtube-nocookie.com/embed/sA5xTSn3Om0?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>'; m.style.display='flex'; },
       closeLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML=''; m.style.display='none'; },
       stopProp: (e) => { if(e && e.stopPropagation) e.stopPropagation(); },
       playYt: (e) => {
         const card = e.currentTarget;
         const vid = card.getAttribute('data-vid');
         if (!vid) return;
-        card.innerHTML = '<iframe title="PPF installation video" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>';
+        card.innerHTML = '<iframe title="PPF installation video" src="https://www.youtube-nocookie.com/embed/' + vid + '?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>';
       },
     };
   }
