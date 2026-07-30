@@ -129,7 +129,7 @@
   .nav-sub:hover .nav-submenu{ opacity:1; visibility:visible; transform:none; }
   .md-nav-desktop{ min-width:0; }
   @media (max-width:1240px){ .hdr-phone{ display:none !important; } .md-nav-desktop{ gap:0; } .md-nav-desktop .nav-link{ padding:8px 6px; font-size:12.5px; } }
-  @media (max-width:1120px){ .md-nav-desktop .nav-link{ padding:6px 4px; font-size:11px; letter-spacing:0; } .hdr-logo{ height:16px !important; } }
+  @media (max-width:1120px){ .md-nav-desktop .nav-link{ padding:6px 4px; font-size:11px; letter-spacing:0; } .hdr-logo{ height:40px !important; } }
 </style>
 </helmet>
 
@@ -149,15 +149,27 @@
       -->
       <button class="md-hamburger" onClick="{{ openMenu }}" aria-label="Open menu" style="grid-column:1; justify-self:start; align-items:center; justify-content:center; width:44px; height:44px; background:transparent; border:none; cursor:pointer; padding:0; color:#fff;"><span style="display:flex; flex-direction:column; gap:5px;"><span style="width:24px; height:2px; background:#fff; border-radius:2px;"></span><span style="width:24px; height:2px; background:#fff; border-radius:2px;"></span><span style="width:24px; height:2px; background:#fff; border-radius:2px;"></span></span></button>
       <a href="/" aria-label="Metropolitan Detail home" style="display:flex; align-items:center; justify-self:center; grid-column:2;">
-        <img src="uploads/md-script-white.svg" alt="Metropolitan Detail" class="hdr-logo" style="height:20px; width:auto; display:block;">
+        <img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" class="hdr-logo" style="height:52px; width:auto; display:block;">
       </a>
       <nav class="md-nav-desktop" aria-label="Primary" style="grid-column:1; justify-self:start;">
         <div class="nav-item">
-          <span class="nav-link">Paint Protection Film <span class="nav-caret"></span></span>
+          <span class="nav-link">Services <span class="nav-caret"></span></span>
           <div class="nav-menu">
-            <a href="/paint-protection-film">DYNOshield</a>
-            <a href="/dynomatte">DYNOmatte</a>
-            <a href="/color-change">Color Change</a>
+            <div class="nav-sub">
+              <a href="/paint-protection-film" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Paint Protection Film <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/paint-protection-film">DYNOshield</a>
+                <a href="/dynomatte">DYNOmatte</a>
+                <a href="/color-change">Color Change</a>
+                <a href="/ev-protection">EV Protection</a>
+              </div>
+            </div>
+            <a href="/ceramic-coatings">Ceramic Coatings</a>
+            <a href="/cquartz-sic">CQuartz SiC</a>
+            <a href="/window-tint">Window Tint</a>
+            <a href="/paint-correction">Paint Correction</a>
+            <a href="/exterior-detailing">Exterior Detailing</a>
+            <a href="/interior-detailing">Interior Detailing</a>
           </div>
         </div>
         <div class="nav-item">
@@ -167,6 +179,7 @@
             <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" style="white-space:normal; max-width:320px;">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
           </div>
         </div>
+        <a href="/about" class="nav-link">About</a>
         <a href="/faq" class="nav-link">FAQ</a>
         <a href="/contact" class="nav-link">Contact</a>
         <a href="/get-a-quote" class="nav-link">Get a Quote</a>
@@ -182,17 +195,26 @@
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
     <div style="position:fixed; inset:0; z-index:100; background:var(--md-ink); display:flex; flex-direction:column; padding:26px 28px;">
       <div style="display:flex; align-items:center; justify-content:space-between; height:48px; margin-bottom:42px;">
-        <img src="uploads/md-script-white.svg" alt="Metropolitan Detail" style="height:22px;">
+        <img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height:56px;">
         <button onClick="{{ closeMenu }}" aria-label="Close menu" style="width:44px; height:44px; background:transparent; border:1px solid var(--md-border-dark); border-radius:2px; color:#fff; font-size:22px; cursor:pointer;">×</button>
       </div>
-      <nav style="display:flex; flex-direction:column; gap:2px;">
-        <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:6px 0 6px;">Paint Protection Film</div>
-        <a href="/paint-protection-film" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">DYNOshield</a>
-        <a href="/dynomatte" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">DYNOmatte</a>
-        <a href="/color-change" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Color Change</a>
+      <nav style="display:flex; flex-direction:column; gap:2px; overflow-y:auto; min-height:0;">
+        <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:6px 0 6px;">Services</div>
+        <a href="/paint-protection-film" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Paint Protection Film</a>
+        <a href="/paint-protection-film" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOshield</a>
+        <a href="/dynomatte" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOmatte</a>
+        <a href="/color-change" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Color Change</a>
+        <a href="/ev-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">EV Protection</a>
+        <a href="/ceramic-coatings" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Ceramic Coatings</a>
+        <a href="/cquartz-sic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">CQuartz SiC</a>
+        <a href="/window-tint" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Window Tint</a>
+        <a href="/paint-correction" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Paint Correction</a>
+        <a href="/exterior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Exterior Detailing</a>
+        <a href="/interior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Interior Detailing</a>
         <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:22px 0 6px;">Explore</div>
         <a href="/blog" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Blog</a>
         <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
+        <a href="/about" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">About</a>
         <a href="/faq" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">FAQ</a>
         <a href="/contact" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Contact</a>
         <a href="/get-a-quote" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Get a Quote</a>
@@ -340,7 +362,7 @@
     </div>
     <div style="max-width:var(--md-maxw); margin:56px auto 0; padding:0 40px;">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:30px; flex-wrap:wrap; border-top:1px solid var(--md-border-dark); padding-top:36px;">
-        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-script-white.svg" alt="Metropolitan Detail" style="height: clamp(34px,5vw,58px); width: 350px; display: block"></a>
+        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height: clamp(72px,8vw,120px); width: 350px; display: block"></a>
         <div style="display:flex; flex-direction:column; align-items:flex-end; gap:18px;">
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#fff; border-radius:2px; padding:9px 16px; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:14px; letter-spacing:1px;">★★★★★</span><span style="width:1px; height:14px; background:#e0e0e0;"></span><span style="font-size:12.5px; font-weight:600; color:#0A0A0A; white-space:nowrap;">4.9 · 112+ reviews</span></a>
           <div style="display:flex; gap:12px;"><a href="https://www.facebook.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Facebook" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.5-1.5h1.6V3.6c-.28-.04-1.24-.12-2.36-.12-2.33 0-3.93 1.42-3.93 4.04v2.25H7.5V13h2.81v8h3.19z"></path></svg></a><a href="https://www.instagram.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Instagram" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></a><a href="https://www.youtube.com/@metropolitandetail" target="_blank" rel="noopener" aria-label="YouTube" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M22 8.2a2.6 2.6 0 0 0-1.8-1.8C18.6 6 12 6 12 6s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.7 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.8C5.4 18 12 18 12 18s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22.3 12 27 27 0 0 0 22 8.2zM10 15V9l5.2 3L10 15z"></path></svg></a><a href="https://www.yelp.com/biz/metropolitan-detail-redmond" target="_blank" rel="noopener" aria-label="Yelp" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12.3 2.1c-1.6.4-2 .8-2 2.4 0 .5.1 3.6.2 6.9.1 4 .2 6.2.4 6.6.3.6 1.1.8 1.8.4.3-.1 1.6-1.6 3-3.4 2.9-3.7 3-3.9 2.2-4.9-.3-.4-1.3-.8-4.3-1.9-4.4-1.6-4.6-1.6-5.5-1.3zM4.8 11.3c-.7.5-.7 1.5-.1 2.1.3.3 1.3.7 3 1.2 2.6.8 2.9.8 3.4.4.7-.6.6-1.6-.3-2.2-1-.7-4.9-2.2-5.4-2-.2 0-.5.3-.6.5zM12.6 16.6c-.6.3-.7.7-.5 3.1.2 2.5.3 2.8.9 3.1.7.3 1.2.1 1.7-.8 1.3-2.2 1.5-3 1-3.6-.5-.7-2.4-1.4-3.1-1.2zM18.7 15.2c-.4.1-1.4.9-2.6 2-1.6 1.5-1.8 1.8-1.6 2.4.3.8 1 1 2 .6 2.4-.8 4-1.6 4.2-2.1.4-.9-.4-3-1.3-3-.2 0-.5 0-.7.1z"></path></svg></a></div>
@@ -348,7 +370,7 @@
       </div>
     </div>
     <div style="max-width:var(--md-maxw); margin:34px auto 0; padding:24px 40px 0; border-top:1px solid var(--md-border-dark); display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;">
-      <span style="font-size:12.5px; color:rgba(255,255,255,0.45);">© 2026 Metropolitan Detail. Celebrating 20 years.</span>
+      <span style="font-size:12.5px; color:rgba(255,255,255,0.45);">© 2026 Metropolitan Detail. Celebrating 30 years.</span>
     </div>
   </footer>
 
