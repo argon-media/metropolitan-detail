@@ -632,7 +632,9 @@ class Component extends DCLogic {
       ['bmw330', 'BMW 330i', 'uploads/BMW 330i', 10],
       ['mustang', 'Ford Mustang GT', null, 5, (i) => 'uploads/Ford Mustang GT Tint (' + i + ').jpg'],
       ['typer', 'Honda Civic Type R', 'uploads/Civic_Type_R', 15],
+      ['hyundai', 'Hyundai', null, 7, (i) => 'uploads/' + ['IMG_8029-1','IMG_8031-2','IMG_8042-3','IMG_8045-4','IMG_8049-5','IMG_8050-6','IMG_8052-7'][i - 1] + '.jpg'],
       ['taycan', 'Porsche Taycan', null, 1, () => 'uploads/Porsche Taycan Tint.jpg'],
+      ['milktruck', 'Vintage Milk Truck', null, 4, (i) => 'uploads/' + ['IMG_2487-1','IMG_2493-1','IMG_2494-2-34b844e0','IMG_2497-3'][i - 1] + '.jpg'],
     ];
     const byKey = {}; const order = [];
     specs.forEach((s) => {

@@ -375,17 +375,28 @@
       </div>
       <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 14px; max-width:18ch; color:var(--sf-fg);">Recent interior work.</h2>
       <p style="font-size:14.5px; line-height:1.6; color:var(--sf-muted); margin:0 0 30px; max-width:60ch;">A sample of recent interior work.</p>
-<div ref="{{ galGridRef }}" style="display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:1fr; gap:14px;">
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_6062-Enhanced-NR-1.jpg" alt="Restored classic interior with tan woven leather seats" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_6063-Enhanced-NR-2.jpg" alt="Detailed center console and tan leather interior" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_6069-Enhanced-NR-3.jpg" alt="Woven leather seats after interior detailing" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_3287-1.jpg" alt="Honda Civic Type R red interior after detailing" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_3318-1.jpg" alt="Porsche Spyder red leather interior detailed" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_3323-1.jpg" alt="Porsche Spyder cockpit and steering wheel after detailing" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-4.jpg" alt="Aston Martin DB4 blue leather interior after detailing" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-5.jpg" alt="Aston Martin DB4 wooden shift knob detail" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-6.jpg" alt="Aston Martin DB4 dashboard medallion detail" style="aspect-ratio:4/3;"></div>
-        <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-7.jpg" alt="Aston Martin DB4 dashboard and wood-rim steering wheel" style="aspect-ratio:4/3;"></div>
+<div ref="{{ galTabsRef }}" style="display:flex; flex-wrap:wrap; gap:10px; margin:0 0 26px;">
+        <button type="button" class="gal-tab active" data-filter="all" onClick="{{ galFilter }}">All</button>
+        <button type="button" class="gal-tab" data-filter="astonmartin" onClick="{{ galFilter }}">Aston Martin DB4</button>
+        <button type="button" class="gal-tab" data-filter="classic" onClick="{{ galFilter }}">Classic Restoration</button>
+        <button type="button" class="gal-tab" data-filter="honda" onClick="{{ galFilter }}">Honda Civic Type R</button>
+        <button type="button" class="gal-tab" data-filter="amggt63" onClick="{{ galFilter }}">Mercedes AMG GT 63</button>
+        <button type="button" class="gal-tab" data-filter="porsche" onClick="{{ galFilter }}">Porsche Spyder</button>
+      </div>
+      <div ref="{{ galGridRef }}" style="display:grid; grid-template-columns:repeat(3,1fr); grid-auto-rows:1fr; gap:14px;">
+        <div class="gal-item md-figure" data-brand="classic" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_6062-Enhanced-NR-1.jpg" alt="Restored classic interior with tan woven leather seats" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="classic" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_6063-Enhanced-NR-2.jpg" alt="Detailed center console and tan leather interior" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="classic" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_6069-Enhanced-NR-3.jpg" alt="Woven leather seats after interior detailing" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="honda" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_3287-1.jpg" alt="Honda Civic Type R red interior after detailing" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="porsche" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_3318-1.jpg" alt="Porsche Spyder red leather interior detailed" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="porsche" style="border-radius:8px;"><img class="md-img" src="uploads/IMG_3323-1.jpg" alt="Porsche Spyder cockpit and steering wheel after detailing" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="astonmartin" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-4.jpg" alt="Aston Martin DB4 blue leather interior after detailing" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="astonmartin" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-5.jpg" alt="Aston Martin DB4 wooden shift knob detail" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="astonmartin" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-6.jpg" alt="Aston Martin DB4 dashboard medallion detail" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="astonmartin" style="border-radius:8px;"><img class="md-img" src="uploads/Aston Martin DB4-7.jpg" alt="Aston Martin DB4 dashboard and wood-rim steering wheel" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="amggt63" style="border-radius:8px;"><img class="md-img" src="uploads/Mercedes AMG GT63-15.jpg" alt="Mercedes AMG GT 63 white leather cockpit after interior detailing" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="amggt63" style="border-radius:8px;"><img class="md-img" src="uploads/Mercedes AMG GT63-16.jpg" alt="Mercedes AMG GT 63 door panel and ambient lighting detailed" style="aspect-ratio:4/3;"></div>
+        <div class="gal-item md-figure" data-brand="amggt63" style="border-radius:8px;"><img class="md-img" src="uploads/Mercedes AMG GT63-17.jpg" alt="Mercedes AMG GT 63 diamond-stitched white seats after detailing" style="aspect-ratio:4/3;"></div>
       </div>
     </div>
   </section>

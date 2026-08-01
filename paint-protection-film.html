@@ -804,26 +804,47 @@ class Component extends DCLogic {
     const pad = (n) => String(n).padStart(5, '0');
     const specs = [
       ['acura','Acura','uploads/Acura',3],
+      ['nsx','Acura NSX',null,0],
       ['audi','Audi','uploads/audi',12],
+      ['rs6','Audi RS6 Avant',null,0],
       ['aston','Aston Martin','uploads/Aston Martin',6],
       ['bmw','BMW','uploads/BMW',31],
+      ['bmwm2','BMW M2',null,0],
+      ['m340i','BMW M340i',null,0],
       ['chevy','Chevy','uploads/Chevy',11],
+      ['c7','Corvette C7',null,0],
       ['dodge','Dodge','uploads/Dodge',3],
       ['ferrari','Ferrari','uploads/Ferrari',11],
+      ['cilindri','Ferrari 12 Cilindri',null,0],
       ['ford','Ford','uploads/Ford',9],
+      ['darkhorse','Ford Mustang Dark Horse',null,0],
       ['hyundai','Hyundai','uploads/Hyundai',2],
       ['kia','KIA',null,0],
+      ['lambo','Lamborghini',null,0],
       ['lexus','Lexus','uploads/Lexus',9],
       ['lucid','Lucid','uploads/Lucid',2],
       ['maserati','Maserati','uploads/Maserati',4],
       ['mazda','Mazda','uploads/Mazda',4],
+      ['miata','Mazda Miata MX-5',null,0],
       ['mercedes','Mercedes','uploads/Mercedes',5],
+      ['gt63','Mercedes AMG GT 63',null,0],
+      ['gwagon','Mercedes G-Wagon',null,0],
       ['porsche','Porsche','uploads/porsche',98],
+      ['c4gts','Porsche 911 Carrera 4GTS',null,0],
+      ['dakar','Porsche Dakar',null,0],
+      ['dakaracid','Porsche Dakar Acid Green',null,0],
+      ['dakarmartini','Porsche Dakar Martini',null,0],
+      ['gt3chroma','Porsche GT3 Chromaflare',null,0],
+      ['gt3viola','Porsche GT3 Touring Violablau',null,0],
+      ['spyderrs','Porsche Spyder RS',null,0],
       ['rivian','Rivian','uploads/Rivian',4],
+      ['r1s','Rivian R1S',null,0],
       ['subaru','Subaru','uploads/Subaru',3],
       ['suzuki','Suzuki','uploads/suzuki',4],
       ['tesla','Tesla','uploads/tesla',4],
       ['toyota','Toyota','uploads/toyota',13],
+      ['landcruiser','Toyota Land Cruiser',null,0],
+      ['supra','Toyota Supra',null,0],
     ];
     const byKey = {}; const order = [];
     specs.forEach((s) => {
@@ -831,8 +852,34 @@ class Component extends DCLogic {
       const items = [];
       for (let i = 1; i <= count; i++) items.push({ src: prefix + pad(i) + '.jpeg', alt: label + ' paint protection film at Metropolitan Detail' });
       if (key === 'kia') items.push({ src: 'uploads/kia.jpeg', alt: 'KIA paint protection film at Metropolitan Detail' });
+      if (key === 'aston') ['IMG_2905-1-c29dabd3','IMG_2917-3'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Aston Martin paint protection film at Metropolitan Detail' }));
+      if (key === 'dodge') ['1928_dodge_truck (1)','1928_dodge_truck (2)','1928_dodge_truck (3)','1928_dodge_truck_tint'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Dodge paint protection film at Metropolitan Detail' }));
+      if (key === 'ferrari') items.push({ src: 'uploads/IMG_3068-1.jpg', alt: 'Ferrari paint protection film at Metropolitan Detail' });
+      if (key === 'nsx') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/honda_nsx_ceramic_' + i + '.jpg', alt: 'Acura NSX paint protection film at Metropolitan Detail' });
+      if (key === 'bmwm2') for (let i = 1; i <= 8; i++) items.push({ src: 'uploads/BMW M2 (' + i + ').jpg', alt: 'BMW M2 paint protection film at Metropolitan Detail' });
+      if (key === 'm340i') ['BMW M340i Brooklyn Grey','BMW M340i Brooklyn Grey-2','BMW M340i Brooklyn Grey-3','BMW M340i Brooklyn Grey-4','BMW M340i Brooklyn Grey-5','BMW M340i Brooklyn Grey-6'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'BMW M340i paint protection film at Metropolitan Detail' }));
+      if (key === 'c7') ['chevy_c7 (1 of 4)-ff60b4f0','chevy_c7 (2 of 4)-4a8657c4','chevy_c7 (3 of 4)-9e1816ae','chevy_c7 (4 of 4)-d80c8a71'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Corvette C7 paint protection film at Metropolitan Detail' }));
+      if (key === 'darkhorse') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/mustang_dark_horse_' + i + '.jpg', alt: 'Ford Mustang Dark Horse paint protection film at Metropolitan Detail' });
+      if (key === 'miata') ['IMG_2524-1','IMG_2526-2','IMG_2530-3','IMG_2532-4','IMG_2536-5'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Mazda Miata MX-5 paint protection film at Metropolitan Detail' }));
+      if (key === 'gt63') { items.push({ src: 'uploads/Mercedes AMG GT63.jpg', alt: 'Mercedes AMG GT 63 paint protection film at Metropolitan Detail' }); for (let i = 2; i <= 14; i++) items.push({ src: 'uploads/Mercedes AMG GT63-' + i + '.jpg', alt: 'Mercedes AMG GT 63 paint protection film at Metropolitan Detail' }); }
+      if (key === 'gwagon') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/mercedes_g_wagon (' + i + ' of 4).jpg', alt: 'Mercedes G-Wagon paint protection film at Metropolitan Detail' });
+      if (key === 'c4gts') for (let i = 1; i <= 8; i++) items.push({ src: 'uploads/Porsche 911 Carrera 4 GTS (' + i + ').jpg', alt: 'Porsche 911 Carrera 4GTS paint protection film at Metropolitan Detail' });
+      if (key === 'dakar') for (let i = 1; i <= 3; i++) items.push({ src: 'uploads/porsche_dakar_dynoshield_' + i + '.jpg', alt: 'Porsche Dakar paint protection film at Metropolitan Detail' });
+      if (key === 'dakaracid') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/porsche_dakar_acidgreen_dynoshield_' + i + '.jpg', alt: 'Porsche Dakar Acid Green paint protection film at Metropolitan Detail' });
+      if (key === 'dakarmartini') for (let i = 1; i <= 5; i++) items.push({ src: 'uploads/porsche_dakar_martini_dynoshield_' + i + '.jpg', alt: 'Porsche Dakar Martini paint protection film at Metropolitan Detail' });
+      if (key === 'gt3chroma') for (let i = 1; i <= 9; i++) items.push({ src: 'uploads/GT3_DYNOshield_Chromaflare (' + i + ').jpg', alt: 'Porsche GT3 Chromaflare paint protection film at Metropolitan Detail' });
+      if (key === 'gt3viola') for (let i = 1; i <= 8; i++) items.push({ src: 'uploads/Porsche GT3 Touring Violablau (' + i + ').jpg', alt: 'Porsche GT3 Touring Violablau paint protection film at Metropolitan Detail' });
+      if (key === 'spyderrs') for (let i = 1; i <= 5; i++) items.push({ src: 'uploads/porsche_spyder_rs_dynoshield_' + i + '.jpg', alt: 'Porsche Spyder RS paint protection film at Metropolitan Detail' });
+      if (key === 'r1s') ['IMG_2245-2','IMG_2247-3','IMG_2250-4','IMG_2252-5'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Rivian R1S paint protection film at Metropolitan Detail' }));
+      if (key === 'landcruiser') for (let i = 1; i <= 6; i++) items.push({ src: 'uploads/toyota_land_cruiser_dynoshield_' + i + '.jpg', alt: 'Toyota Land Cruiser paint protection film at Metropolitan Detail' });
+      if (key === 'supra') for (let i = 1; i <= 5; i++) items.push({ src: 'uploads/toyota_gr_supra_dynoshield_' + i + '.jpg', alt: 'Toyota Supra paint protection film at Metropolitan Detail' });
+      if (key === 'cilindri') for (let i = 1; i <= 23; i++) items.push({ src: 'uploads/ferrari_12_cillindri (' + i + ').jpg', alt: 'Ferrari 12 Cilindri paint protection film at Metropolitan Detail' });
+      if (key === 'lambo') items.push({ src: 'uploads/IMG_2355-1.jpg', alt: 'Lamborghini paint protection film at Metropolitan Detail' });
+      if (key === 'suzuki') ['IMG_5185-1','IMG_5190-1'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Suzuki paint protection film at Metropolitan Detail' }));
+      if (key === 'toyota') items.push({ src: 'uploads/IMG_4283-1.jpg', alt: 'Toyota paint protection film at Metropolitan Detail' });
+      if (key === 'rs6') [1,2,3,4,7,10,11].forEach((n) => items.push({ src: 'uploads/Audi RS6 Avant (' + n + ').jpg', alt: 'Audi RS6 Avant paint protection film at Metropolitan Detail' }));
       if (key === 'lexus') items.unshift({ src: 'uploads/Lexus.jpeg', alt: 'Lexus paint protection film at Metropolitan Detail' });
-      if (key === 'porsche') ['00012','00013','00016'].forEach((n) => items.push({ src: 'uploads/porche' + n + '.jpeg', alt: 'Porsche paint protection film at Metropolitan Detail' }));
+      if (key === 'porsche') { ['00012','00013','00016'].forEach((n) => items.push({ src: 'uploads/porche' + n + '.jpeg', alt: 'Porsche paint protection film at Metropolitan Detail' })); ['IMG_2618-1','IMG_2691-2','IMG_2708-1','IMG_4035-1'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Porsche paint protection film at Metropolitan Detail' })); }
       byKey[key] = { key: key, label: label, items: items };
       order.push(key);
     });
