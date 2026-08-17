@@ -25,7 +25,7 @@
 <meta name="twitter:image" content="https://metropolitandetail.argon-devsite.com/uploads/tint.jpg">
 <meta name="description" content="Ceramic window tint in Redmond for drivers across Bellevue, Seattle, and the Eastside. STEK Action carbon and STEK NEX graphene films cut heat, block UV, and add privacy. Plus Glassparency glass coating.">
 <meta property="og:title" content="Ceramic Window Tint | Metropolitan Detail, Redmond WA">
-<meta property="og:description" content="STEK Action and STEK NEX ceramic window tint. Cut heat, block 99 percent of UV, and get a cleaner, more private drive across the Eastside.">
+<meta property="og:description" content="STEK Action and STEK NEX ceramic window tint. Cut heat, block 99% of UV, and get a cleaner, more private drive across the Eastside.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/tint.jpg">
 <style>
@@ -40,8 +40,15 @@
   .md-link-underline:hover::after { width:100%; }
   a { color: var(--md-red); }
   a:hover { color: var(--md-red-hover); }
-  .foot-link{ font-size:14px; color:rgba(255,255,255,0.7); text-decoration:none; transition:color .2s var(--md-ease); }
+  .foot-link{ font-size:15px; white-space:nowrap; color:rgba(255,255,255,0.72); text-decoration:none; transition:color .2s var(--md-ease); }
   .foot-link:hover{ color:var(--md-red); }
+  .av-in{ width:100%; box-sizing:border-box; background:#161616; border:1px solid #2A2A2A; color:#fff; font:400 14.5px/1.45 var(--md-font-body); padding:12px 13px; outline:none; transition:border-color .2s; }
+  .av-in:focus{ border-color:var(--md-red); }
+  .av-in::placeholder{ color:rgba(255,255,255,0.32); }
+  .av-in[type="date"]{ color-scheme:dark; }
+  .av-in::-webkit-calendar-picker-indicator{ filter:none; opacity:.85; cursor:pointer; }
+  .av-lb{ display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:7px; }
+  @media (max-width: 560px){ #avail-modal form{ grid-template-columns:1fr !important; } }
   .md-cta{ display:inline-flex; align-items:stretch; text-decoration:none; border-radius:2px; overflow:hidden; font-family:var(--md-font-body); cursor:pointer; }
   .md-cta .l{ display:inline-flex; align-items:center; background:var(--md-red); color:#fff; padding:16px 28px; font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; transition:background .25s var(--md-ease); white-space:nowrap; }
   .md-cta .t{ display:inline-flex; align-items:center; justify-content:center; background:var(--md-red); color:#fff; padding:0 17px; border-left:1px solid rgba(255,255,255,.4); transition:background .25s var(--md-ease); }
@@ -64,8 +71,8 @@
   .svc-bullets li{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; line-height:1.5; color:var(--svc-muted); }
   .svc-bullets li::before{ content:""; flex:none; width:6px; height:6px; margin-top:7px; background:var(--md-red); }
   /* Process */
-  .proc-line-fill{ width:0; }
-  .proc-step{ opacity:.3; transition:opacity .5s var(--md-ease); }
+  .proc-line-fill{ width:100% !important; }
+  .proc-step{ opacity:1; }
   .proc-step.active{ opacity:1; }
   .proc-dot{ transition:background .45s var(--md-ease), border-color .45s var(--md-ease), transform .45s var(--md-ease); }
   .proc-step.active .proc-dot{ background:var(--md-red) !important; border-color:var(--md-red) !important; transform:scale(1.15); }
@@ -187,15 +194,35 @@
                 <a href="/paint-protection-film">DYNOshield</a>
                 <a href="/dynomatte">DYNOmatte</a>
                 <a href="/color-change">Color Change</a>
-                <a href="/ev-protection">EV Protection</a>
               </div>
             </div>
-            <a href="/ceramic-coatings">Ceramic Coatings</a>
-            <a href="/cquartz-sic">CQuartz SiC</a>
+            <div class="nav-sub">
+              <a href="/ceramic-coatings" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Ceramic Coatings <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/cquartz-sic">CQuartz SiC</a>
+                <a href="/cquartz-professional">CQuartz Professional</a>
+                <a href="/cquartz-finest-reserve">CQuartz Finest Reserve</a>
+                <a href="/glassparency">Glassparency</a>
+                <a href="/dlux-wheels-and-calipers">DLUX Wheels &amp; Calipers</a>
+                <a href="/dlux-trim-coat">DLUX Trim Coat</a>
+              </div>
+            </div>
             <a href="/window-tint">Window Tint</a>
             <a href="/paint-correction">Paint Correction</a>
-            <a href="/exterior-detailing">Exterior Detailing</a>
-            <a href="/interior-detailing">Interior Detailing</a>
+            <div class="nav-sub">
+              <a href="/exterior-detailing" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Exterior Detailing <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/essential-exterior">Essential Exterior</a>
+                <a href="/ceramic-maintenance-polish">Ceramic Maintenance Polish</a>
+                <a href="/ppf-maintenance-polish">PPF Maintenance Polish</a>
+              </div>
+            </div>
+            <div class="nav-sub">
+              <a href="/interior-detailing" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Interior Detailing <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/interior-detailing">Signature Interior</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="nav-item">
@@ -205,10 +232,11 @@
             <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" style="white-space:normal; max-width:320px;">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
           </div>
         </div>
+        <a href="/ev-protection" class="nav-link">EV Protection</a>
+        <a href="/portfolio" class="nav-link">Portfolio</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/faq" class="nav-link">FAQ</a>
         <a href="/contact" class="nav-link">Contact</a>
-        <a href="/get-a-quote" class="nav-link">Get a Quote</a>
       </nav>
       <div style="display:flex; align-items:center; gap:14px; justify-self:end; grid-column:3;">
         <a href="tel:+14252336068" class="hdr-phone" style="display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--md-white); text-decoration:none; white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg>(425) 233-6068</a>
@@ -230,21 +258,30 @@
         <a href="/paint-protection-film" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOshield</a>
         <a href="/dynomatte" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOmatte</a>
         <a href="/color-change" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Color Change</a>
-        <a href="/ev-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">EV Protection</a>
         <a href="/ceramic-coatings" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Ceramic Coatings</a>
-        <a href="/cquartz-sic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">CQuartz SiC</a>
+        <a href="/cquartz-sic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz SiC</a>
+        <a href="/cquartz-professional" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz Professional</a>
+        <a href="/cquartz-finest-reserve" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz Finest Reserve</a>
+        <a href="/glassparency" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Glassparency</a>
+        <a href="/dlux-wheels-and-calipers" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DLUX Wheels &amp; Calipers</a>
+        <a href="/dlux-trim-coat" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DLUX Trim Coat</a>
         <a href="/window-tint" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Window Tint</a>
         <a href="/paint-correction" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Paint Correction</a>
         <a href="/exterior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Exterior Detailing</a>
+        <a href="/essential-exterior" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Essential Exterior</a>
+        <a href="/ceramic-maintenance-polish" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Ceramic Maintenance Polish</a>
+        <a href="/ppf-maintenance-polish" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">PPF Maintenance Polish</a>
         <a href="/interior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Interior Detailing</a>
+        <a href="/interior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:8px 0 8px 14px;">Signature Interior</a>
         <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:22px 0 6px;">Explore</div>
         <a href="/blog" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Blog</a>
         <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
+        <a href="/ev-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">EV Protection</a>
+        <a href="/portfolio" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Portfolio</a>
         <a href="/about" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">About</a>
         <a href="/faq" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">FAQ</a>
         <a href="/contact" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Contact</a>
-        <a href="/get-a-quote" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Get a Quote</a>
-      </nav>
+              </nav>
       <div style="margin-top:auto; display:flex; flex-direction:column; gap:14px;">
         <a href="tel:+14252336068" style="font-size:18px; font-weight:600; color:#fff; text-decoration:none;">(425) 233-6068</a>
         <a href="/get-a-quote" onClick="{{ closeMenu }}" style="display:inline-flex; justify-content:center; background:var(--md-red); padding:16px; border-radius:2px; text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule Appointment</a>
@@ -254,7 +291,7 @@
 
   <!-- ============ HERO (1D) ============ -->
   <section id="home" data-screen-label="Hero" style="position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; background:#000;">
-    <img src="uploads/Civic_Type_R-3-872a6318.jpg" alt="Red Honda Civic Type R with ceramic window tint at Metropolitan Detail" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+    <img src="uploads/tint.jpg" alt="Tesla Model 3 with ceramic window tint in the Metropolitan Detail shop in Redmond" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
     <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.18) 38%, rgba(0,0,0,.9) 100%);"></div>
     <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 55%);"></div>
     <span style="position:absolute; top:-20%; left:0; width:55%; height:140%; pointer-events:none; background:linear-gradient(115deg, transparent 38%, rgba(255,255,255,.22) 48%, rgba(255,255,255,.05) 54%, transparent 66%); animation:mdHeroFilm 1.9s cubic-bezier(.22,.61,.36,1) .25s both;"></span>
@@ -263,8 +300,8 @@
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
         <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.75);">Window Tint</span>
       </div>
-      <h1 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h1); line-height:1.02; letter-spacing:var(--md-tracking-tight); margin:0 0 22px; max-width:17ch; animation:mdFadeUp .85s var(--md-ease) .26s both;">Cooler cabin. Less glare. More privacy.</h1>
-      <p style="font-size:18px; line-height:1.6; color:rgba(255,255,255,0.82); max-width:60ch; margin:0 0 30px; animation:mdFadeUp .85s var(--md-ease) .4s both;">Ceramic window tint from Metropolitan Detail in Redmond, installed for drivers across Bellevue, Seattle, and the Eastside. We use STEK Action and STEK NEX films to cut heat, block UV, and give you a cleaner, more private drive.</p>
+      <h1 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h1); line-height:1.02; letter-spacing:var(--md-tracking-tight); margin:0 0 16px; max-width:17ch; animation:mdFadeUp .85s var(--md-ease) .26s both;">Ceramic Window Tint in Redmond, WA</h1>
+      <p style="font-size:18px; line-height:1.6; color:rgba(255,255,255,0.82); max-width:60ch; margin:0 0 30px; animation:mdFadeUp .85s var(--md-ease) .4s both;">Good tint does more than darken your windows. It keeps the heat down, cuts the glare, blocks the UV that fades your interior, and gives you some privacy. We install STEK Action and STEK NEX here in Redmond for drivers all over Bellevue and Seattle.</p>
       <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; animation:mdFadeUp .85s var(--md-ease) .54s both;">
         <a href="/get-a-quote" class="md-cta lg"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a>
       </div>
@@ -273,98 +310,62 @@
       <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark); display:flex; align-items:center; gap:11px;"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:15px; letter-spacing:1px;">★★★★★</span><span style="color:#fff; font-size:13.5px; font-weight:600; white-space:nowrap;">4.9 Google · 112+ reviews</span></div>
       <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">99% UV</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">Blocked</div></div>
       <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">STEK Action &amp; NEX</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">Ceramic films</div></div>
-      <div style="padding:22px clamp(24px,3vw,40px);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">30 Years</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">On the Eastside</div></div>
+      <div style="padding:22px clamp(24px,3vw,40px);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">30 Years</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">In Redmond</div></div>
     </div>
   </section>
 
   <!-- ============ STEK ACTION ============ -->
   <section id="action" data-reveal="out" data-film="out" data-scrollfade="invert" style="background:var(--md-white); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; padding:var(--md-section-y) 0;">
-    <div class="md-row" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
-      <div class="md-media-col md-figure" style="position:relative; cursor:pointer;">
-        <div style="position:relative; overflow:hidden; border-radius:14px; aspect-ratio:4/3.2;">
-          <img class="md-img" src="uploads/IMG_2494-2.jpg" alt="Classic truck with carbon ceramic window tint at Metropolitan Detail" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .8s var(--md-ease);">
-          <span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span>
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div class="md-row" style="display:grid; grid-template-columns:1.15fr .85fr; gap:44px; align-items:center;">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">STEK Action</span></div>
+          <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 16px; max-width:18ch; color:var(--sf-fg);">STEK Action: carbon tint that cuts heat and adds privacy.</h2>
+          <div style="display:flex; align-items:flex-end; gap:20px; flex-wrap:wrap;"><div><div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:10px;">Starting from</div><div style="font-family:var(--md-font-display); font-weight:700; font-size:32px; line-height:1; color:var(--sf-fg);">$240</div></div><div style="display:inline-flex; align-items:center; gap:9px; border:1px solid var(--md-red); border-radius:999px; padding:9px 16px; margin-bottom:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><path d="M12 3l7 2.5v5c0 4.4-3 7.7-7 9.2-4-1.5-7-4.8-7-9.2v-5L12 3z"></path></svg><span style="font-size:13px; font-weight:600; color:var(--sf-fg);">99% UV blocked</span></div></div>
+          <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:56ch; margin:22px 0 0;">Action is our carbon film, and it is a great everyday choice. The tint comes from nano-carbon technology, not dye, so it will never fade or turn purple the way cheaper films do. It knocks down heat and glare, blocks 99 percent of UV, and gives you privacy without going too dark. Because it is carbon and not metal, it will not interfere with your phone, your GPS, or anything else in the car. A clean look, a film that lasts, and a balanced choice for most drivers at a price that makes sense.</p>
         </div>
+        <div class="md-figure" style="border-radius:14px; overflow:hidden; background:#000;"><img class="md-img" src="uploads/stek-action-carbon-tint-redmond-1920w.webp" alt="STEK Action carbon ceramic tint shades from Action 05 to Action 70" style="display:block; width:100%; height:250px; object-fit:contain;"></div>
       </div>
-      <div>
-        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
-          <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
-          <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">STEK Action</span>
-        </div>
-        <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 22px; max-width:18ch; color:var(--sf-fg);">Carbon ceramic tint for heat and privacy.</h2>
-        <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:52ch; margin:0;">STEK Action uses nano-carbon technology to reduce heat and glare while adding privacy, with no interference to your phone, GPS, or electronics. It blocks 99 percent of UV rays and keeps the cabin more comfortable in Eastside traffic. A balanced choice with a clean carbon look.</p>
+      <div class="md-row" style="display:grid; grid-template-columns:.55fr 1.45fr; gap:40px; align-items:start; margin-top:40px;">
+        <div style="min-width:0;"><div style="font-weight:600; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:16px;">Pricing</div><div style="display:flex; flex-direction:column; gap:14px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">Two fronts</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$240</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">2 Door Car</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$435</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">4 Door Car</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$535</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">Wagon/SUV</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$585</span></div></div></div>
+        <div style="min-width:0; border:1px solid var(--sf-border); border-radius:12px; padding:22px 24px;"><div style="font-weight:600; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:16px;">Film performance</div><div class="spec-wrap"><table class="spec" style="min-width:0;"><thead><tr><th class="metric" style="text-align:left;">STEK Action</th><th>CS 05</th><th>CS 15</th><th class="pop"><span class="poptag">Most Popular</span>CS 35</th><th>CS 50</th><th>CS 80</th></tr></thead><tbody><tr><td class="metric">Total Solar Energy Rejected</td><td>55%</td><td>48%</td><td class="pop">37%</td><td>32%</td><td>32%</td></tr><tr><td class="metric">Infrared Rejection</td><td>57%</td><td>51%</td><td class="pop">40%</td><td>35%</td><td>35%</td></tr><tr><td class="metric">UV Rejection</td><td>99%</td><td>99%</td><td class="pop">99%</td><td>99%</td><td>99%</td></tr></tbody></table></div></div>
       </div>
-    </div>
-    <div style="max-width:var(--md-maxw); margin:52px auto 0; padding:0 40px;">
-      <div class="spec-wrap">
-        <table class="spec">
-          <thead><tr>
-            <th class="metric" style="text-align:left;">STEK Action</th>
-            <th>CS 05</th><th>CS 15</th>
-            <th class="pop"><span class="poptag">Most Popular</span>CS 35</th>
-            <th>CS 50</th><th>CS 80</th>
-          </tr></thead>
-          <tbody>
-            <tr><td class="metric">Total Solar Energy Rejected</td><td>55%</td><td>48%</td><td class="pop">37%</td><td>32%</td><td>32%</td></tr>
-            <tr><td class="metric">Infrared Rejection</td><td>57%</td><td>51%</td><td class="pop">40%</td><td>35%</td><td>35%</td></tr>
-            <tr><td class="metric">UV Rejection</td><td>99%</td><td>99%</td><td class="pop">99%</td><td>99%</td><td>99%</td></tr>
-          </tbody>
-        </table>
-      </div>
+      <div style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:32px;"><a href="/get-a-quote" class="md-cta"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a></div>
     </div>
   </section>
 
   <!-- ============ STEK NEX ============ -->
-  <section id="nex" data-reveal="out" data-film="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
-    <div class="md-row" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
-      <div>
-        <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
-          <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
-          <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">STEK NEX</span>
+  <section id="nex" data-reveal="out" data-film="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:calc(var(--md-section-y) * 0.62) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div class="md-row" style="display:grid; grid-template-columns:1.15fr .85fr; gap:44px; align-items:center;">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">STEK NEX</span></div>
+          <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 16px; max-width:18ch; color:var(--sf-fg);">STEK NEX: our best film for heat and sun.</h2>
+          <div style="display:flex; align-items:flex-end; gap:20px; flex-wrap:wrap;"><div><div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:10px;">Starting from</div><div style="font-family:var(--md-font-display); font-weight:700; font-size:32px; line-height:1; color:var(--sf-fg);">$400</div></div><div style="display:inline-flex; align-items:center; gap:9px; border:1px solid var(--md-red); border-radius:999px; padding:9px 16px; margin-bottom:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><path d="M12 3l7 2.5v5c0 4.4-3 7.7-7 9.2-4-1.5-7-4.8-7-9.2v-5L12 3z"></path></svg><span style="font-size:13px; font-weight:600; color:var(--sf-fg);">99.9% UV blocked</span></div></div>
+          <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:56ch; margin:22px 0 0;">If you want the most heat rejection we offer, this is it. NEX is built on graphene, which spreads and disperses heat far better than carbon, and you can feel the difference the second you get in on a hot day. It blocks 99.9 percent of UV, and it is recommended by the Skin Cancer Foundation, which is not something most films can claim. Your cabin stays cooler, your AC works less, and your skin and your interior get real protection, even in the lighter shades. Like Action, it is a non-metal film, so your phone and GPS are not affected.</p>
         </div>
-        <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 22px; max-width:20ch; color:var(--sf-fg);">Graphene ceramic tint for maximum heat rejection.</h2>
-        <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:52ch; margin:0 0 26px;">STEK NEX uses graphene technology for our highest heat rejection and blocks 99.9 percent of UV rays. It is recommended by the Skin Cancer Foundation, so you get a cooler interior, less strain on your AC, and real protection for your skin and your interior, even in lighter shades. No interference with GPS or cell signal.</p>
-        <div style="display:inline-flex; align-items:center; gap:13px; border:1px solid var(--sf-border); border-radius:8px; padding:12px 16px;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.6" style="flex:none;"><path d="M12 3l7 2.5v5c0 4.4-3 7.7-7 9.2-4-1.5-7-4.8-7-9.2v-5L12 3z"></path><path d="M9 12l2 2 4-4.5"></path></svg>
-          <div style="line-height:1.3;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:14px; color:var(--sf-fg);">Skin Cancer Foundation</div><div style="font-size:11.5px; color:var(--sf-muted);">Recommended · official seal to be added</div></div>
-        </div>
-      </div>
-      <div class="md-media-col md-figure" style="position:relative; cursor:pointer;">
-        <div style="position:relative; overflow:hidden; border-radius:14px; aspect-ratio:4/3.2;">
-          <img class="md-img" src="uploads/Ford Mustang GT Tint (5)-3d76b0f6.jpg" alt="Ford Mustang GT with graphene ceramic window tint at Metropolitan Detail" style="display:block; width:100%; height:100%; object-fit:cover; transition:transform .8s var(--md-ease);">
-          <span class="md-film" style="position:absolute; top:-15%; left:0; width:60%; height:130%; pointer-events:none; background:linear-gradient(115deg, transparent 40%, rgba(255,255,255,.26) 49%, rgba(255,255,255,.05) 55%, transparent 66%); transform:translateX(-130%) skewX(-8.5deg);"></span>
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <div class="md-figure" style="border-radius:14px; overflow:hidden; background:#000;"><img class="md-img" src="uploads/stek-nex-child-uv-protection-bellevue-1920w.webp" alt="STEK NEX graphene ceramic tint shades from NEX 05 to NEX 70" style="display:block; width:100%; height:250px; object-fit:contain;"></div>
+          <div style="display:flex; align-items:center; gap:16px; border:1px solid var(--sf-border); border-radius:8px; padding:14px 18px;"><img src="uploads/scf-seal-nonsunscreens-2-color-516x600.jpg" alt="Skin Cancer Foundation Seal of Recommendation" style="height:96px; width:auto; display:block; flex:none; border-radius:4px;"><div style="line-height:1.35;"><div style="font-family:var(--md-font-display); font-weight:600; font-size:15px; color:var(--sf-fg);">Skin Cancer Foundation</div><div style="font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--sf-muted);">Seal of Recommendation</div></div></div>
         </div>
       </div>
-    </div>
-    <div style="max-width:var(--md-maxw); margin:52px auto 0; padding:0 40px;">
-      <div class="spec-wrap">
-        <table class="spec">
-          <thead><tr>
-            <th class="metric" style="text-align:left;">STEK NEX</th>
-            <th>NEX 05</th><th>NEX 15</th>
-            <th class="pop"><span class="poptag">Most Popular</span>NEX 35</th>
-            <th>NEX 45</th><th>NEX 70</th>
-          </tr></thead>
-          <tbody>
-            <tr><td class="metric">Total Solar Energy Rejected</td><td>64%</td><td>61%</td><td class="pop">56%</td><td>52%</td><td>65.8%</td></tr>
-            <tr><td class="metric">Infrared Rejection</td><td>93.7%</td><td>92.5%</td><td class="pop">94.5%</td><td>92.2%</td><td>94.1%</td></tr>
-            <tr><td class="metric">UV Rejection</td><td>99%</td><td>99%</td><td class="pop">99%</td><td>99%</td><td>99%</td></tr>
-            <tr><td class="metric">Glare Reduction</td><td>92.2%</td><td>83%</td><td class="pop">62.9%</td><td>49.8%</td><td>27.1%</td></tr>
-          </tbody>
-        </table>
+      <div class="md-row" style="display:grid; grid-template-columns:.55fr 1.45fr; gap:40px; align-items:start; margin-top:40px;">
+        <div style="min-width:0;"><div style="font-weight:600; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:16px;">Pricing</div><div style="display:flex; flex-direction:column; gap:14px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">Two fronts</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$400</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">2 Door Car</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$825</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">4 Door Car</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$1,050</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14px; color:var(--sf-muted); white-space:nowrap;">Wagon/SUV</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$1,350</span></div></div></div>
+        <div style="min-width:0; border:1px solid var(--sf-border); border-radius:12px; padding:22px 24px;"><div style="font-weight:600; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:16px;">Film performance</div><div class="spec-wrap"><table class="spec" style="min-width:0;"><thead><tr><th class="metric" style="text-align:left;">STEK NEX</th><th>NEX 05</th><th>NEX 15</th><th class="pop"><span class="poptag">Most Popular</span>NEX 35</th><th>NEX 45</th><th>NEX 70</th></tr></thead><tbody><tr><td class="metric">Total Solar Energy Rejected</td><td>64%</td><td>61%</td><td class="pop">56%</td><td>52%</td><td>65.8%</td></tr><tr><td class="metric">Infrared Rejection</td><td>93.7%</td><td>92.5%</td><td class="pop">94.5%</td><td>92.2%</td><td>94.1%</td></tr><tr><td class="metric">UV Rejection</td><td>99%</td><td>99%</td><td class="pop">99%</td><td>99%</td><td>99%</td></tr><tr><td class="metric">Glare Reduction</td><td>92.2%</td><td>83%</td><td class="pop">62.9%</td><td>49.8%</td><td>27.1%</td></tr></tbody></table></div></div>
       </div>
+      <div style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:32px;"><a href="/get-a-quote" class="md-cta"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a></div>
     </div>
   </section>
 
   <!-- ============ NEX vs ACTION COMPARISON ============ -->
-  <section id="compare" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
+  <section id="compare" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0 var(--md-section-y);">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
       <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
         <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">NEX vs Action</span>
       </div>
-      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 18px; max-width:20ch; color:var(--sf-fg);">Which ceramic tint is right for you?</h2>
-      <p style="font-size:16px; line-height:1.7; color:var(--sf-muted); max-width:64ch; margin:0 0 12px;">Both films reject UV and heat. STEK NEX leads on heat rejection and carries the Skin Cancer Foundation recommendation, so it is the pick for the most comfort and protection, even in lighter shades. STEK Action balances performance and value with a classic carbon look.</p>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 18px; max-width:20ch; color:var(--sf-fg);">Which one should you get?</h2>
+      <p style="font-size:16px; line-height:1.7; color:var(--sf-muted); max-width:64ch; margin:0 0 12px;">Both films block UV and cut heat, so you cannot really go wrong. The difference is the material and how much heat you want gone. NEX uses graphene and rejects more heat, and it carries the Skin Cancer Foundation recommendation, so it is the pick if comfort and protection matter most, even in a lighter shade. Action uses carbon and gives you most of the way there at a better price, with that classic look. Tell us how your car sits in the sun and we will steer you right.</p>
       <div style="display:flex; gap:22px; margin:26px 0 40px;">
         <div style="display:flex; align-items:center; gap:9px; font-size:13px; color:var(--sf-muted);"><span style="width:14px; height:14px; border-radius:3px; background:var(--md-red);"></span>STEK NEX</div>
         <div style="display:flex; align-items:center; gap:9px; font-size:13px; color:var(--sf-muted);"><span style="width:14px; height:14px; border-radius:3px; background:#5a5a5a;"></span>STEK Action</div>
@@ -381,42 +382,21 @@
   <!-- ============ GLASSPARENCY ============ -->
   <section id="glass" data-reveal="out" data-scrollfade="darkinvert" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
-      <div class="md-row" style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; margin-bottom:52px;">
+      <div class="md-row" style="display:grid; grid-template-columns:.85fr 1.15fr; gap:56px; align-items:center;">
+        <div style="display:grid; gap:14px; border-radius:12px; overflow:hidden;"><div onClick="{{ playYt }}" data-vid="RP2REpeMRA8" style="position:relative; aspect-ratio:16/9; background:#000; cursor:pointer; overflow:hidden;"><img loading="lazy" src="https://i.ytimg.com/vi/RP2REpeMRA8/hqdefault.jpg" alt="Glassparency glass coating video" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"><div style="position:absolute; inset:0; background:rgba(0,0,0,.25);"></div><span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:58px; height:40px; background:var(--md-red); border-radius:8px; display:flex; align-items:center; justify-content:center;"><span style="width:0; height:0; border-left:13px solid #fff; border-top:8px solid transparent; border-bottom:8px solid transparent; margin-left:3px;"></span></span></div><div onClick="{{ playYt }}" data-vid="4w4vkuC7XGw" style="position:relative; aspect-ratio:16/9; background:#000; cursor:pointer; overflow:hidden;"><img loading="lazy" src="https://i.ytimg.com/vi/4w4vkuC7XGw/hqdefault.jpg" alt="Glassparency glass coating video" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"><div style="position:absolute; inset:0; background:rgba(0,0,0,.25);"></div><span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:58px; height:40px; background:var(--md-red); border-radius:8px; display:flex; align-items:center; justify-content:center;"><span style="width:0; height:0; border-left:13px solid #fff; border-top:8px solid transparent; border-bottom:8px solid transparent; margin-left:3px;"></span></span></div></div>
         <div>
-          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
-            <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
-            <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">Glass Coating</span>
-          </div>
-          <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 22px; max-width:18ch; color:var(--sf-fg);">Glassparency hydrophobic glass coating.</h2>
-          <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:52ch; margin:0;">Add Glassparency to your windshield and glass for a clearer view in Seattle rain. It improves visibility, cuts glare, makes bugs and sap easier to clean off, and resists hard water spotting. A clean, protected view on every drive.</p>
-        </div>
-        <div style="padding-top:8px;">
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px 26px; margin-bottom:24px;">
-            <div style="display:flex; align-items:flex-start; gap:11px; font-size:14.5px; line-height:1.5; color:var(--sf-fg);"><span style="width:7px; height:7px; margin-top:6px; background:var(--md-red); flex:none;"></span>Better visibility in the rain</div>
-            <div style="display:flex; align-items:flex-start; gap:11px; font-size:14.5px; line-height:1.5; color:var(--sf-fg);"><span style="width:7px; height:7px; margin-top:6px; background:var(--md-red); flex:none;"></span>Less glare</div>
-            <div style="display:flex; align-items:flex-start; gap:11px; font-size:14.5px; line-height:1.5; color:var(--sf-fg);"><span style="width:7px; height:7px; margin-top:6px; background:var(--md-red); flex:none;"></span>Bugs wipe off easily</div>
-            <div style="display:flex; align-items:flex-start; gap:11px; font-size:14.5px; line-height:1.5; color:var(--sf-fg);"><span style="width:7px; height:7px; margin-top:6px; background:var(--md-red); flex:none;"></span>Resists hard water spotting</div>
-          </div>
-          <div style="display:flex; align-items:flex-start; gap:11px; border-left:2px solid var(--md-red); padding:4px 0 4px 16px; font-size:13.5px; line-height:1.6; color:var(--sf-muted); max-width:52ch;">If your glass already has hard water spots, it may need a hard water spot removal service before application.</div>
-        </div>
-      </div>
-      <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:22px;">
-        <div onClick="{{ playYt }}" data-vid="RP2REpeMRA8" style="position:relative; aspect-ratio:16/9; background:#000; border:1px solid var(--sf-border); cursor:pointer; overflow:hidden; border-radius:8px;">
-          <img loading="lazy" src="https://i.ytimg.com/vi/RP2REpeMRA8/hqdefault.jpg" alt="Glassparency glass coating video" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-          <div style="position:absolute; inset:0; background:rgba(0,0,0,.25);"></div>
-          <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:58px; height:40px; background:var(--md-red); border-radius:8px; display:flex; align-items:center; justify-content:center;"><span style="width:0; height:0; border-left:13px solid #fff; border-top:8px solid transparent; border-bottom:8px solid transparent; margin-left:3px;"></span></span>
-        </div>
-        <div onClick="{{ playYt }}" data-vid="4w4vkuC7XGw" style="position:relative; aspect-ratio:16/9; background:#000; border:1px solid var(--sf-border); cursor:pointer; overflow:hidden; border-radius:8px;">
-          <img loading="lazy" src="https://i.ytimg.com/vi/4w4vkuC7XGw/hqdefault.jpg" alt="Glassparency application video" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
-          <div style="position:absolute; inset:0; background:rgba(0,0,0,.25);"></div>
-          <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:58px; height:40px; background:var(--md-red); border-radius:8px; display:flex; align-items:center; justify-content:center;"><span style="width:0; height:0; border-left:13px solid #fff; border-top:8px solid transparent; border-bottom:8px solid transparent; margin-left:3px;"></span></span>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">Glass Coating</span></div>
+          <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 20px; max-width:16ch; color:var(--sf-fg);">Glassparency: a clearer view when it rains.</h2>
+          <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:50ch; margin:0 0 26px;">This one is easy to add while you are here, and if you drive in Seattle rain you will notice it fast. <a href="/glassparency" style="font-weight:600;">Glassparency</a> is a hydrophobic coating for your windshield and glass that makes water bead up and clear off, so you see better in the rain. It cuts glare, and it makes bugs and sap wipe right off instead of baking on. A cleaner, clearer view every drive.</p>
+          <div style="display:flex; flex-direction:column; margin-bottom:24px;"><div style="display:flex; align-items:center; gap:13px; padding:15px 0; border-top:1px solid var(--sf-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.7" style="flex:none;"><path d="M7 17a4.5 4.5 0 0 1-.6-8.96 5.5 5.5 0 0 1 10.7-1.1A4 4 0 0 1 17.5 17H7z"></path><path d="M8 20l1-2M12 21l1-2M16 20l1-2"></path></svg><span style="font-family:var(--md-font-display); font-weight:700; font-size:16px; color:var(--sf-fg);">Better visibility in the rain</span></div><div style="display:flex; align-items:center; gap:13px; padding:15px 0; border-top:1px solid var(--sf-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.7" style="flex:none;"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"></path></svg><span style="font-family:var(--md-font-display); font-weight:700; font-size:16px; color:var(--sf-fg);">Less glare</span></div><div style="display:flex; align-items:center; gap:13px; padding:15px 0; border-top:1px solid var(--sf-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.7" style="flex:none;"><ellipse cx="12" cy="13" rx="4" ry="5.5"></ellipse><path d="M12 7.5V5"></path><path d="M10.4 4l1.6 1.4L13.6 4"></path><path d="M8 9.5L4.5 7.5M8 13H4M8 16.5l-3.5 2M16 9.5l3.5-2M16 13h4M16 16.5l3.5 2"></path></svg><span style="font-family:var(--md-font-display); font-weight:700; font-size:16px; color:var(--sf-fg);">Bugs wipe off easily</span></div><div style="display:flex; align-items:center; gap:13px; padding:15px 0; border-top:1px solid var(--sf-border); border-bottom:1px solid var(--sf-border);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.7" style="flex:none;"><path d="M12 3s6 6.5 6 10.5a6 6 0 0 1-12 0C6 9.5 12 3 12 3z"></path></svg><span style="font-family:var(--md-font-display); font-weight:700; font-size:16px; color:var(--sf-fg);">Resists hard water spotting</span></div></div>
+          <div style="display:flex; align-items:flex-start; gap:11px; border-left:2px solid var(--md-red); padding:4px 0 4px 16px; font-size:13.5px; line-height:1.6; color:var(--sf-muted); max-width:52ch;">If your glass already has hard water spots, it may need a hard water spot removal service first.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============ WORK GALLERY ============ -->
-  <section id="portfolio" data-reveal="out" data-scrollfade="darkinvert" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
+  <section id="portfolio" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
       <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
@@ -446,7 +426,7 @@
   </section>
 
   <!-- ============ FREE LOANER CAR ============ -->
-  <section data-reveal="out" style="background:#0A0A0A; padding:44px 0 var(--md-section-y);">
+  <section data-reveal="out" style="background:#0A0A0A; padding:var(--md-section-y) 0;">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; text-align:center;">
       <div style="display:inline-flex; align-items:center; gap:14px; margin-bottom:18px;">
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
@@ -454,7 +434,7 @@
       </div>
       <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.05; letter-spacing:var(--md-tracking-tight); color:#fff; margin:0 auto 18px; max-width:20ch;">Drop off, grab a free loaner, drive away protected.</h2>
       <p style="font-size:17px; line-height:1.6; color:rgba(255,255,255,0.7); margin:0 auto 32px; max-width:54ch;">Quality work takes time, and you should not have to wait around for it. We keep a small free fleet, based on availability, so your day keeps moving.</p>
-      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="/get-a-quote" class="md-cta" style="display:inline-flex;"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a><a onClick="{{ openLoaner }}" role="button" tabindex="0" style="display:inline-flex; align-items:center; gap:11px; padding:16px 26px; border:1px solid rgba(255,255,255,0.28); border-radius:2px; color:#fff; text-decoration:none; font-family:var(--md-font-body); font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer; transition:border-color .25s, background .25s;" style-hover="border-color:#fff; background:rgba(255,255,255,0.08);"><span style="display:inline-flex; width:22px; height:22px; border-radius:50%; background:var(--md-red); align-items:center; justify-content:center; flex:none;"><span style="width:0; height:0; border-left:7px solid #fff; border-top:5px solid transparent; border-bottom:5px solid transparent; margin-left:2px;"></span></span>Watch the Loaner Tour</a></div>
+      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="#" onClick="{{ openAvail }}" class="md-cta" style="display:inline-flex;"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a><a onClick="{{ openLoaner }}" role="button" tabindex="0" style="display:inline-flex; align-items:center; gap:11px; padding:16px 26px; border:1px solid rgba(255,255,255,0.28); border-radius:2px; color:#fff; text-decoration:none; font-family:var(--md-font-body); font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer; transition:border-color .25s, background .25s;" style-hover="border-color:#fff; background:rgba(255,255,255,0.08);"><span style="display:inline-flex; width:22px; height:22px; border-radius:50%; background:var(--md-red); align-items:center; justify-content:center; flex:none;"><span style="width:0; height:0; border-left:7px solid #fff; border-top:5px solid transparent; border-bottom:5px solid transparent; margin-left:2px;"></span></span>Watch the Loaner Tour</a></div>
       <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:840px; margin:52px auto 0;">
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img src="uploads/APNQkAFSPZWLCsuB9J3BdO_83KGZHoMO0rl2oy-HttFOWa3VeoXQQyReN-_ZBTzzuNR60vlV-CWTWsV4Yxlr2iAyVK476kkdYR7BJkO5KUoYQsKEVYQoZymnw4oGZvpWmD0bjYaXhHHk=s870-k-no.png" alt="Metropolitan Detail loaner car fleet" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img src="uploads/APNQkAH6G3nlaoSi1Jy6PusI0bHq3kjvdT7f7muSzkHVEs_BqKOmzZ7RpNJcmzItAI89AQnO4IkiBZ5vvHq_u4NDmdz5f0JXgIdp3Q8OXyZoEDCRLmohUh0SJNFZVvJHmaegmdzIHtqi=s870-k-no.png" alt="Metropolitan Detail courtesy loaner vehicle" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
@@ -469,13 +449,15 @@
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
         <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">FAQ</span>
       </div>
-      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 40px; max-width:18ch; color:var(--sf-fg);">Common window tint questions.</h2>
-      <details class="faq-item"><summary>What is the difference between STEK Action and STEK NEX?<span class="faq-plus"></span></summary><p>NEX is a graphene film with higher heat rejection and a Skin Cancer Foundation recommendation. Action is a carbon film that balances value and performance.</p></details>
-      <details class="faq-item"><summary>Will tint interfere with my phone or GPS?<span class="faq-plus"></span></summary><p>No. Both films are non-metal, so they do not block cell or GPS signals.</p></details>
-      <details class="faq-item"><summary>How much UV does it block?<span class="faq-plus"></span></summary><p>Action blocks 99 percent of UV. NEX blocks 99.9 percent and is Skin Cancer Foundation recommended.</p></details>
-      <details class="faq-item"><summary>Is there a legal limit on how dark I can go?<span class="faq-plus"></span></summary><p>Washington regulates how dark front windows can be. We will walk you through shades that look good and stay compliant.</p></details>
-      <details class="faq-item"><summary>How long does an install take?<span class="faq-plus"></span></summary><p>Most installs are same day. A free loaner is available, based on availability.</p></details>
-      <details class="faq-item"><summary>What is Glassparency?<span class="faq-plus"></span></summary><p>A hydrophobic coating for your windshield and glass that improves rain visibility, cuts glare, and repels water.</p></details>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 40px; max-width:18ch; color:var(--sf-fg);">Questions we get about tint.</h2>
+      <details class="faq-item"><summary>What is the difference between STEK Action and STEK NEX?<span class="faq-plus"></span></summary><p>NEX is our graphene film with the most heat rejection, and it carries the Skin Cancer Foundation recommendation. Action is a carbon film that gives you most of that performance for less. Both are solid.</p></details>
+      <details class="faq-item"><summary>Will tint mess with my phone or GPS?<span class="faq-plus"></span></summary><p>No. We do not use metal films, which are the ones that cause that. Ours leave your signal alone.</p></details>
+      <details class="faq-item"><summary>How much UV does it block?<span class="faq-plus"></span></summary><p>Action blocks 99 percent. NEX blocks 99.9 percent and is Skin Cancer Foundation recommended.</p></details>
+      <details class="faq-item"><summary>Is there a legal limit on how dark I can go?<span class="faq-plus"></span></summary><p>Washington has rules on how dark your front windows can be. We will walk you through shades that look good and stay legal.</p></details>
+      <details class="faq-item"><summary>How long does it take?<span class="faq-plus"></span></summary><p>Most installs are same day. Grab a free loaner and go about your day if you need to.</p></details>
+      <details class="faq-item"><summary>My new tint looks a little cloudy. Is something wrong?<span class="faq-plus"></span></summary><p>Nope, that is normal. Tint goes on wet, so you might see a little haze or a few water pockets for a couple of days while it cures. Keep the windows up for five days and it clears up on its own.</p></details>
+      <details class="faq-item"><summary>What is Glassparency?<span class="faq-plus"></span></summary><p>A hydrophobic coating for your glass that makes rain bead off, cuts glare, and keeps bugs and water spots from sticking.</p></details>
+      <div style="margin-top:46px;"><a href="/faq" class="md-cta lg"><span class="l">View Full FAQ</span><span class="t"><span class="arr">→</span></span></a></div>
     </div>
   </section>
 
@@ -487,24 +469,29 @@
         <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.1) 60%);"></div>
       </div>
       <div class="md-cta-panel" style="position:absolute; right:clamp(40px,7vw,108px); top:50%; transform:translateY(-50%); background:#0A0A0A; border:1px solid var(--md-border-dark); padding:clamp(34px,4vw,50px); max-width:440px;">
-        <div style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:16px;">STEK Action &amp; STEK NEX Ceramic Tint</div>
+        <div style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:16px;">Three decades in Redmond</div>
         <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(28px,3.4vw,36px); line-height:1.08; letter-spacing:-0.02em; color:#fff; margin:0 0 26px;">Ready for a cooler, more private drive?</h2>
-        <a href="/get-a-quote" class="md-cta lg"><span class="l">Schedule Window Tint</span><span class="t"><span class="arr">→</span></span></a>
+        <a href="/get-a-quote" class="md-cta lg"><span class="l">Get a Quote</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
   </section>
 
   <!-- ============ FOOTER ============ -->
   <footer id="contact" data-reveal="out" style="background:var(--md-ink); border-top:1px solid var(--md-border-dark); padding:72px 0 36px;">
-    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr 1.2fr 1.2fr; gap:40px;">
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Services</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/paint-protection-film" class="foot-link">DYNOshield</a><a href="/dynomatte" class="foot-link">DYNOmatte</a><a href="/color-change" class="foot-link">Color Change</a></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Company</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" class="foot-link">Blog</a><a href="/faq" class="foot-link">FAQ</a><a href="/contact" class="foot-link">Contact</a><a href="/get-a-quote" class="foot-link">Get a Quote</a></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Contact</div><div style="display:flex; flex-direction:column; gap:14px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link" style="display:flex; align-items:flex-start; gap:11px; line-height:1.5;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>8539 152nd Ave NE<br>Redmond, WA 98052</span></a><a href="tel:+14252336068" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--md-red)" style="flex:none;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg><span>(425) 233-6068</span></a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 7l8 6 8-6"></path></svg><span>info@metropolitandetail.com</span></a><div style="display:flex; align-items:flex-start; gap:11px; font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.5); margin-top:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Mon–Fri 8:00 AM – 5:00 PM<br>Sat &amp; Sun Closed</span></div></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Find Us</div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:200px; border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
+    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:repeat(5,1fr); gap:40px;">
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/paint-protection-film" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Paint Protection Film</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/dynomatte" class="foot-link">DYNOmatte</a><a href="/color-change" class="foot-link">Color Change</a><a href="/ev-protection" class="foot-link">EV Protection</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/ceramic-coatings" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Ceramic Coatings</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/cquartz-sic" class="foot-link">CQuartz SiC</a><a href="/cquartz-professional" class="foot-link">CQuartz Professional</a><a href="/cquartz-finest-reserve" class="foot-link">CQuartz Finest Reserve</a><a href="/glassparency" class="foot-link">Glassparency</a><a href="/dlux-wheels-and-calipers" class="foot-link">DLUX Wheels &amp; Calipers</a><a href="/dlux-trim-coat" class="foot-link">DLUX Trim Coat</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/exterior-detailing" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Detailing</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/essential-exterior" class="foot-link">Essential Exterior</a><a href="/ceramic-maintenance-polish" class="foot-link">Ceramic Maintenance Polish</a><a href="/ppf-maintenance-polish" class="foot-link">PPF Maintenance Polish</a><a href="/interior-detailing" class="foot-link">Interior Detailing</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Glass &amp; Paint</span></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/window-tint" class="foot-link">Window Tint</a><a href="/paint-correction" class="foot-link">Paint Correction</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Company</span></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/about" class="foot-link">About</a><a href="/portfolio" class="foot-link">Portfolio</a><a href="/blog" class="foot-link">Blog</a><a href="/faq" class="foot-link">FAQ</a><a href="/employment" class="foot-link">Employment</a><a href="/contact" class="foot-link">Contact</a><a href="/get-a-quote" class="foot-link">Get a Quote</a></div></div>
+    </div>
+    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:48px auto 0; padding:0 40px; display:grid; grid-template-columns:1.45fr 1.05fr; gap:40px;">
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Contact</span></div><div style="border:1px solid var(--md-border-dark); border-radius:2px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));"><div style="display:flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:16px;"><span style="width:7px; height:7px; border-radius:50%; background:#3ecf6a;"></span>Open now</div><a href="tel:+14252336068" class="foot-link" style="display:block; font-family:var(--md-font-display); font-weight:700; font-size:clamp(20px,1.7vw,28px); line-height:1.1; color:#fff; margin-bottom:6px; white-space:nowrap;">(425) 233-6068</a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:block; font-size:13.5px; margin-bottom:16px;">info@metropolitandetail.com</a><div style="font-size:13.5px; line-height:1.55; color:rgba(255,255,255,0.7); border-top:1px solid var(--md-border-dark); padding-top:16px; margin-bottom:18px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link">8539 152nd Ave NE, Redmond, WA 98052</a><br><span style="color:rgba(255,255,255,0.5);">Mon–Fri 8:00 AM – 5:00 PM</span></div><a href="/get-a-quote" style="display:flex; align-items:center; justify-content:center; gap:9px; background:var(--md-red); color:#fff; font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:13px 10px; border-radius:2px; text-decoration:none; transition:background .22s; white-space:nowrap;" style-hover="background:#b30018;">Schedule appointment <span>→</span></a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Find Us</span></div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:240px; border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
     </div>
     <div style="max-width:var(--md-maxw); margin:56px auto 0; padding:0 40px;">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:30px; flex-wrap:wrap; border-top:1px solid var(--md-border-dark); padding-top:36px;">
-        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height: clamp(72px,8vw,120px); width: 350px; display: block"></a>
+        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height: clamp(48px,5vw,72px); width: auto; display: block"></a>
         <div style="display:flex; flex-direction:column; align-items:flex-end; gap:18px;">
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#fff; border-radius:2px; padding:9px 16px; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:14px; letter-spacing:1px;">★★★★★</span><span style="width:1px; height:14px; background:#e0e0e0;"></span><span style="font-size:12.5px; font-weight:600; color:#0A0A0A; white-space:nowrap;">4.9 · 112+ reviews</span></a>
           <div style="display:flex; gap:12px;"><a href="https://www.facebook.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Facebook" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.5-1.5h1.6V3.6c-.28-.04-1.24-.12-2.36-.12-2.33 0-3.93 1.42-3.93 4.04v2.25H7.5V13h2.81v8h3.19z"></path></svg></a><a href="https://www.instagram.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Instagram" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></a><a href="https://www.youtube.com/@metropolitandetail" target="_blank" rel="noopener" aria-label="YouTube" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M22 8.2a2.6 2.6 0 0 0-1.8-1.8C18.6 6 12 6 12 6s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.7 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.8C5.4 18 12 18 12 18s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22.3 12 27 27 0 0 0 22 8.2zM10 15V9l5.2 3L10 15z"></path></svg></a><a href="https://www.yelp.com/biz/metropolitan-detail-redmond" target="_blank" rel="noopener" aria-label="Yelp" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12.3 2.1c-1.6.4-2 .8-2 2.4 0 .5.1 3.6.2 6.9.1 4 .2 6.2.4 6.6.3.6 1.1.8 1.8.4.3-.1 1.6-1.6 3-3.4 2.9-3.7 3-3.9 2.2-4.9-.3-.4-1.3-.8-4.3-1.9-4.4-1.6-4.6-1.6-5.5-1.3zM4.8 11.3c-.7.5-.7 1.5-.1 2.1.3.3 1.3.7 3 1.2 2.6.8 2.9.8 3.4.4.7-.6.6-1.6-.3-2.2-1-.7-4.9-2.2-5.4-2-.2 0-.5.3-.6.5zM12.6 16.6c-.6.3-.7.7-.5 3.1.2 2.5.3 2.8.9 3.1.7.3 1.2.1 1.7-.8 1.3-2.2 1.5-3 1-3.6-.5-.7-2.4-1.4-3.1-1.2zM18.7 15.2c-.4.1-1.4.9-2.6 2-1.6 1.5-1.8 1.8-1.6 2.4.3.8 1 1 2 .6 2.4-.8 4-1.6 4.2-2.1.4-.9-.4-3-1.3-3-.2 0-.5 0-.7.1z"></path></svg></a></div>
@@ -515,6 +502,28 @@
       <span style="font-size:12.5px; color:rgba(255,255,255,0.45);">© 2026 Metropolitan Detail. Celebrating 30 years.</span>
     </div>
   </footer>
+
+  <!-- ============ AVAILABILITY MODAL ============ -->
+  <div id="avail-modal" onClick="{{ closeAvail }}" style="display:none; position:fixed; inset:0; z-index:210; background:rgba(0,0,0,0.84); align-items:center; justify-content:center; padding:24px; overflow:auto;">
+    <div onClick="{{ stopProp }}" style="position:relative; width:100%; max-width:560px; background:#0F0F0F; border:1px solid var(--md-border-dark); padding:40px 40px 36px; text-align:left;">
+      <button onClick="{{ closeAvail }}" aria-label="Close" style="position:absolute; top:16px; right:16px; width:34px; height:34px; background:transparent; border:1px solid var(--md-border-dark); color:#fff; font-size:17px; line-height:1; cursor:pointer; transition:border-color .2s, background .2s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);">&times;</button>
+      <div data-av-body="">
+        <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="display:inline-block; width:26px; height:3px; background:var(--md-red); flex:0 0 auto;"></span><span style="font-weight:600; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Free Loaner Cars</span></div>
+        <h3 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.02em; color:#fff; margin:0 0 10px;">Ask about availability</h3>
+        <p style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.62); margin:0 0 26px;">Tell us what you are booking and when you need the car. We will confirm what is open.</p>
+        <form onSubmit="{{ submitAvail }}" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div><label class="av-lb" for="av-name">Name</label><input class="av-in" id="av-name" name="name" type="text" placeholder="Full name" required=""></div>
+          <div><label class="av-lb" for="av-phone">Phone</label><input class="av-in" id="av-phone" name="phone" type="tel" placeholder="(425) 000-0000"></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-email">Email</label><input class="av-in" id="av-email" name="email" type="email" placeholder="you@email.com" required=""></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-vehicle">Vehicle</label><input class="av-in" id="av-vehicle" name="vehicle" type="text" placeholder="Year, make and model"></div>
+          <div><label class="av-lb" for="av-service">Service</label><select class="av-in" id="av-service" name="service"><option>Paint Protection Film</option><option>Ceramic Coating</option><option>Window Tint</option><option>Paint Correction</option><option>Detailing</option><option>Not sure yet</option></select></div>
+          <div><label class="av-lb" for="av-date">Preferred drop-off</label><input class="av-in" id="av-date" name="date" type="date"></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-notes">Anything else</label><textarea class="av-in" id="av-notes" name="notes" rows="3" placeholder="Timing, questions, or preferences"></textarea></div>
+          <button type="submit" style="grid-column:1 / -1; margin-top:6px; background:var(--md-red); color:#fff; border:none; font:600 12.5px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; padding:16px 22px; cursor:pointer; transition:background .22s;" style-hover="background:#b30018;">Check availability</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ LOANER VIDEO MODAL ============ -->
   <div id="loaner-video" onClick="{{ closeLoaner }}" style="display:none; position:fixed; inset:0; z-index:200; background:rgba(0,0,0,0.86); align-items:center; justify-content:center; padding:24px;">
@@ -551,7 +560,10 @@ class Component extends DCLogic {
       menuOpen: this.state.menuOpen,
       openMenu: () => this.setState({ menuOpen: true }),
       closeMenu: () => this.setState({ menuOpen: false }),
-      openLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML='<iframe title="Free loaner cars at Metropolitan Detail" src="https://www.youtube-nocookie.com/embed/sA5xTSn3Om0?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>'; m.style.display='flex'; },
+      openAvail: (e) => { if(e && e.preventDefault) e.preventDefault(); var m=document.getElementById('avail-modal'); if(m) m.style.display='flex'; },
+      closeAvail: () => { var m=document.getElementById('avail-modal'); if(m) m.style.display='none'; },
+      submitAvail: (e) => { if(e && e.preventDefault) e.preventDefault(); var m=document.getElementById('avail-modal'); if(!m) return; var b=m.querySelector('[data-av-body]'); if(b) b.innerHTML='<div style="padding:14px 0 6px;"><div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="display:inline-block; width:26px; height:3px; background:var(--md-red);"></span><span style="font-weight:600; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Request sent</span></div><h3 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.02em; color:#fff; margin:0 0 10px;">Thank you.</h3><p style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.62); margin:0;">We will confirm loaner availability for your dates and follow up shortly.</p></div>'; },
+      openLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML='<iframe title="Free loaner cars at Metropolitan Detail" src="https://www.youtube.com/embed/OU2MUQUXX1c?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>'; m.style.display='flex'; },
       closeLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML=''; m.style.display='none'; },
       stopProp: (e) => { if(e && e.stopPropagation) e.stopPropagation(); },
       playYt: (e) => {

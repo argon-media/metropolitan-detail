@@ -40,8 +40,15 @@
   .md-link-underline:hover::after { width:100%; }
   a { color: var(--md-red); }
   a:hover { color: var(--md-red-hover); }
-  .foot-link{ font-size:14px; color:rgba(255,255,255,0.7); text-decoration:none; transition:color .2s var(--md-ease); }
+  .foot-link{ font-size:15px; white-space:nowrap; color:rgba(255,255,255,0.72); text-decoration:none; transition:color .2s var(--md-ease); }
   .foot-link:hover{ color:var(--md-red); }
+  .av-in{ width:100%; box-sizing:border-box; background:#161616; border:1px solid #2A2A2A; color:#fff; font:400 14.5px/1.45 var(--md-font-body); padding:12px 13px; outline:none; transition:border-color .2s; }
+  .av-in:focus{ border-color:var(--md-red); }
+  .av-in::placeholder{ color:rgba(255,255,255,0.32); }
+  .av-in[type="date"]{ color-scheme:dark; }
+  .av-in::-webkit-calendar-picker-indicator{ filter:none; opacity:.85; cursor:pointer; }
+  .av-lb{ display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:7px; }
+  @media (max-width: 560px){ #avail-modal form{ grid-template-columns:1fr !important; } }
   .md-cta{ display:inline-flex; align-items:stretch; text-decoration:none; border-radius:2px; overflow:hidden; font-family:var(--md-font-body); cursor:pointer; }
   .md-cta .l{ display:inline-flex; align-items:center; background:var(--md-red); color:#fff; padding:16px 28px; font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; transition:background .25s var(--md-ease); white-space:nowrap; }
   .md-cta .t{ display:inline-flex; align-items:center; justify-content:center; background:var(--md-red); color:#fff; padding:0 17px; border-left:1px solid rgba(255,255,255,.4); transition:background .25s var(--md-ease); }
@@ -64,8 +71,8 @@
   .svc-bullets li{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; line-height:1.5; color:var(--svc-muted); }
   .svc-bullets li::before{ content:""; flex:none; width:6px; height:6px; margin-top:7px; background:var(--md-red); }
   /* Process */
-  .proc-line-fill{ width:0; }
-  .proc-step{ opacity:.3; transition:opacity .5s var(--md-ease); }
+  .proc-line-fill{ width:100% !important; }
+  .proc-step{ opacity:1; }
   .proc-step.active{ opacity:1; }
   .proc-dot{ transition:background .45s var(--md-ease), border-color .45s var(--md-ease), transform .45s var(--md-ease); }
   .proc-step.active .proc-dot{ background:var(--md-red) !important; border-color:var(--md-red) !important; transform:scale(1.15); }
@@ -85,6 +92,9 @@
   .faq-plus::after{ left:8px; top:0; width:2px; height:18px; }
   .faq-item[open] .faq-plus{ transform:rotate(45deg); }
   .faq-item p{ margin:0; padding:0 0 28px; font-size:15.5px; line-height:1.7; color:var(--sf-muted); max-width:70ch; }
+  .rev-track{ display:flex; transition:transform .55s var(--md-ease); }
+  .rev-card{ flex:0 0 50%; box-sizing:border-box; padding-right:22px; }
+  @media (max-width: 820px){ .rev-card{ flex:0 0 100%; padding-right:0; } }
   /* Text fade */
   .txt-fade{ opacity:0; transform:translateY(30px); transition:opacity .9s var(--md-ease), transform .9s var(--md-ease); }
   .txt-fade.in{ opacity:1; transform:none; }
@@ -167,15 +177,35 @@
                 <a href="/paint-protection-film">DYNOshield</a>
                 <a href="/dynomatte">DYNOmatte</a>
                 <a href="/color-change">Color Change</a>
-                <a href="/ev-protection">EV Protection</a>
               </div>
             </div>
-            <a href="/ceramic-coatings">Ceramic Coatings</a>
-            <a href="/cquartz-sic">CQuartz SiC</a>
+            <div class="nav-sub">
+              <a href="/ceramic-coatings" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Ceramic Coatings <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/cquartz-sic">CQuartz SiC</a>
+                <a href="/cquartz-professional">CQuartz Professional</a>
+                <a href="/cquartz-finest-reserve">CQuartz Finest Reserve</a>
+                <a href="/glassparency">Glassparency</a>
+                <a href="/dlux-wheels-and-calipers">DLUX Wheels &amp; Calipers</a>
+                <a href="/dlux-trim-coat">DLUX Trim Coat</a>
+              </div>
+            </div>
             <a href="/window-tint">Window Tint</a>
             <a href="/paint-correction">Paint Correction</a>
-            <a href="/exterior-detailing">Exterior Detailing</a>
-            <a href="/interior-detailing">Interior Detailing</a>
+            <div class="nav-sub">
+              <a href="/exterior-detailing" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Exterior Detailing <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/essential-exterior">Essential Exterior</a>
+                <a href="/ceramic-maintenance-polish">Ceramic Maintenance Polish</a>
+                <a href="/ppf-maintenance-polish">PPF Maintenance Polish</a>
+              </div>
+            </div>
+            <div class="nav-sub">
+              <a href="/interior-detailing" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Interior Detailing <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/interior-detailing">Signature Interior</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="nav-item">
@@ -185,10 +215,11 @@
             <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" style="white-space:normal; max-width:320px;">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
           </div>
         </div>
+        <a href="/ev-protection" class="nav-link">EV Protection</a>
+        <a href="/portfolio" class="nav-link">Portfolio</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/faq" class="nav-link">FAQ</a>
         <a href="/contact" class="nav-link">Contact</a>
-        <a href="/get-a-quote" class="nav-link">Get a Quote</a>
       </nav>
       <div style="display:flex; align-items:center; gap:14px; justify-self:end; grid-column:3;">
         <a href="tel:+14252336068" class="hdr-phone" style="display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--md-white); text-decoration:none; white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg>(425) 233-6068</a>
@@ -210,21 +241,30 @@
         <a href="/paint-protection-film" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOshield</a>
         <a href="/dynomatte" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOmatte</a>
         <a href="/color-change" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Color Change</a>
-        <a href="/ev-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">EV Protection</a>
         <a href="/ceramic-coatings" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Ceramic Coatings</a>
-        <a href="/cquartz-sic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">CQuartz SiC</a>
+        <a href="/cquartz-sic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz SiC</a>
+        <a href="/cquartz-professional" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz Professional</a>
+        <a href="/cquartz-finest-reserve" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz Finest Reserve</a>
+        <a href="/glassparency" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Glassparency</a>
+        <a href="/dlux-wheels-and-calipers" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DLUX Wheels &amp; Calipers</a>
+        <a href="/dlux-trim-coat" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DLUX Trim Coat</a>
         <a href="/window-tint" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Window Tint</a>
         <a href="/paint-correction" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Paint Correction</a>
         <a href="/exterior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Exterior Detailing</a>
+        <a href="/essential-exterior" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Essential Exterior</a>
+        <a href="/ceramic-maintenance-polish" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Ceramic Maintenance Polish</a>
+        <a href="/ppf-maintenance-polish" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">PPF Maintenance Polish</a>
         <a href="/interior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Interior Detailing</a>
+        <a href="/interior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:8px 0 8px 14px;">Signature Interior</a>
         <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:22px 0 6px;">Explore</div>
         <a href="/blog" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Blog</a>
         <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
+        <a href="/ev-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">EV Protection</a>
+        <a href="/portfolio" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Portfolio</a>
         <a href="/about" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">About</a>
         <a href="/faq" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">FAQ</a>
         <a href="/contact" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Contact</a>
-        <a href="/get-a-quote" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Get a Quote</a>
-      </nav>
+              </nav>
       <div style="margin-top:auto; display:flex; flex-direction:column; gap:14px;">
         <a href="tel:+14252336068" style="font-size:18px; font-weight:600; color:#fff; text-decoration:none;">(425) 233-6068</a>
         <a href="/get-a-quote" onClick="{{ closeMenu }}" style="display:inline-flex; justify-content:center; background:var(--md-red); padding:16px; border-radius:2px; text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule Appointment</a>
@@ -319,50 +359,44 @@
   </section>
 
   <!-- ============ THE PROCESS ============ -->
-  <section class="proc" data-reveal="out" data-scrollfade="invert" style="background:var(--md-surface); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; padding:var(--md-section-y) 0;">
+  <section class="proc" data-reveal="out" data-scrollfade="invert" style="background:var(--md-surface); border-bottom:1px solid var(--md-border-dark); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; padding:var(--md-section-y) 0;">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
-      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+      <div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:18px;">
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
         <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">The Process</span>
       </div>
-      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 64px; max-width:22ch; color:var(--sf-fg);">How a color change goes at our Redmond shop.</h2>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 auto 64px; max-width:22ch; text-align:center; color:var(--sf-fg);">How a color change goes at our Redmond shop.</h2>
       <div style="position:relative;">
-        <div style="position:absolute; left:8px; right:8px; top:7px; height:1px; background:var(--sf-border);"></div>
-        <div style="position:absolute; left:8px; right:8px; top:6px; height:2px;"><div class="proc-line-fill" style="height:2px; background:var(--md-red);"></div></div>
+        <div class="proc-rail" style="position:absolute; left:10%; right:10%; top:33px; height:1px; background:var(--md-red);"></div>
         <div class="md-4col" style="display:grid; grid-template-columns:repeat(5,1fr); gap:34px; position:relative;">
-          <div class="proc-step">
-            <span class="proc-dot" style="display:block; width:16px; height:16px; border-radius:50%; background:var(--md-surface); border:2px solid var(--sf-border); margin-bottom:30px;"></span>
-            <div style="font-family:var(--md-font-display); font-weight:700; font-size:15px; color:var(--md-red); margin-bottom:14px;">01</div>
-            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:var(--sf-fg); margin:0 0 9px;">Consultation and Color Selection</h3>
+          <div style="text-align:center;">
+            <span style="position:relative; z-index:2; display:inline-flex; align-items:center; justify-content:center; width:66px; height:66px; border-radius:50%; border:1px solid var(--md-red); background:var(--md-red); color:#fff; font-family:var(--md-font-display); font-weight:700; font-size:19px; margin-bottom:24px;">01</span>
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:18px; line-height:1.3; color:var(--sf-fg); margin:0 0 9px;">Consultation and Color Selection</h3>
             <p style="font-size:14.5px; line-height:1.6; color:var(--sf-muted); margin:0;">Come in and look through the STEK Fashion Films range in person. Color reads differently under shop light than it does on a screen, and this is a decision worth making with the film in your hand. We go over the finish, the coverage, and what the car will actually look like when it is done.</p>
           </div>
-          <div class="proc-step">
-            <span class="proc-dot" style="display:block; width:16px; height:16px; border-radius:50%; background:var(--md-surface); border:2px solid var(--sf-border); margin-bottom:30px;"></span>
-            <div style="font-family:var(--md-font-display); font-weight:700; font-size:15px; color:var(--md-red); margin-bottom:14px;">02</div>
-            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:var(--sf-fg); margin:0 0 9px;">Drop Off and Loaner Car</h3>
+          <div style="text-align:center;">
+            <span style="position:relative; z-index:2; display:inline-flex; align-items:center; justify-content:center; width:66px; height:66px; border-radius:50%; border:1px solid var(--md-red); background:var(--md-red); color:#fff; font-family:var(--md-font-display); font-weight:700; font-size:19px; margin-bottom:24px;">02</span>
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:18px; line-height:1.3; color:var(--sf-fg); margin:0 0 9px;">Drop Off and Loaner Car</h3>
             <p style="font-size:14.5px; line-height:1.6; color:var(--sf-muted); margin:0;">Hand off the keys and take a free loaner, based on availability. A full body color change takes several days, so the loaner stays with you until your car is ready.</p>
           </div>
-          <div class="proc-step">
-            <span class="proc-dot" style="display:block; width:16px; height:16px; border-radius:50%; background:var(--md-surface); border:2px solid var(--sf-border); margin-bottom:30px;"></span>
-            <div style="font-family:var(--md-font-display); font-weight:700; font-size:15px; color:var(--md-red); margin-bottom:14px;">03</div>
-            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:var(--sf-fg); margin:0 0 9px;">Prep and Disassembly</h3>
+          <div style="text-align:center;">
+            <span style="position:relative; z-index:2; display:inline-flex; align-items:center; justify-content:center; width:66px; height:66px; border-radius:50%; border:1px solid var(--md-red); background:var(--md-red); color:#fff; font-family:var(--md-font-display); font-weight:700; font-size:19px; margin-bottom:24px;">03</span>
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:18px; line-height:1.3; color:var(--sf-fg); margin:0 0 9px;">Prep and Disassembly</h3>
             <p style="font-size:14.5px; line-height:1.6; color:var(--sf-muted); margin:0;">The paint is washed, decontaminated, and prepped. Proper coverage means light disassembly, because wrapping edges cleanly and hiding seams is what separates a color change that looks like paint from one that looks like a wrap.</p>
           </div>
-          <div class="proc-step">
-            <span class="proc-dot" style="display:block; width:16px; height:16px; border-radius:50%; background:var(--md-surface); border:2px solid var(--sf-border); margin-bottom:30px;"></span>
-            <div style="font-family:var(--md-font-display); font-weight:700; font-size:15px; color:var(--md-red); margin-bottom:14px;">04</div>
-            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:var(--sf-fg); margin:0 0 9px;">The Install</h3>
+          <div style="text-align:center;">
+            <span style="position:relative; z-index:2; display:inline-flex; align-items:center; justify-content:center; width:66px; height:66px; border-radius:50%; border:1px solid var(--md-red); background:var(--md-red); color:#fff; font-family:var(--md-font-display); font-weight:700; font-size:19px; margin-bottom:24px;">04</span>
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:18px; line-height:1.3; color:var(--sf-fg); margin:0 0 9px;">The Install</h3>
             <p style="font-size:14.5px; line-height:1.6; color:var(--sf-muted); margin:0;">Each panel is cut and fitted custom to your vehicle, then checked under proper light. Every painted surface is covered, so the whole car carries the same finish and the same protection.</p>
           </div>
-          <div class="proc-step">
-            <span class="proc-dot" style="display:block; width:16px; height:16px; border-radius:50%; background:var(--md-surface); border:2px solid var(--sf-border); margin-bottom:30px;"></span>
-            <div style="font-family:var(--md-font-display); font-weight:700; font-size:15px; color:var(--md-red); margin-bottom:14px;">05</div>
-            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; color:var(--sf-fg); margin:0 0 9px;">Reveal</h3>
+          <div style="text-align:center;">
+            <span style="position:relative; z-index:2; display:inline-flex; align-items:center; justify-content:center; width:66px; height:66px; border-radius:50%; border:1px solid var(--md-red); background:var(--md-red); color:#fff; font-family:var(--md-font-display); font-weight:700; font-size:19px; margin-bottom:24px;">05</span>
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:18px; line-height:1.3; color:var(--sf-fg); margin:0 0 9px;">Reveal</h3>
             <p style="font-size:14.5px; line-height:1.6; color:var(--sf-muted); margin:0;">We reassemble, walk the finished car with you, and hand back the keys. Your factory paint is untouched underneath, and the work is backed by a 10 year warranty.</p>
           </div>
         </div>
       </div>
-      <div style="margin-top:52px;"><a href="/get-a-quote" class="md-cta"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a></div>
+      <div style="margin-top:52px; display:flex; justify-content:center;"><a href="/get-a-quote" class="md-cta"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a></div>
     </div>
   </section>
 
@@ -415,42 +449,49 @@
   </section>
 
   <!-- ============ TESTIMONIALS ============ -->
-  <section data-reveal="out" style="background:var(--md-white); color:var(--md-ink); padding:var(--md-section-y) 0;">
+  <section data-reveal="out" data-scrollfade="invert" style="background:var(--md-white); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; padding:var(--md-section-y) 0;">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
       <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px;">
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
-        <span style="font-weight:500; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--md-muted);">What People Say</span>
+        <span style="font-weight:500; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted);">What People Say</span>
       </div>
-      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.04; letter-spacing:var(--md-tracking-tight); margin:0 0 18px; max-width:20ch; color:var(--md-ink);">Drivers Trust Us With Their Best Cars</h2>
-      <p style="font-size:var(--md-body); line-height:1.6; color:var(--md-muted); max-width:56ch; margin:0 0 44px;">Real Google reviews from color change clients across Redmond, Bellevue &amp; Seattle.</p>
+      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.04; letter-spacing:var(--md-tracking-tight); margin:0 0 18px; max-width:20ch; color:var(--sf-fg);">Drivers Trust Us With Their Best Cars</h2>
+      <p style="font-size:var(--md-body); line-height:1.6; color:var(--sf-muted); max-width:56ch; margin:0 0 44px;">Real Google reviews from color change clients across Redmond, Bellevue &amp; Seattle.</p>
 
-      <div style="border:1px solid var(--md-border); background:#fff; padding:34px 36px; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap; margin-bottom:22px;">
+      <div style="border:1px solid var(--sf-border); background:transparent; padding:34px 36px; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap; margin-bottom:22px;">
         <div style="display:flex; align-items:center; gap:28px;">
-          <div style="font-family:var(--md-font-display); font-weight:700; font-size:58px; line-height:.9; color:var(--md-ink);">4.9</div>
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:58px; line-height:.9; color:var(--sf-fg);">4.9</div>
           <div>
             <div style="color:#FFC400; font-size:18px; letter-spacing:3px; margin-bottom:8px;">★★★★★</div>
-            <div style="font-size:14px; color:var(--md-muted);"><span style="color:var(--md-ink); font-weight:600;">Rated on Google</span> · 112+ reviews</div>
-            <div style="display:flex; align-items:center; gap:8px; margin-top:8px; color:var(--md-muted); font-size:13px;"><span style="width:14px; height:14px; background:var(--md-red); display:inline-block;"></span>STEK &amp; CarPro certified installer in Redmond</div>
+            <div style="font-size:14px; color:var(--sf-muted);"><span style="color:var(--sf-fg); font-weight:600;">Rated on Google</span> · 112+ reviews</div>
+            <div style="display:flex; align-items:center; gap:8px; margin-top:8px; color:var(--sf-muted); font-size:13px;"><span style="width:14px; height:14px; background:var(--md-red); display:inline-block;"></span>STEK &amp; CarPro certified installer in Redmond</div>
           </div>
         </div>
-        <div style="display:flex; align-items:center; gap:11px; color:var(--md-muted); font-size:14px;">
+        <div style="display:flex; align-items:center; gap:11px; color:var(--sf-muted); font-size:14px;">
           <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg>
           Powered by Google
         </div>
       </div>
 
-      <div class="md-2col" style="display:grid; grid-template-columns:repeat(2,1fr); gap:22px;">
-        <div style="border:1px solid var(--md-border); background:#fff; padding:30px 30px 32px; box-sizing:border-box;">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#3a5a7a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">T</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">taylor tyler</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">Local Guide · 21 reviews · a year ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+      <div style="position:relative; overflow:hidden;">
+        <div class="rev-track" ref="{{ revTrackRef }}">
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:transparent; padding:30px 30px 32px; box-sizing:border-box;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#3a5a7a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">T</span><div><div style="font-weight:600; font-size:15px; color:var(--sf-fg);">taylor tyler</div><div style="font-size:12.5px; color:var(--sf-muted); margin-top:2px;">Local Guide · 21 reviews · a year ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
           <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
-          <p style="font-size:15px; line-height:1.65; color:#2a2a2a; margin:0;">I just picked up my car from Metropolitan detail and have to say I am incredibly pleased with the results. I had the vehicle wrapped in STEK color PPF for a color change and protection. The vehicle I brought in was not a standard vehicle, so the lead installer and co owner walked around the car with me and provided a custom quote. They forewarned me about all of the potential problems that could occur when installing color ppf, and highlighted any areas where seams were going to be required. When I picked up the car it looked brand new, they completely cleaned the vehicle and did an incredible job installing the material. I am convinced this material will last a long time with how much care and attention to detail they showed when installing it. I would highly recommend this shop to anyone considering a vehicle wrap of any kind. Another huge bonus of going with Metropolitan Detail is the free loaner car. Really simple process which made my drop off and pick up seamless.</p>
-        </div>
-        <div style="border:1px solid var(--md-border); background:#fff; padding:30px 30px 32px; box-sizing:border-box;">
-          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#c0392b; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">A</span><div><div style="font-weight:600; font-size:15px; color:var(--md-ink);">Aaron</div><div style="font-size:12.5px; color:var(--md-muted); margin-top:2px;">6 reviews · 7 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:0;">I just picked up my car from Metropolitan detail and have to say I am incredibly pleased with the results. I had the vehicle wrapped in STEK color PPF for a color change and protection. The vehicle I brought in was not a standard vehicle, so the lead installer and co owner walked around the car with me and provided a custom quote. They forewarned me about all of the potential problems that could occur when installing color ppf, and highlighted any areas where seams were going to be required. When I picked up the car it looked brand new, they completely cleaned the vehicle and did an incredible job installing the material. I am convinced this material will last a long time with how much care and attention to detail they showed when installing it. I would highly recommend this shop to anyone considering a vehicle wrap of any kind. Another huge bonus of going with Metropolitan Detail is the free loaner car. Really simple process which made my drop off and pick up seamless.</p>
+        </div></div>
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:transparent; padding:30px 30px 32px; box-sizing:border-box;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#c0392b; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">A</span><div><div style="font-weight:600; font-size:15px; color:var(--sf-fg);">Aaron</div><div style="font-size:12.5px; color:var(--sf-muted); margin-top:2px;">6 reviews · 7 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
           <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
-          <p style="font-size:15px; line-height:1.65; color:#2a2a2a; margin:0;">Metropolitan Detail did a fantastic job of applying full body PPF to my new-to-me 2015 Dodge Challenger Hellcat. The car's Sublime Green body and satin black hood look phenomenal now. The PPF is practically invisible (other than the everlasting shine) and knowing that it's as protected as it can be makes driving the car a lot more fun! I really can't recommend their services enough.</p>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:0;">Metropolitan Detail did a fantastic job of applying full body PPF to my new-to-me 2015 Dodge Challenger Hellcat. The car's Sublime Green body and satin black hood look phenomenal now. The PPF is practically invisible (other than the everlasting shine) and knowing that it's as protected as it can be makes driving the car a lot more fun! I really can't recommend their services enough.</p>
+        </div></div>
         </div>
       </div>
+      <div style="display:flex; align-items:center; gap:10px; margin-top:26px;">
+        <button onClick="{{ revPrev }}" aria-label="Previous review" style="width:46px; height:46px; border:1px solid var(--sf-border); background:transparent; color:var(--sf-fg); cursor:pointer; font-size:16px; transition:background .25s var(--md-ease), border-color .25s;" style-hover="border-color:var(--sf-fg);">←</button>
+        <button onClick="{{ revNext }}" aria-label="Next review" style="width:46px; height:46px; border:none; background:var(--md-red); color:#fff; cursor:pointer; font-size:16px; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">→</button>
+      </div>
+    
 
       <div style="margin-top:34px;">
         <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" class="md-cta"><span class="l">Read Google Reviews</span><span class="t"><span class="arr">→</span></span></a>
@@ -493,15 +534,14 @@
   </section>
 
   <!-- ============ FREE LOANER CAR ============ -->
-  <section data-reveal="out" style="background:#0A0A0A; padding:44px 0 var(--md-section-y);">
+  <section data-reveal="out" style="background:#0A0A0A; padding:var(--md-section-y) 0;">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; text-align:center;">
       <div style="display:inline-flex; align-items:center; gap:14px; margin-bottom:18px;">
-        <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
         <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Free Loaner Cars</span>
       </div>
       <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.05; letter-spacing:var(--md-tracking-tight); color:#fff; margin:0 auto 18px; max-width:20ch;">Drop off, grab a free loaner, drive away protected.</h2>
       <p style="font-size:17px; line-height:1.6; color:rgba(255,255,255,0.7); margin:0 auto 32px; max-width:54ch;">Quality work takes time, and you should not have to wait around for it. We keep a small free fleet, based on availability, so your day keeps moving.</p>
-      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="/get-a-quote" class="md-cta" style="display:inline-flex;"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a><a onClick="{{ openLoaner }}" role="button" tabindex="0" style="display:inline-flex; align-items:center; gap:11px; padding:16px 26px; border:1px solid rgba(255,255,255,0.28); border-radius:2px; color:#fff; text-decoration:none; font-family:var(--md-font-body); font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer; transition:border-color .25s, background .25s;" style-hover="border-color:#fff; background:rgba(255,255,255,0.08);"><span style="display:inline-flex; width:22px; height:22px; border-radius:50%; background:var(--md-red); align-items:center; justify-content:center; flex:none;"><span style="width:0; height:0; border-left:7px solid #fff; border-top:5px solid transparent; border-bottom:5px solid transparent; margin-left:2px;"></span></span>Watch the Loaner Tour</a></div>
+      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="#" onClick="{{ openAvail }}" class="md-cta" style="display:inline-flex;"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a><a onClick="{{ openLoaner }}" role="button" tabindex="0" style="display:inline-flex; align-items:center; gap:11px; padding:16px 26px; border:1px solid rgba(255,255,255,0.28); border-radius:2px; color:#fff; text-decoration:none; font-family:var(--md-font-body); font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; cursor:pointer; transition:border-color .25s, background .25s;" style-hover="border-color:#fff; background:rgba(255,255,255,0.08);"><span style="display:inline-flex; width:22px; height:22px; border-radius:50%; background:var(--md-red); align-items:center; justify-content:center; flex:none;"><span style="width:0; height:0; border-left:7px solid #fff; border-top:5px solid transparent; border-bottom:5px solid transparent; margin-left:2px;"></span></span>Watch the Loaner Tour</a></div>
       <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:840px; margin:52px auto 0;">
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img src="uploads/APNQkAFSPZWLCsuB9J3BdO_83KGZHoMO0rl2oy-HttFOWa3VeoXQQyReN-_ZBTzzuNR60vlV-CWTWsV4Yxlr2iAyVK476kkdYR7BJkO5KUoYQsKEVYQoZymnw4oGZvpWmD0bjYaXhHHk=s870-k-no.png" alt="Metropolitan Detail loaner car fleet" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img src="uploads/APNQkAH6G3nlaoSi1Jy6PusI0bHq3kjvdT7f7muSzkHVEs_BqKOmzZ7RpNJcmzItAI89AQnO4IkiBZ5vvHq_u4NDmdz5f0JXgIdp3Q8OXyZoEDCRLmohUh0SJNFZVvJHmaegmdzIHtqi=s870-k-no.png" alt="Metropolitan Detail courtesy loaner vehicle" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
@@ -525,7 +565,7 @@
       <details class="faq-item"><summary>What colors can I get?<span class="faq-plus"></span></summary><p>STEK Fashion Films come in a wide range of finishes. Come in and see them in person, since color reads differently in the light than it does on a screen.</p></details>
       <details class="faq-item"><summary>Can I change just part of the car?<span class="faq-plus"></span></summary><p>Yes, roofs, mirrors, and accents are common. Tell us what you have in mind.</p></details>
       <details class="faq-item"><summary>How long does it last?<span class="faq-plus"></span></summary><p>Our installs carry a 10 year warranty.</p></details>
-      <div style="margin-top:46px; display:flex; justify-content:center;"><a href="/get-a-quote" class="md-cta lg"><span class="l">Get a Quote</span><span class="t"><span class="arr">→</span></span></a></div>
+      <div style="margin-top:46px;"><a href="/faq" class="md-cta lg"><span class="l">View Full FAQ</span><span class="t"><span class="arr">→</span></span></a></div>
     </div>
   </section>
 
@@ -537,8 +577,8 @@
         <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.1) 60%);"></div>
       </div>
       <div class="md-cta-panel" style="position:absolute; right:clamp(40px,7vw,108px); top:50%; transform:translateY(-50%); background:#0A0A0A; border:1px solid var(--md-border-dark); padding:clamp(34px,4vw,50px); max-width:440px;">
-        <div style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:16px;">STEK Fashion Films · Redmond</div>
-        <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(28px,3.4vw,36px); line-height:1.08; letter-spacing:-0.02em; color:#fff; margin:0 0 26px;">Ready for a new look?</h2>
+        <div style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:16px;">Three decades in Redmond</div>
+        <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(28px,3.4vw,36px); line-height:1.08; letter-spacing:-0.02em; color:#fff; margin:0 0 26px;">Ready for a new color?</h2>
         <a href="/get-a-quote" class="md-cta lg"><span class="l">Get a Quote</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
@@ -546,15 +586,20 @@
 
   <!-- ============ FOOTER ============ -->
   <footer id="contact" data-reveal="out" style="background:var(--md-ink); border-top:1px solid var(--md-border-dark); padding:72px 0 36px;">
-    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr 1.2fr 1.2fr; gap:40px;">
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Services</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/paint-protection-film" class="foot-link">DYNOshield</a><a href="/dynomatte" class="foot-link">DYNOmatte</a><a href="/color-change" class="foot-link">Color Change</a></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Company</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" class="foot-link">Blog</a><a href="/faq" class="foot-link">FAQ</a><a href="/contact" class="foot-link">Contact</a><a href="/get-a-quote" class="foot-link">Get a Quote</a></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Contact</div><div style="display:flex; flex-direction:column; gap:14px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link" style="display:flex; align-items:flex-start; gap:11px; line-height:1.5;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>8539 152nd Ave NE<br>Redmond, WA 98052</span></a><a href="tel:+14252336068" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--md-red)" style="flex:none;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg><span>(425) 233-6068</span></a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 7l8 6 8-6"></path></svg><span>info@metropolitandetail.com</span></a><div style="display:flex; align-items:flex-start; gap:11px; font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.5); margin-top:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Mon–Fri 8:00 AM – 5:00 PM<br>Sat &amp; Sun Closed</span></div></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Find Us</div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:200px; border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
+    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:repeat(5,1fr); gap:40px;">
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/paint-protection-film" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Paint Protection Film</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/dynomatte" class="foot-link">DYNOmatte</a><a href="/color-change" class="foot-link">Color Change</a><a href="/ev-protection" class="foot-link">EV Protection</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/ceramic-coatings" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Ceramic Coatings</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/cquartz-sic" class="foot-link">CQuartz SiC</a><a href="/cquartz-professional" class="foot-link">CQuartz Professional</a><a href="/cquartz-finest-reserve" class="foot-link">CQuartz Finest Reserve</a><a href="/glassparency" class="foot-link">Glassparency</a><a href="/dlux-wheels-and-calipers" class="foot-link">DLUX Wheels &amp; Calipers</a><a href="/dlux-trim-coat" class="foot-link">DLUX Trim Coat</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/exterior-detailing" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Detailing</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/essential-exterior" class="foot-link">Essential Exterior</a><a href="/ceramic-maintenance-polish" class="foot-link">Ceramic Maintenance Polish</a><a href="/ppf-maintenance-polish" class="foot-link">PPF Maintenance Polish</a><a href="/interior-detailing" class="foot-link">Interior Detailing</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Glass &amp; Paint</span></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/window-tint" class="foot-link">Window Tint</a><a href="/paint-correction" class="foot-link">Paint Correction</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Company</span></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/about" class="foot-link">About</a><a href="/portfolio" class="foot-link">Portfolio</a><a href="/blog" class="foot-link">Blog</a><a href="/faq" class="foot-link">FAQ</a><a href="/employment" class="foot-link">Employment</a><a href="/contact" class="foot-link">Contact</a><a href="/get-a-quote" class="foot-link">Get a Quote</a></div></div>
+    </div>
+    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:48px auto 0; padding:0 40px; display:grid; grid-template-columns:1.45fr 1.05fr; gap:40px;">
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Contact</span></div><div style="border:1px solid var(--md-border-dark); border-radius:2px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));"><div style="display:flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:16px;"><span style="width:7px; height:7px; border-radius:50%; background:#3ecf6a;"></span>Open now</div><a href="tel:+14252336068" class="foot-link" style="display:block; font-family:var(--md-font-display); font-weight:700; font-size:clamp(20px,1.7vw,28px); line-height:1.1; color:#fff; margin-bottom:6px; white-space:nowrap;">(425) 233-6068</a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:block; font-size:13.5px; margin-bottom:16px;">info@metropolitandetail.com</a><div style="font-size:13.5px; line-height:1.55; color:rgba(255,255,255,0.7); border-top:1px solid var(--md-border-dark); padding-top:16px; margin-bottom:18px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link">8539 152nd Ave NE, Redmond, WA 98052</a><br><span style="color:rgba(255,255,255,0.5);">Mon–Fri 8:00 AM – 5:00 PM</span></div><a href="/get-a-quote" style="display:flex; align-items:center; justify-content:center; gap:9px; background:var(--md-red); color:#fff; font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:13px 10px; border-radius:2px; text-decoration:none; transition:background .22s; white-space:nowrap;" style-hover="background:#b30018;">Schedule appointment <span>→</span></a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Find Us</span></div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:240px; border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
     </div>
     <div style="max-width:var(--md-maxw); margin:56px auto 0; padding:0 40px;">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:30px; flex-wrap:wrap; border-top:1px solid var(--md-border-dark); padding-top:36px;">
-        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height: clamp(72px,8vw,120px); width: 350px; display: block"></a>
+        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height: clamp(48px,5vw,72px); width: auto; display: block"></a>
         <div style="display:flex; flex-direction:column; align-items:flex-end; gap:18px;">
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#fff; border-radius:2px; padding:9px 16px; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:14px; letter-spacing:1px;">★★★★★</span><span style="width:1px; height:14px; background:#e0e0e0;"></span><span style="font-size:12.5px; font-weight:600; color:#0A0A0A; white-space:nowrap;">4.9 · 112+ reviews</span></a>
           <div style="display:flex; gap:12px;"><a href="https://www.facebook.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Facebook" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.5-1.5h1.6V3.6c-.28-.04-1.24-.12-2.36-.12-2.33 0-3.93 1.42-3.93 4.04v2.25H7.5V13h2.81v8h3.19z"></path></svg></a><a href="https://www.instagram.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Instagram" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></a><a href="https://www.youtube.com/@metropolitandetail" target="_blank" rel="noopener" aria-label="YouTube" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M22 8.2a2.6 2.6 0 0 0-1.8-1.8C18.6 6 12 6 12 6s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.7 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.8C5.4 18 12 18 12 18s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22.3 12 27 27 0 0 0 22 8.2zM10 15V9l5.2 3L10 15z"></path></svg></a><a href="https://www.yelp.com/biz/metropolitan-detail-redmond" target="_blank" rel="noopener" aria-label="Yelp" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12.3 2.1c-1.6.4-2 .8-2 2.4 0 .5.1 3.6.2 6.9.1 4 .2 6.2.4 6.6.3.6 1.1.8 1.8.4.3-.1 1.6-1.6 3-3.4 2.9-3.7 3-3.9 2.2-4.9-.3-.4-1.3-.8-4.3-1.9-4.4-1.6-4.6-1.6-5.5-1.3zM4.8 11.3c-.7.5-.7 1.5-.1 2.1.3.3 1.3.7 3 1.2 2.6.8 2.9.8 3.4.4.7-.6.6-1.6-.3-2.2-1-.7-4.9-2.2-5.4-2-.2 0-.5.3-.6.5zM12.6 16.6c-.6.3-.7.7-.5 3.1.2 2.5.3 2.8.9 3.1.7.3 1.2.1 1.7-.8 1.3-2.2 1.5-3 1-3.6-.5-.7-2.4-1.4-3.1-1.2zM18.7 15.2c-.4.1-1.4.9-2.6 2-1.6 1.5-1.8 1.8-1.6 2.4.3.8 1 1 2 .6 2.4-.8 4-1.6 4.2-2.1.4-.9-.4-3-1.3-3-.2 0-.5 0-.7.1z"></path></svg></a></div>
@@ -565,6 +610,28 @@
       <span style="font-size:12.5px; color:rgba(255,255,255,0.45);">© 2026 Metropolitan Detail. Celebrating 30 years.</span>
     </div>
   </footer>
+
+  <!-- ============ AVAILABILITY MODAL ============ -->
+  <div id="avail-modal" onClick="{{ closeAvail }}" style="display:none; position:fixed; inset:0; z-index:210; background:rgba(0,0,0,0.84); align-items:center; justify-content:center; padding:24px; overflow:auto;">
+    <div onClick="{{ stopProp }}" style="position:relative; width:100%; max-width:560px; background:#0F0F0F; border:1px solid var(--md-border-dark); padding:40px 40px 36px; text-align:left;">
+      <button onClick="{{ closeAvail }}" aria-label="Close" style="position:absolute; top:16px; right:16px; width:34px; height:34px; background:transparent; border:1px solid var(--md-border-dark); color:#fff; font-size:17px; line-height:1; cursor:pointer; transition:border-color .2s, background .2s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);">&times;</button>
+      <div data-av-body="">
+        <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="display:inline-block; width:26px; height:3px; background:var(--md-red); flex:0 0 auto;"></span><span style="font-weight:600; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Free Loaner Cars</span></div>
+        <h3 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.02em; color:#fff; margin:0 0 10px;">Ask about availability</h3>
+        <p style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.62); margin:0 0 26px;">Tell us what you are booking and when you need the car. We will confirm what is open.</p>
+        <form onSubmit="{{ submitAvail }}" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div><label class="av-lb" for="av-name">Name</label><input class="av-in" id="av-name" name="name" type="text" placeholder="Full name" required=""></div>
+          <div><label class="av-lb" for="av-phone">Phone</label><input class="av-in" id="av-phone" name="phone" type="tel" placeholder="(425) 000-0000"></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-email">Email</label><input class="av-in" id="av-email" name="email" type="email" placeholder="you@email.com" required=""></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-vehicle">Vehicle</label><input class="av-in" id="av-vehicle" name="vehicle" type="text" placeholder="Year, make and model"></div>
+          <div><label class="av-lb" for="av-service">Service</label><select class="av-in" id="av-service" name="service"><option>Paint Protection Film</option><option>Ceramic Coating</option><option>Window Tint</option><option>Paint Correction</option><option>Detailing</option><option>Not sure yet</option></select></div>
+          <div><label class="av-lb" for="av-date">Preferred drop-off</label><input class="av-in" id="av-date" name="date" type="date"></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-notes">Anything else</label><textarea class="av-in" id="av-notes" name="notes" rows="3" placeholder="Timing, questions, or preferences"></textarea></div>
+          <button type="submit" style="grid-column:1 / -1; margin-top:6px; background:var(--md-red); color:#fff; border:none; font:600 12.5px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; padding:16px 22px; cursor:pointer; transition:background .22s;" style-hover="background:#b30018;">Check availability</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ LOANER VIDEO MODAL ============ -->
   <div id="loaner-video" onClick="{{ closeLoaner }}" style="display:none; position:fixed; inset:0; z-index:200; background:rgba(0,0,0,0.86); align-items:center; justify-content:center; padding:24px;">
@@ -594,6 +661,9 @@ class Component extends DCLogic {
     const g = this._gallery();
     return {
       headerRef: this._headerRef,
+      revTrackRef: (this._revTrackRef = this._revTrackRef || React.createRef()),
+      revPrev: () => { this._revI = Math.max(0, (this._revI || 0) - 1); this._applyRev(); },
+      revNext: () => { const tr = this._revTrackRef && this._revTrackRef.current; const n = tr ? tr.children.length : 0; const per = (window.innerWidth <= 820) ? 1 : 2; const max = Math.max(0, n - per); this._revI = Math.min(max, (this._revI || 0) + 1); this._applyRev(); },
       scrimRef: this._scrimRef,
       tabs: g.tabs,
       pageImages: g.pageImages,
@@ -604,9 +674,12 @@ class Component extends DCLogic {
       menuOpen: this.state.menuOpen,
       openMenu: () => this.setState({ menuOpen: true }),
       closeMenu: () => this.setState({ menuOpen: false }),
-      openLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML='<iframe title="Free loaner cars at Metropolitan Detail" src="https://www.youtube-nocookie.com/embed/sA5xTSn3Om0?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>'; m.style.display='flex'; },
+      openLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML='<iframe title="Free loaner cars at Metropolitan Detail" src="https://www.youtube.com/embed/OU2MUQUXX1c?autoplay=1&mute=1&rel=0&modestbranding=1&playsinline=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen frameborder="0" style="position:absolute; inset:0; width:100%; height:100%; border:0; display:block;"></iframe>'; m.style.display='flex'; },
       closeLoaner: () => { var m=document.getElementById('loaner-video'); if(!m) return; var f=m.querySelector('[data-frame]'); if(f) f.innerHTML=''; m.style.display='none'; },
       stopProp: (e) => { if(e && e.stopPropagation) e.stopPropagation(); },
+      openAvail: (e) => { if(e && e.preventDefault) e.preventDefault(); var m=document.getElementById('avail-modal'); if(m) m.style.display='flex'; },
+      closeAvail: () => { var m=document.getElementById('avail-modal'); if(m) m.style.display='none'; },
+      submitAvail: (e) => { if(e && e.preventDefault) e.preventDefault(); var m=document.getElementById('avail-modal'); if(!m) return; var b=m.querySelector('[data-av-body]'); if(b) b.innerHTML='<div style="padding:14px 0 6px;"><div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="display:inline-block; width:26px; height:3px; background:var(--md-red);"></span><span style="font-weight:600; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Request sent</span></div><h3 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.02em; color:#fff; margin:0 0 10px;">Thank you.</h3><p style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.62); margin:0;">We will confirm loaner availability for your dates and follow up shortly.</p></div>'; },
       playYt: (e) => {
         const card = e.currentTarget;
         const vid = card.getAttribute('data-vid');

@@ -21,11 +21,11 @@
 <meta property="og:image:alt" content="CQuartz SiC Ceramic Coating in Redmond, WA | Metropolitan Detail">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="CQuartz SiC Ceramic Coating in Redmond, WA | Metropolitan Detail">
-<meta name="twitter:description" content="CQuartz SiC ceramic coating in Redmond, serving Bellevue and Seattle. One year of real ceramic protection from $875, full wash, decontamination, and luster polish included.">
+<meta name="twitter:description" content="CQuartz SiC ceramic coating in Redmond, serving Bellevue and Seattle. Our entry ceramic coating on a silicon carbide base, 1 year of protection, prep included, from $875.">
 <meta name="twitter:image" content="https://metropolitandetail.argon-devsite.com/uploads/porsche00012.jpeg">
-<meta name="description" content="CQuartz SiC ceramic coating in Redmond, serving Bellevue and Seattle. One year of real ceramic protection from $875, full wash, decontamination, and luster polish included.">
+<meta name="description" content="CQuartz SiC ceramic coating in Redmond, serving Bellevue and Seattle. Our entry ceramic coating on a silicon carbide base, 1 year of protection, prep included, from $875.">
 <meta property="og:title" content="CQuartz SiC Ceramic Coating in Redmond, WA | Metropolitan Detail">
-<meta property="og:description" content="Real ceramic protection, entry level. One year silicon carbide coating from $875, prep included. Serving Redmond, Bellevue and Seattle.">
+<meta property="og:description" content="A real coating, without the big commitment. A silicon carbide base, 1 year of protection, prep included. Serving Redmond, Bellevue and Seattle.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/porsche00012.jpeg">
 <style>
@@ -40,8 +40,15 @@
   .md-link-underline:hover::after { width:100%; }
   a { color: var(--md-red); }
   a:hover { color: var(--md-red-hover); }
-  .foot-link{ font-size:14px; color:rgba(255,255,255,0.7); text-decoration:none; transition:color .2s var(--md-ease); }
+  .foot-link{ font-size:15px; white-space:nowrap; color:rgba(255,255,255,0.72); text-decoration:none; transition:color .2s var(--md-ease); }
   .foot-link:hover{ color:var(--md-red); }
+  .av-in{ width:100%; box-sizing:border-box; background:#161616; border:1px solid #2A2A2A; color:#fff; font:400 14.5px/1.45 var(--md-font-body); padding:12px 13px; outline:none; transition:border-color .2s; }
+  .av-in:focus{ border-color:var(--md-red); }
+  .av-in::placeholder{ color:rgba(255,255,255,0.32); }
+  .av-in[type="date"]{ color-scheme:dark; }
+  .av-in::-webkit-calendar-picker-indicator{ filter:none; opacity:.85; cursor:pointer; }
+  .av-lb{ display:block; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:7px; }
+  @media (max-width: 560px){ #avail-modal form{ grid-template-columns:1fr !important; } }
   .md-cta{ display:inline-flex; align-items:stretch; text-decoration:none; border-radius:2px; overflow:hidden; font-family:var(--md-font-body); cursor:pointer; }
   .md-cta .l{ display:inline-flex; align-items:center; background:var(--md-red); color:#fff; padding:16px 28px; font-weight:700; font-size:13px; letter-spacing:.05em; text-transform:uppercase; transition:background .25s var(--md-ease); white-space:nowrap; }
   .md-cta .t{ display:inline-flex; align-items:center; justify-content:center; background:var(--md-red); color:#fff; padding:0 17px; border-left:1px solid rgba(255,255,255,.4); transition:background .25s var(--md-ease); }
@@ -64,11 +71,13 @@
   .svc-bullets li{ display:flex; align-items:flex-start; gap:10px; font-size:14.5px; line-height:1.5; color:var(--svc-muted); }
   .svc-bullets li::before{ content:""; flex:none; width:6px; height:6px; margin-top:7px; background:var(--md-red); }
   /* Process */
-  .proc-line-fill{ width:0; }
-  .proc-step{ opacity:.3; transition:opacity .5s var(--md-ease); }
+  .proc-line-fill{ width:100% !important; }
+  .proc-step{ opacity:1; }
   .proc-step.active{ opacity:1; }
   .proc-dot{ transition:background .45s var(--md-ease), border-color .45s var(--md-ease), transform .45s var(--md-ease); }
-  .proc-step.active .proc-dot{ background:var(--md-red) !important; border-color:var(--md-red) !important; transform:scale(1.15); }
+  .proc-step.active .proc-dot{ background:var(--md-red) !important; border-color:var(--md-red) !important; }
+  @media (max-width:1100px){ .proc-rail{ display:none; } }
+  @media (max-width:1200px){ #addons .md-4col{ grid-template-columns:repeat(2,minmax(0,1fr)) !important; } }
   /* Gallery */
   .gal-tab{ font-family:var(--md-font-body); font-weight:600; font-size:12.5px; letter-spacing:.05em; text-transform:uppercase; padding:11px 20px; border:1px solid var(--sf-border); background:transparent; color:var(--sf-muted); cursor:pointer; transition:background .2s var(--md-ease), color .2s, border-color .2s; }
   .gal-tab:hover{ color:var(--sf-fg); border-color:var(--sf-fg); }
@@ -85,12 +94,16 @@
   .faq-plus::after{ left:8px; top:0; width:2px; height:18px; }
   .faq-item[open] .faq-plus{ transform:rotate(45deg); }
   .faq-item p{ margin:0; padding:0 0 28px; font-size:15.5px; line-height:1.7; color:var(--sf-muted); max-width:70ch; }
+  .rev-track{ display:flex; transition:transform .55s var(--md-ease); }
+  .rev-card{ flex:0 0 50%; box-sizing:border-box; padding-right:22px; }
+  @media (max-width: 820px){ .rev-card{ flex:0 0 100%; padding-right:0; } }
   /* Text fade */
   .txt-fade{ opacity:0; transform:translateY(30px); transition:opacity .9s var(--md-ease), transform .9s var(--md-ease); }
   .txt-fade.in{ opacity:1; transform:none; }
   @media (prefers-reduced-motion: reduce){ .txt-fade{ opacity:1 !important; transform:none !important; } .md-film{ display:none; } }
   .md-hamburger{ display:none; }
   @media (max-width: 1120px){ .md-nav-desktop{ display:none !important; } .md-hamburger{ display:inline-flex !important; } }
+  @media (max-width: 1100px){ .proc .md-4col{ grid-template-columns:1fr 1fr !important; } }
   @media (max-width: 900px){
     .md-row{ grid-template-columns:1fr !important; }
     .md-row .md-media-col{ order:-1 !important; }
@@ -111,6 +124,12 @@
   .gtab{ display:inline-flex; align-items:center; gap:8px; padding:9px 16px !important; border:none !important; background:transparent !important; border-radius:999px !important; color:rgba(255,255,255,.7) !important; cursor:pointer; font:600 11.5px/1 var(--md-font-body); letter-spacing:.05em; text-transform:uppercase; transition:background .2s var(--md-ease), color .2s; }
   .gtab:hover{ color:#fff !important; }
   .gtab.active{ background:var(--md-red) !important; color:#fff !important; }
+  .gtab-txt{ font-family:var(--md-font-body); font-weight:600; font-size:12px; letter-spacing:.04em; text-transform:uppercase; white-space:nowrap; line-height:1; padding:9px 15px; border:1px solid rgba(255,255,255,0.16); background:#000; color:rgba(255,255,255,0.6); cursor:pointer; border-radius:999px; transition:background .2s var(--md-ease), color .2s, border-color .2s; }
+  .gtab-txt:hover{ color:#fff; border-color:#fff; }
+  .gtab-txt[data-active="true"]{ background:var(--md-red); border-color:var(--md-red); color:#fff; }
+  .gpage{ min-width:40px; height:40px; padding:0 12px; display:inline-flex; align-items:center; justify-content:center; font-family:var(--md-font-body); font-weight:600; font-size:13px; border:1px solid rgba(255,255,255,0.16); background:transparent; color:rgba(255,255,255,0.7); cursor:pointer; border-radius:2px; transition:background .2s var(--md-ease), color .2s, border-color .2s; }
+  .gpage:hover{ color:#fff; border-color:#fff; }
+  .gpage[data-active="true"]{ background:var(--md-red); border-color:var(--md-red); color:#fff; }
 </style>
 <style>
   .md-nav-desktop{ display:flex; align-items:center; gap:2px; }
@@ -161,15 +180,35 @@
                 <a href="/paint-protection-film">DYNOshield</a>
                 <a href="/dynomatte">DYNOmatte</a>
                 <a href="/color-change">Color Change</a>
-                <a href="/ev-protection">EV Protection</a>
               </div>
             </div>
-            <a href="/ceramic-coatings">Ceramic Coatings</a>
-            <a href="/cquartz-sic">CQuartz SiC</a>
+            <div class="nav-sub">
+              <a href="/ceramic-coatings" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Ceramic Coatings <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/cquartz-sic">CQuartz SiC</a>
+                <a href="/cquartz-professional">CQuartz Professional</a>
+                <a href="/cquartz-finest-reserve">CQuartz Finest Reserve</a>
+                <a href="/glassparency">Glassparency</a>
+                <a href="/dlux-wheels-and-calipers">DLUX Wheels &amp; Calipers</a>
+                <a href="/dlux-trim-coat">DLUX Trim Coat</a>
+              </div>
+            </div>
             <a href="/window-tint">Window Tint</a>
             <a href="/paint-correction">Paint Correction</a>
-            <a href="/exterior-detailing">Exterior Detailing</a>
-            <a href="/interior-detailing">Interior Detailing</a>
+            <div class="nav-sub">
+              <a href="/exterior-detailing" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Exterior Detailing <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/essential-exterior">Essential Exterior</a>
+                <a href="/ceramic-maintenance-polish">Ceramic Maintenance Polish</a>
+                <a href="/ppf-maintenance-polish">PPF Maintenance Polish</a>
+              </div>
+            </div>
+            <div class="nav-sub">
+              <a href="/interior-detailing" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">Interior Detailing <span class="nav-caret-r"></span></a>
+              <div class="nav-submenu">
+                <a href="/interior-detailing">Signature Interior</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="nav-item">
@@ -179,10 +218,11 @@
             <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" style="white-space:normal; max-width:320px;">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
           </div>
         </div>
+        <a href="/ev-protection" class="nav-link">EV Protection</a>
+        <a href="/portfolio" class="nav-link">Portfolio</a>
         <a href="/about" class="nav-link">About</a>
         <a href="/faq" class="nav-link">FAQ</a>
         <a href="/contact" class="nav-link">Contact</a>
-        <a href="/get-a-quote" class="nav-link">Get a Quote</a>
       </nav>
       <div style="display:flex; align-items:center; gap:14px; justify-self:end; grid-column:3;">
         <a href="tel:+14252336068" class="hdr-phone" style="display:inline-flex; align-items:center; gap:8px; font-size:14px; font-weight:600; color:var(--md-white); text-decoration:none; white-space:nowrap;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg>(425) 233-6068</a>
@@ -204,21 +244,30 @@
         <a href="/paint-protection-film" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOshield</a>
         <a href="/dynomatte" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DYNOmatte</a>
         <a href="/color-change" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Color Change</a>
-        <a href="/ev-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">EV Protection</a>
         <a href="/ceramic-coatings" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Ceramic Coatings</a>
-        <a href="/cquartz-sic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">CQuartz SiC</a>
+        <a href="/cquartz-sic" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz SiC</a>
+        <a href="/cquartz-professional" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz Professional</a>
+        <a href="/cquartz-finest-reserve" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">CQuartz Finest Reserve</a>
+        <a href="/glassparency" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Glassparency</a>
+        <a href="/dlux-wheels-and-calipers" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DLUX Wheels &amp; Calipers</a>
+        <a href="/dlux-trim-coat" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">DLUX Trim Coat</a>
         <a href="/window-tint" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Window Tint</a>
         <a href="/paint-correction" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Paint Correction</a>
         <a href="/exterior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Exterior Detailing</a>
+        <a href="/essential-exterior" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Essential Exterior</a>
+        <a href="/ceramic-maintenance-polish" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">Ceramic Maintenance Polish</a>
+        <a href="/ppf-maintenance-polish" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">PPF Maintenance Polish</a>
         <a href="/interior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Interior Detailing</a>
+        <a href="/interior-detailing" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:8px 0 8px 14px;">Signature Interior</a>
         <div style="font-weight:500; font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:22px 0 6px;">Explore</div>
         <a href="/blog" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Blog</a>
         <a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:16px; color:rgba(255,255,255,0.72); text-decoration:none; padding:9px 0 9px 18px; border-bottom:1px solid var(--md-border-dark);">The Art of Matte Paint and the Magic of STEK DYNOmatte Protection</a>
+        <a href="/ev-protection" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">EV Protection</a>
+        <a href="/portfolio" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Portfolio</a>
         <a href="/about" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">About</a>
         <a href="/faq" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">FAQ</a>
         <a href="/contact" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Contact</a>
-        <a href="/get-a-quote" onClick="{{ closeMenu }}" style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; text-decoration:none; padding:10px 0; border-bottom:1px solid var(--md-border-dark);">Get a Quote</a>
-      </nav>
+              </nav>
       <div style="margin-top:auto; display:flex; flex-direction:column; gap:14px;">
         <a href="tel:+14252336068" style="font-size:18px; font-weight:600; color:#fff; text-decoration:none;">(425) 233-6068</a>
         <a href="/get-a-quote" onClick="{{ closeMenu }}" style="display:inline-flex; justify-content:center; background:var(--md-red); padding:16px; border-radius:2px; text-decoration:none; font-size:13px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:#fff;">Schedule Appointment</a>
@@ -228,98 +277,279 @@
 
   <!-- ============ HERO ============ -->
   <section id="home" data-screen-label="CQuartz SiC" style="position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; background:#000;">
-    <img src="uploads/porsche00012.jpeg" alt="CQuartz SiC ceramic coated car at Metropolitan Detail in Redmond" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+    <img src="uploads/pasted-1786431651705-0.png" alt="CQuartz SiC ceramic coated Lexus LC at Metropolitan Detail in Redmond" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
     <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.22) 38%, rgba(0,0,0,.9) 100%);"></div>
     <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 55%);"></div>
     <span style="position:absolute; top:-20%; left:0; width:55%; height:140%; pointer-events:none; background:linear-gradient(115deg, transparent 38%, rgba(255,255,255,.22) 48%, rgba(255,255,255,.05) 54%, transparent 66%); animation:mdHeroFilm 1.9s cubic-bezier(.22,.61,.36,1) .25s both;"></span>
-    <div class="md-hero-inner" style="position:relative; z-index:2; width:100%; max-width:var(--md-maxw); margin:0 auto; padding:120px 40px 60px;">
+    <div class="md-hero-inner" style="position:relative; z-index:2; width:100%; max-width:var(--md-maxw); margin:0 auto; padding:120px 40px 44px;">
       <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px; animation:mdFadeUp .85s var(--md-ease) .1s both;">
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
         <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.75);">CQuartz SiC</span>
       </div>
       <h1 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(34px,4.4vw,58px); line-height:1.05; letter-spacing:var(--md-tracking-tight); margin:0 0 16px; max-width:20ch; animation:mdFadeUp .85s var(--md-ease) .26s both;">CQuartz SiC Ceramic Coating in <span style="white-space:nowrap;">Redmond, WA</span></h1>
-      <p style="font-family:var(--md-font-display); font-weight:600; font-size:clamp(19px,2vw,24px); line-height:1.3; color:#fff; margin:0 0 12px; animation:mdFadeUp .85s var(--md-ease) .4s both;">Real ceramic protection, entry level.</p>
-      <p style="font-size:17px; line-height:1.65; color:rgba(255,255,255,0.82); max-width:66ch; margin:0 0 30px; animation:mdFadeUp .85s var(--md-ease) .5s both;">A one year silicon carbide coating that adds gloss, easier washing, and water-spot resistance without the flagship price.</p>
+      <p style="font-size:17px; line-height:1.65; color:rgba(255,255,255,0.82); max-width:66ch; margin:0 0 30px; animation:mdFadeUp .85s var(--md-ease) .5s both;">At Metropolitan Detail in Redmond, we apply CQuartz SiC, our entry-level ceramic coating. It puts a solid layer of protection over your paint, makes routine cleaning much easier, and keeps the car looking fresh for a year. We take care of drivers all over Bellevue and Seattle.</p>
       <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; animation:mdFadeUp .85s var(--md-ease) .54s both;">
         <a href="/get-a-quote" class="md-cta lg"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
-  </section>
-
-  <!-- ============ STAT BAND ============ -->
-  <section data-reveal="out" style="background:#0A0A0A; border-top:1px solid var(--md-border-dark); border-bottom:1px solid var(--md-border-dark); padding:var(--md-section-y) 0;">
-    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
-      <div class="md-4col" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1px; border:1px solid var(--md-border-dark); border-radius:14px; overflow:hidden; background:var(--md-border-dark);">
-      <div style="padding:38px 30px; background:#0A0A0A;">
-        <div style="font-family:var(--md-font-display); font-weight:700; font-size:26px; line-height:1.05; letter-spacing:-0.02em; color:var(--md-red);">1 YR</div>
-        <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 18px;">Durability</div>
-        <div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; margin-bottom:9px;">Protection that lasts</div>
-        <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.62);">A full year of ceramic protection with proper maintenance, well beyond any wax or sealant.</div>
-      </div>
-      <div style="padding:38px 30px; background:#0A0A0A;">
-        <div style="font-family:var(--md-font-display); font-weight:700; font-size:26px; line-height:1.05; letter-spacing:-0.02em; color:var(--md-red);">SiC</div>
-        <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 18px;">Silicon Carbide</div>
-        <div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; margin-bottom:9px;">The active ingredient</div>
-        <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.62);">Silicon carbide gives strong chemical resistance and helps fight mineral deposits and water spots.</div>
-      </div>
-      <div style="padding:38px 30px; background:#0A0A0A;">
-        <div style="font-family:var(--md-font-display); font-weight:700; font-size:26px; line-height:1.05; letter-spacing:-0.02em; color:var(--md-red);">1 COAT</div>
-        <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 18px;">Plus Luster Polish</div>
-        <div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; margin-bottom:9px;">Gloss goes up</div>
-        <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.62);">A single stage luster polish and one coat of CQuartz SiC for a clean, bright finish.</div>
-      </div>
-      <div style="padding:38px 30px; background:#0A0A0A;">
-        <div style="font-family:var(--md-font-display); font-weight:700; font-size:26px; line-height:1.05; letter-spacing:-0.02em; color:var(--md-red); font-size:clamp(17px,1.6vw,22px);">HYDROPHOBIC</div>
-        <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 18px;">Water Beads Off</div>
-        <div style="font-family:var(--md-font-display); font-weight:600; font-size:19px; color:#fff; margin-bottom:9px;">Easier every wash</div>
-        <div style="font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.62);">Water and grime bead and release, so routine cleaning gets noticeably quicker.</div>
-      </div>
-      </div>
+    <div class="md-4col" style="position:relative; z-index:3; width:100%; background:rgba(10,10,10,.72); backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px); border-top:1px solid var(--md-border-dark); display:grid; grid-template-columns:repeat(4,1fr);">
+      <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark); display:flex; align-items:center; gap:11px;"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:15px; letter-spacing:1px;">★★★★★</span><span style="color:#fff; font-size:13.5px; font-weight:600; white-space:nowrap;">4.9 Google · 112+ reviews</span></div>
+      <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">CQuartz Reserve</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">Certified installer</div></div>
+      <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">1 Year</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">Silicon carbide, easier cleaning</div></div>
+      <div style="padding:22px clamp(24px,3vw,40px);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">30 Years</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">In Redmond</div></div>
     </div>
   </section>
 
-  <!-- ============ WHO IT IS FOR ============ -->
-  <section data-reveal="out" data-scrollfade="invert" style="background:var(--md-white); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; padding:var(--md-section-y) 0;">
-    <div style="max-width:920px; margin:0 auto; padding:0 40px;">
-      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">Is This You?</span></div>
-      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 24px; max-width:20ch; color:var(--sf-fg);">The right call for a budget, or a lease.</h2>
-      <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); margin:0;">CQuartz SiC is the entry point into real ceramic protection. If you want your paint to look brighter and wash easier without committing to a multi year coating, or you are leasing and only need protection for the term, this is the one. You still get a genuine ceramic coating with proper prep behind it, just at a lighter tier than Professional or Finest Reserve.</p>
+  <!-- ============ INTRO ============ -->
+  <section data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div class="md-row" style="display:grid; grid-template-columns:1.15fr .85fr; gap:44px; align-items:center;">
+        <div>
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">CQuartz SiC</span></div>
+          <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 16px; max-width:18ch; color:var(--sf-fg);">CQuartz SiC: a real coating, without the big commitment.</h2>
+          <div style="display:flex; align-items:flex-end; gap:20px; flex-wrap:wrap;"><div><div style="font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:10px;">Starting from</div><div style="font-family:var(--md-font-display); font-weight:700; font-size:32px; line-height:1; color:var(--sf-fg);">$875</div></div><div style="display:inline-flex; align-items:center; gap:9px; border:1px solid var(--md-red); border-radius:999px; padding:9px 16px; margin-bottom:6px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><path d="M12 3l7 2.5v5c0 4.4-3 7.7-7 9.2-4-1.5-7-4.8-7-9.2v-5L12 3z"></path></svg><span style="font-size:13px; font-weight:600; color:var(--sf-fg);">1 Year warranty</span></div></div>
+          <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:56ch; margin:22px 0 0;">This is where most people start, and it holds up for a year. What makes it work is silicon carbide, the main ingredient, and it is a genuinely tough material. It gives you strong chemical resistance, which protects your paint from harsh substances and environmental fallout, and it helps fight the mineral deposits and water spots that dull a finish over time. You get a real gloss, paint that beads water and cleans up easy, and a solid layer between your finish and everyday road grime. The easy yes if you are leasing, or you just want your car protected without spending flagship money. One coat, done right, over freshly polished paint.</p>
+        </div>
+        <div class="md-figure" style="border-radius:14px; overflow:hidden; background:#000;"><img class="md-img" loading="lazy" src="uploads/pasted-1786369563618-0.png" alt="Bottle of CarPro CQuartz SiC ceramic quartz coating" style="display:block; width:100%; aspect-ratio:1/1; height:auto; object-fit:cover;"></div>
+      </div>
+      <div class="md-4col" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:40px; margin-top:56px; padding-top:48px; border-top:1px solid var(--md-border-dark);">
+        <div>
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(19px,1.7vw,24px); line-height:1.05; letter-spacing:-0.02em; color:var(--md-red);">1 YR</div>
+          <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 16px;">Durability</div>
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:18px; color:#fff; margin-bottom:8px;">Protection that lasts</div>
+          <div style="font-size:13.5px; line-height:1.6; color:var(--sf-muted);">A full year of ceramic protection with proper maintenance, well past any wax or sealant.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(19px,1.7vw,24px); line-height:1.05; letter-spacing:-0.02em; color:var(--md-red);">SiC</div>
+          <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 16px;">Silicon Carbide</div>
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:18px; color:#fff; margin-bottom:8px;">The active ingredient</div>
+          <div style="font-size:13.5px; line-height:1.6; color:var(--sf-muted);">A silicon carbide base gives strong chemical resistance against harsh substances and fallout.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(19px,1.7vw,24px); line-height:1.05; letter-spacing:-0.02em; color:var(--md-red);">WATER SPOTS</div>
+          <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 16px;">Mitigated</div>
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:18px; color:#fff; margin-bottom:8px;">Cleaner after every wash</div>
+          <div style="font-size:13.5px; line-height:1.6; color:var(--sf-muted);">Formulated to fight mineral deposits and water spots, so the gloss holds up wash after wash.</div>
+        </div>
+        <div>
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(19px,1.7vw,24px); line-height:1.05; letter-spacing:-0.02em; color:var(--md-red);">HYDROPHOBIC</div>
+          <div style="font-weight:500; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin:10px 0 16px;">Water Beads Off</div>
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:18px; color:#fff; margin-bottom:8px;">Easier maintenance</div>
+          <div style="font-size:13.5px; line-height:1.6; color:var(--sf-muted);">Water, dust, and dirt bead up and roll off, so routine cleaning gets noticeably quicker.</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- ============ INCLUDED + PRICING ============ -->
-  <section id="pricing" data-scrollfade="invert" style="background:var(--md-white); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; --svc-fg:#0A0A0A; --svc-muted:#6B6B6B; padding:var(--md-section-y) 0;">
+  <section id="pricing" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); --svc-fg:#FFFFFF; --svc-muted:rgba(255,255,255,0.62); padding:calc(var(--md-section-y) * 0.5) 0 var(--md-section-y);">
     <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
-      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">CQuartz SiC</span></div>
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">What's Included</span></div>
       <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 18px; max-width:22ch; color:var(--sf-fg);">One coat, fully prepped, priced by vehicle.</h2>
-      <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:64ch; margin:0 0 48px;">Every SiC coating includes a full wash, three-stage decontamination, and a single stage polish before the coating goes on. A coating is only as good as the surface under it.</p>
-      <div class="md-row" style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;">
-        <div>
-          <div style="font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--sf-fg); margin-bottom:22px;">Includes</div>
-          <ul class="svc-bullets" style="margin:0;"><li>Foam Bath Pre-Soak</li><li>Gentle 2 Bucket Hand Wash</li><li>Clean Wheels</li><li>Clean Door Jambs</li><li>Paint Decontamination with Iron Remover</li><li>Paint Decontamination with Tar Remover</li><li>Paint Decontamination with Synthetic Clay Pad</li><li>Mask Trim</li><li>Single Stage Luster Polish</li><li>One Coat of CQuartz SiC (1 Year Lifespan)</li><li>Polish Exhaust Tips</li><li>Tire Dressing</li><li>Vacuum of Interior</li><li>Cleaning of Interior Windows</li></ul>
+      <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:64ch; margin:0 0 48px;">Every SiC coating includes a full wash, decontamination, and a polish before the coating goes on. A coating is only as good as the surface under it.</p>
+      <div class="md-row" style="display:grid; grid-template-columns:.75fr 1.25fr; gap:40px; align-items:start;">
+        <div><div style="font-weight:600; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:16px;">Pricing</div><div style="display:flex; flex-direction:column; gap:14px;"><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14.5px; color:var(--sf-muted);">2 Door Coupe</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:19px; color:var(--sf-fg); white-space:nowrap;">$875</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14.5px; color:var(--sf-muted);">Sedan</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:19px; color:var(--sf-fg); white-space:nowrap;">$900</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14.5px; color:var(--sf-muted);">Wagon</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:19px; color:var(--sf-fg); white-space:nowrap;">$950</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14.5px; color:var(--sf-muted);">SUV / Small Truck</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:19px; color:var(--sf-fg); white-space:nowrap;">$1,000</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14.5px; color:var(--sf-muted);">3 Row SUV / Medium Truck</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:19px; color:var(--sf-fg); white-space:nowrap;">$1,050</span></div><div style="display:flex; align-items:baseline; gap:10px;"><span style="font-size:14.5px; color:var(--sf-muted);">Van / Full Size SUV / Large Truck</span><span style="flex:1; border-bottom:1px dotted var(--sf-border);"></span><span style="font-family:var(--md-font-display); font-weight:700; font-size:19px; color:var(--sf-fg); white-space:nowrap;">$1,100</span></div></div></div>
+        <div style="border:1px solid var(--sf-border); border-radius:12px; padding:22px 24px;"><div style="font-weight:600; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted); margin-bottom:16px;">Includes</div><div class="md-2col" style="display:grid; grid-template-columns:repeat(2,1fr); gap:11px 26px;"><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Foam Bath Pre-Soak</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Gentle 2 Bucket Hand Wash</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Clean Wheels</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Clean Door Jambs</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Paint Decontamination with Iron Remover</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Paint Decontamination with Tar Remover</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Paint Decontamination with Synthetic Clay Pad</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Mask Trim</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Single Stage Luster Polish</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>1 Coat of CQuartz SiC (1 Year Lifespan)</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Polish Exhaust Tips</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Tire Dressing</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Vacuum of Interior</div><div style="display:flex; align-items:flex-start; gap:10px; font-size:14px; line-height:1.5; color:var(--sf-fg);"><span style="width:6px; height:6px; margin-top:6px; background:var(--md-red); flex:none;"></span>Cleaning of Interior Windows</div></div></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:32px;"><a href="/get-a-quote" class="md-cta"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a></div>
+    </div>
+  </section>
+
+  <!-- ============ DISCLAIMER ============ -->
+  <section data-reveal="out" style="background:#0A0A0A; padding:0 0 calc(var(--md-section-y) * 0.5);">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <p style="font-style:italic; font-size:15px; line-height:1.75; color:rgba(255,255,255,0.5); margin:0; border-top:1px solid var(--md-border-dark); border-bottom:1px solid var(--md-border-dark); padding:22px 0;">CQuartz seals your finish with a glossy, hydrophobic top coat. Every coating includes a full wash, decontamination, and prep, because a coating is only as good as the paint underneath it. If you want more swirl and scratch removal than the polish we include, we will take a look and quote it. Heavy contaminants like overspray, moss, or hard sap take extra labor, also quoted after we see the car.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHY CQUARTZ PROFESSIONAL ============ -->
+  <section data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">Why CQuartz SiC</span></div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 48px; max-width:20ch; color:var(--sf-fg);">What you get for the money.</h2>
+      <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; border-top:1px solid var(--sf-border); border-left:1px solid var(--sf-border);">
+        <div style="border-right:1px solid var(--sf-border); border-bottom:1px solid var(--sf-border); padding:44px 48px 48px;">
+          <span style="display:block; margin-bottom:26px;"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.2 5.3L20 10l-5.8 1.7L12 17l-2.2-5.3L4 10l5.8-1.7L12 3z"></path></svg></span>
+          <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:22px; line-height:1.25; color:var(--sf-fg); margin:0 0 12px;">Real chemical resistance.</h3>
+          <p style="font-size:15.5px; line-height:1.7; color:var(--sf-muted); margin:0;">The main ingredient in CQuartz SiC is silicon carbide, which gives the coating strong chemical resistance. That protects your paint from harsh substances and the environmental fallout that settles on a car, so the finish keeps its integrity.</p>
         </div>
-        <div style="border:1px solid var(--sf-border); background:var(--md-surface); padding:clamp(28px,3vw,42px);">
-          <div style="font-weight:700; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--sf-fg); margin-bottom:22px;">Pricing by Vehicle</div>
-          <div style="display:flex; flex-direction:column;"><div style="display:flex; align-items:baseline; justify-content:space-between; gap:18px; padding:14px 0; border-bottom:1px solid var(--sf-border);"><span style="font-size:15px; color:var(--sf-fg);">2 Door Coupe</span><span style="font-family:var(--md-font-display); font-weight:700; font-size:17px; color:var(--sf-fg); white-space:nowrap;">$875</span></div><div style="display:flex; align-items:baseline; justify-content:space-between; gap:18px; padding:14px 0; border-bottom:1px solid var(--sf-border);"><span style="font-size:15px; color:var(--sf-fg);">Sedan</span><span style="font-family:var(--md-font-display); font-weight:700; font-size:17px; color:var(--sf-fg); white-space:nowrap;">$900</span></div><div style="display:flex; align-items:baseline; justify-content:space-between; gap:18px; padding:14px 0; border-bottom:1px solid var(--sf-border);"><span style="font-size:15px; color:var(--sf-fg);">Wagon</span><span style="font-family:var(--md-font-display); font-weight:700; font-size:17px; color:var(--sf-fg); white-space:nowrap;">$950</span></div><div style="display:flex; align-items:baseline; justify-content:space-between; gap:18px; padding:14px 0; border-bottom:1px solid var(--sf-border);"><span style="font-size:15px; color:var(--sf-fg);">SUV / Small Truck</span><span style="font-family:var(--md-font-display); font-weight:700; font-size:17px; color:var(--sf-fg); white-space:nowrap;">$1,000</span></div><div style="display:flex; align-items:baseline; justify-content:space-between; gap:18px; padding:14px 0; border-bottom:1px solid var(--sf-border);"><span style="font-size:15px; color:var(--sf-fg);">3 Row SUV / Medium Truck</span><span style="font-family:var(--md-font-display); font-weight:700; font-size:17px; color:var(--sf-fg); white-space:nowrap;">$1,050</span></div><div style="display:flex; align-items:baseline; justify-content:space-between; gap:18px; padding:14px 0; border-bottom:1px solid var(--sf-border);"><span style="font-size:15px; color:var(--sf-fg);">Van / Full Size SUV / Large Truck</span><span style="font-family:var(--md-font-display); font-weight:700; font-size:17px; color:var(--sf-fg); white-space:nowrap;">$1,100</span></div>
-          </div>
-          <p style="font-size:13.5px; line-height:1.65; color:var(--sf-muted); margin:20px 0 26px;">CQuartz SiC seals your finish with a glossy, hydrophobic top coat. Depending on how much swirl and scratch removal you want, additional paint correction may be needed, priced after a vehicle inspection. Heavy contaminants such as overspray, moss, or hard sap take additional labor, also priced after inspection.</p>
-          <a href="/get-a-quote" class="md-cta"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a>
+        <div style="border-right:1px solid var(--sf-border); border-bottom:1px solid var(--sf-border); padding:44px 48px 48px;">
+          <span style="display:block; margin-bottom:26px;"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5c3.2 3.6 5.5 6.4 5.5 9.2A5.5 5.5 0 0 1 6.5 12.7C6.5 9.9 8.8 7.1 12 3.5z"></path></svg></span>
+          <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:22px; line-height:1.25; color:var(--sf-fg); margin:0 0 12px;">Fights water spots and mineral deposits.</h3>
+          <p style="font-size:15.5px; line-height:1.7; color:var(--sf-muted); margin:0;">Water spots are one of the most common headaches for car owners out here. SiC is formulated to help mitigate mineral deposits and water spots, so the car cleans up easier and keeps its gloss even after a wash.</p>
+        </div>
+        <div style="border-right:1px solid var(--sf-border); border-bottom:1px solid var(--sf-border); padding:44px 48px 48px;">
+          <span style="display:block; margin-bottom:26px;"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M5 5l1.8 1.8M17.2 17.2L19 19M19 5l-1.8 1.8M6.8 17.2L5 19"></path></svg></span>
+          <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:22px; line-height:1.25; color:var(--sf-fg); margin:0 0 12px;">Real gloss, easy upkeep.</h3>
+          <p style="font-size:15.5px; line-height:1.7; color:var(--sf-muted); margin:0;">You get a real, noticeable jump in gloss, and the hydrophobic surface makes water, dust, and dirt bead up and roll off. That simplifies your routine cleaning and keeps the car looking freshly detailed with less work.</p>
+        </div>
+        <div style="border-right:1px solid var(--sf-border); border-bottom:1px solid var(--sf-border); padding:44px 48px 48px;">
+          <span style="display:block; margin-bottom:26px;"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8.5l8-4 8 4-8 4-8-4z"></path><path d="M4 13l8 4 8-4"></path></svg></span>
+          <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:22px; line-height:1.25; color:var(--sf-fg); margin:0 0 12px;">A durable year of protection.</h3>
+          <p style="font-size:15.5px; line-height:1.7; color:var(--sf-muted); margin:0;">It is our entry coating, but it is still a genuine ceramic layer. SiC shields your paint from environmental contaminants for a year, helping preserve its condition and its value.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ REVIEWS ============ -->
+  <section data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); border-top:1px solid var(--md-border-dark); padding:calc(var(--md-section-y) * 0.7) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">What Customers Say</span></div>
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; margin-bottom:40px;">
+        <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.04; letter-spacing:var(--md-tracking-tight); margin:0; max-width:20ch; color:var(--sf-fg);">Coated cars, happy owners.</h2>
+        <div style="display:flex; align-items:center; gap:16px;"><div style="font-family:var(--md-font-display); font-weight:700; font-size:44px; line-height:.9; color:var(--sf-fg);">4.9</div><div><div style="color:#FFC400; font-size:16px; letter-spacing:2px;">★★★★★</div><div style="display:flex; align-items:center; gap:7px; font-size:13px; color:var(--sf-muted); margin-top:4px;"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg>Rated on Google · 112+ reviews</div></div></div>
+      </div>
+      <div style="position:relative; overflow:hidden;">
+        <div class="rev-track" ref="{{ revTrackRef }}">
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:#141414; border-radius:14px; padding:28px 28px 30px; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;"><div style="display:flex; align-items:center; gap:12px;"><span style="width:42px; height:42px; border-radius:50%; background:#3a5a7a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:16px; color:#fff;">S</span><div><div style="font-weight:600; font-size:14.5px; color:var(--sf-fg);">Sunil Sanghani</div><div style="font-size:12px; color:var(--sf-muted); margin-top:2px;">Local Guide · 5 stars</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <div style="color:#FFC400; font-size:13px; letter-spacing:2px; margin-bottom:14px;">★★★★★</div>
+          <p style="font-size:14px; line-height:1.6; color:var(--sf-muted); margin:0;">John, Lee and the entire team are top notch. John joined us to inspect the Tesla on the scheduled date and it happened to be the wettest day of the decade with delivery outside. John was soaking wet and yet took his time to inspect the car in painstaking detail, including the underbody. These guys are craftsmen and designers.</p>
+        </div></div>
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:#141414; border-radius:14px; padding:28px 28px 30px; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;"><div style="display:flex; align-items:center; gap:12px;"><span style="width:42px; height:42px; border-radius:50%; background:#8a6a5a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:16px; color:#fff;">M</span><div><div style="font-weight:600; font-size:14.5px; color:var(--sf-fg);">Matthew Huynh</div><div style="font-size:12px; color:var(--sf-muted); margin-top:2px;">Local Guide · 5 stars</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <div style="color:#FFC400; font-size:13px; letter-spacing:2px; margin-bottom:14px;">★★★★★</div>
+          <p style="font-size:14px; line-height:1.6; color:var(--sf-muted); margin:0;">Great customer service and communication. Dropped off my car in the morning in exchange for their loaner car. I picked up my well-groomed car at end of the day. Every surface was seemingly cleaned. I am satisfied with the Wash, Decon and Protect package, and will return in the spring for an upgraded exterior package.</p>
+        </div></div>
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:#141414; border-radius:14px; padding:28px 28px 30px; display:flex; flex-direction:column;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:14px;"><div style="display:flex; align-items:center; gap:12px;"><span style="width:42px; height:42px; border-radius:50%; background:#7a4a3a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:16px; color:#fff;">J</span><div><div style="font-weight:600; font-size:14.5px; color:var(--sf-fg);">Jeremy Schreiber</div><div style="font-size:12px; color:var(--sf-muted); margin-top:2px;">5 stars</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <div style="color:#FFC400; font-size:13px; letter-spacing:2px; margin-bottom:14px;">★★★★★</div>
+          <p style="font-size:14px; line-height:1.6; color:var(--sf-muted); margin:0;">I can't say enough good things about my experience here. All my research pointed me here. Lee and his partner were super responsive over email, not only providing me a quote, but answering all of my questions. In person they were very low key, highly knowledgable, and just fun to talk to.</p>
+        </div></div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; margin-top:26px;">
+        <button onClick="{{ revPrev }}" aria-label="Previous review" style="width:46px; height:46px; border:1px solid var(--sf-border); background:transparent; color:var(--sf-fg); cursor:pointer; font-size:16px; transition:background .25s var(--md-ease), border-color .25s;" style-hover="border-color:var(--sf-fg);">←</button>
+        <button onClick="{{ revNext }}" aria-label="Next review" style="width:46px; height:46px; border:none; background:var(--md-red); color:#fff; cursor:pointer; font-size:16px; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">→</button>
+      </div>
+    
+      <div style="margin-top:36px;"><a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" class="md-cta"><span class="l">Read Google Reviews</span><span class="t"><span class="arr">→</span></span></a></div>
+    </div>
+  </section>
+
   <!-- ============ PAINT CORRECTION CROSS-LINK ============ -->
-  <section data-reveal="out" style="background:#0A0A0A; border-top:1px solid var(--md-border-dark); border-bottom:1px solid var(--md-border-dark); padding:var(--md-section-y) 0;">
-    <div style="max-width:920px; margin:0 auto; padding:0 40px; text-align:center;">
-      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.05; letter-spacing:var(--md-tracking-tight); color:#fff; margin:0 auto 20px; max-width:22ch;">Want the swirls gone first?</h2>
-      <p style="font-size:16.5px; line-height:1.7; color:rgba(255,255,255,0.7); margin:0 auto 32px; max-width:62ch;">A coating locks in whatever is under it. If your paint has swirls and scratches, paint correction before the coating is the way to a finish that is actually corrected, not sealed over. Charged by the hour on top of the coating.</p>
-      <a href="/paint-correction" class="md-cta"><span class="l">Learn about Paint Correction</span><span class="t"><span class="arr">→</span></span></a>
+  <section id="correction" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); border-top:1px solid var(--md-border-dark); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="text-align:center; max-width:720px; margin:0 auto 36px;">
+        <div style="display:inline-flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">Before the Coating</span></div>
+        <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 20px; color:var(--sf-fg);">We take the swirls out. We don't paint over them.</h2>
+        <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); margin:0 0 26px;">This truly separates us from the rest. A coating locks in whatever is under it, so if your paint is full of swirls, a coating just seals them in. Most shops fill swirls with waxes and polishes to hide them for a few weeks. We remove them for real, with multiple stages of polishing. It takes more time, and the reward is worth it. Correction is charged by the hour on top of the coating, and we recommend bringing the car by for an evaluation.</p>
+        <a href="/paint-correction" class="md-cta"><span class="l">Learn about Paint Correction</span><span class="t"><span class="arr">→</span></span></a>
+      </div>
+      <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+        <div class="md-figure" style="border-radius:12px; overflow:hidden; background:#000;"><img class="md-img" loading="lazy" src="uploads/audi-paint-correction-ceramic-coating-redmond-1920w.webp" alt="Audi trunk lid before and after paint correction at Metropolitan Detail" style="display:block; width:100%; aspect-ratio:16/9; object-fit:cover;"></div>
+        <div onClick="{{ playYt }}" data-vid="VSr1zRlrtYk" style="position:relative; aspect-ratio:16/9; background:#000; cursor:pointer; overflow:hidden; border-radius:12px;"><img loading="lazy" src="https://i.ytimg.com/vi/VSr1zRlrtYk/hqdefault.jpg" alt="Paint correction video" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;"><div style="position:absolute; inset:0; background:rgba(0,0,0,.25);"></div><span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:58px; height:40px; background:var(--md-red); border-radius:8px; display:flex; align-items:center; justify-content:center;"><span style="width:0; height:0; border-left:13px solid #fff; border-top:8px solid transparent; border-bottom:8px solid transparent; margin-left:3px;"></span></span></div>
+      </div>
     </div>
   </section>
 
   <!-- ============ OTHER COATINGS ============ -->
-  
+  <section data-reveal="out" style="background:var(--md-black); border-top:1px solid var(--md-border-dark); padding:var(--md-section-y) 0 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px 56px;">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Other Coatings</span></div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0; max-width:18ch; color:#fff;">Want it to last longer?</h2>
+      <p style="font-size:16px; line-height:1.7; color:rgba(255,255,255,0.62); margin:16px 0 0; max-width:62ch;">SiC is the entry point in the CQuartz line. Professional steps up to a nano-ceramic hybrid for 2-3 years, and Finest Reserve is the flagship at 3-5 years, infrared cured.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr;">
+      <a href="/cquartz-professional" class="md-figure" style="position:relative; height:560px; overflow:hidden; text-decoration:none; clip-path:polygon(0 0, 100% 0, calc(100% - 70px) 100%, 0 100%); margin-right:-35px; z-index:2;">
+        <img class="md-img" src="uploads/pasted-1786366960260-0.png" alt="CarPro CQuartz Professional coating bottle" loading="lazy" style="width:100%; height:100%; object-fit:cover; transition:transform .8s var(--md-ease);">
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 62%, rgba(0,0,0,.92) 100%);"></div>
+        <div style="position:absolute; left:64px; right:48px; bottom:44px;">
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:30px; color:#fff; margin-bottom:8px;">CQuartz Professional</div>
+          <div style="font-size:14px; line-height:1.6; color:rgba(255,255,255,.78); max-width:46ch; margin-bottom:14px;">A nano-ceramic hybrid with a deeper wet look and 2-3 years of protection, with light correction included.</div>
+          <span class="md-link-underline" style="position:relative; font:700 12px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; color:#fff; border-bottom:2px solid var(--md-red); padding-bottom:4px;">Learn More</span>
+        </div>
+      </a>
+      <a href="/cquartz-finest-reserve" class="md-figure" style="position:relative; height:560px; overflow:hidden; text-decoration:none; clip-path:polygon(70px 0, 100% 0, 100% 100%, 0 100%); margin-left:-35px;">
+        <img class="md-img" src="uploads/pasted-1786369554164-0.png" alt="CarPro CQuartz Finest Reserve coating bottle" loading="lazy" style="width:100%; height:100%; object-fit:cover; transition:transform .8s var(--md-ease);">
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 62%, rgba(0,0,0,.92) 100%);"></div>
+        <div style="position:absolute; left:64px; right:48px; bottom:44px;">
+          <div style="font-family:var(--md-font-display); font-weight:600; font-size:30px; color:#fff; margin-bottom:8px;">CQuartz Finest Reserve</div>
+          <div style="font-size:14px; line-height:1.6; color:rgba(255,255,255,.78); max-width:46ch; margin-bottom:14px;">Our flagship. Quartz-infused epoxy nanotech, 3-5 years, infrared cured for maximum gloss and hardness.</div>
+          <span class="md-link-underline" style="position:relative; font:700 12px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; color:#fff; border-bottom:2px solid var(--md-red); padding-bottom:4px;">Learn More</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ ADD-ONS ============ -->
+  <section id="addons" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); border-top:1px solid var(--md-border-dark); padding:calc(var(--md-section-y) * 0.7) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">Add-Ons</span></div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 14px; max-width:20ch; color:var(--sf-fg);">Enhance your protection.</h2>
+      <p style="font-size:16.5px; line-height:1.7; color:var(--sf-muted); max-width:56ch; margin:0 0 40px;">While your car is here, these are easy to add on.</p>
+      <div class="md-4col" style="display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px;">
+        <div style="background:#141414; border:1px solid var(--sf-border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;">
+<div style="display:flex; align-items:center; justify-content:center; aspect-ratio:16/10; background:#000; border-bottom:1px solid var(--sf-border); padding:26px;"><img loading="lazy" src="uploads/pasted-1786373711755-0.png" alt="Glassparency" style="display:block; width:100%; max-width:230px; height:auto;"></div>
+          <div style="padding:26px 28px 28px; display:flex; flex-direction:column; flex:1;">
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; line-height:1.25; margin:0 0 12px;"><a href="/glassparency" style="color:var(--sf-fg); text-decoration:none;" style-hover="color:var(--md-red);">Glassparency</a></h3>
+            <p style="font-size:14.5px; line-height:1.65; color:var(--sf-muted); margin:0 0 22px;">A hydrophobic glass coating for your windshield and glass. It repels water, cuts glare, and makes bugs and sap wipe off easily, for a clearer view in the rain.</p>
+            <div style="margin-top:auto; font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">Contact for pricing</div>
+            <div style="margin-top:18px;"><a href="/glassparency" class="md-link-underline" style="position:relative; font:700 12px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; color:#fff; text-decoration:none; border-bottom:2px solid var(--md-red); padding-bottom:4px;">Learn More</a></div>
+          </div>
+        </div>
+        <div style="background:#141414; border:1px solid var(--sf-border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;">
+<div class="md-figure" style="overflow:hidden; background:#000; border-bottom:1px solid var(--sf-border);"><img class="md-img" loading="lazy" src="uploads/AdobeStock_2007801370 (1).jpeg" alt="Headlight being polished clear at Metropolitan Detail" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
+          <div style="padding:26px 28px 28px; display:flex; flex-direction:column; flex:1;">
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; line-height:1.25; color:var(--sf-fg); margin:0 0 12px;">Headlight Restoration</h3>
+            <p style="font-size:14.5px; line-height:1.65; color:var(--sf-muted); margin:0 0 22px;">Over time headlights oxidize and yellow, which cuts the light they put out. We wet sand and polish them clear, then add PPF to protect them going forward.</p>
+            <div style="margin-top:auto; font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$199 per pair</div>
+            <div style="margin-top:18px;"><a href="/get-a-quote" class="md-link-underline" style="position:relative; font:700 12px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; color:#fff; text-decoration:none; border-bottom:2px solid var(--md-red); padding-bottom:4px;">Get a Quote</a></div>
+          </div>
+        </div>
+        <div style="background:#141414; border:1px solid var(--sf-border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;">
+<div class="md-figure" style="overflow:hidden; background:#000; border-bottom:1px solid var(--sf-border);"><img class="md-img" loading="lazy" src="uploads/IMG_5030-2-2adaf1d0-2880w.webp" alt="Wheels and calipers ceramic coated with CarPro DLUX" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
+          <div style="padding:26px 28px 28px; display:flex; flex-direction:column; flex:1;">
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; line-height:1.25; margin:0 0 12px;"><a href="/dlux-wheels-and-calipers" style="color:var(--sf-fg); text-decoration:none;" style-hover="color:var(--md-red);">DLUX Wheels &amp; Calipers</a></h3>
+            <p style="font-size:14.5px; line-height:1.65; color:var(--sf-muted); margin:0 0 22px;">A high-temp ceramic on the wheels and calipers so brake dust and grime wipe right off and they stop fading.</p>
+            <div style="margin-top:auto; font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$500</div>
+            <div style="margin-top:18px;"><a href="/dlux-wheels-and-calipers" class="md-link-underline" style="position:relative; font:700 12px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; color:#fff; text-decoration:none; border-bottom:2px solid var(--md-red); padding-bottom:4px;">Learn More</a></div>
+          </div>
+        </div>
+        <div style="background:#141414; border:1px solid var(--sf-border); border-radius:14px; overflow:hidden; display:flex; flex-direction:column;">
+<div class="md-figure" style="overflow:hidden; background:#000; border-bottom:1px solid var(--sf-border);"><img class="md-img" loading="lazy" src="uploads/DLUX Trim Coat .webp" alt="CarPro DLUX trim coat restoring black plastic trim" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
+          <div style="padding:26px 28px 28px; display:flex; flex-direction:column; flex:1;">
+            <h3 style="font-family:var(--md-font-display); font-weight:600; font-size:20px; line-height:1.25; margin:0 0 12px;"><a href="/dlux-trim-coat" style="color:var(--sf-fg); text-decoration:none;" style-hover="color:var(--md-red);">DLUX Trim Coat</a></h3>
+            <p style="font-size:14.5px; line-height:1.65; color:var(--sf-muted); margin:0 0 22px;">Faded plastic trim is one of the first things that ages a car. DLUX is a high-silica ceramic, over 50% pure silica, that restores black trim and protects it from UV fading.</p>
+            <div style="margin-top:auto; font-family:var(--md-font-display); font-weight:700; font-size:18px; color:var(--sf-fg);">$250</div>
+            <div style="margin-top:18px;"><a href="/dlux-trim-coat" class="md-link-underline" style="position:relative; font:700 12px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; color:#fff; text-decoration:none; border-bottom:2px solid var(--md-red); padding-bottom:4px;">Learn More</a></div>
+          </div>
+        </div>
+      </div>
+      <p style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.45); margin:24px 0 0;">Add-on pricing is subject to a vehicle inspection.</p>
+    </div>
+  </section>
+
+  <!-- ============ WORK GALLERY ============ -->
+  <section id="portfolio" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">Portfolio</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 14px; max-width:18ch; color:var(--sf-fg);">Recent ceramic coating work.</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px;">
+        <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="6">
+          <button onClick="{{ tab.onClick }}" class="gtab-txt" data-active="{{ tab.active }}">{{ tab.label }}</button>
+        </sc-for>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:1fr; gap:14px;">
+        <sc-for list="{{ pageImages }}" as="ph" hint-placeholder-count="8">
+          <div class="gal-item md-figure" style="border-radius:8px;"><img class="md-img" src="{{ ph.src }}" alt="{{ ph.alt }}" loading="lazy" style="aspect-ratio:4/3;"></div>
+        </sc-for>
+      </div>
+      <sc-if value="{{ showPager }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:8px; margin-top:32px;">
+          <button onClick="{{ prevPage }}" class="gpage">‹ Prev</button>
+          <sc-for list="{{ pages }}" as="pg" hint-placeholder-count="3">
+            <button onClick="{{ pg.onClick }}" class="gpage" data-active="{{ pg.active }}">{{ pg.label }}</button>
+          </sc-for>
+          <button onClick="{{ nextPage }}" class="gpage">Next ›</button>
+        </div>
+      </sc-if>
+    </div>
+  </section>
 
   <!-- ============ FREE LOANER CAR ============ -->
   <section data-reveal="out" style="background:#0A0A0A; padding:var(--md-section-y) 0;">
@@ -330,7 +560,7 @@
       </div>
       <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.05; letter-spacing:var(--md-tracking-tight); color:#fff; margin:0 auto 18px; max-width:20ch;">Drop off, grab a free loaner, drive away protected.</h2>
       <p style="font-size:17px; line-height:1.6; color:rgba(255,255,255,0.7); margin:0 auto 32px; max-width:54ch;">Quality work takes time, and you should not have to wait around for it. We keep a small free fleet, based on availability, so your day keeps moving.</p>
-      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="/get-a-quote" class="md-cta"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a></div>
+      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="#" onClick="{{ openAvail }}" class="md-cta"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a></div>
       <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:840px; margin:52px auto 0;">
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img loading="lazy" src="uploads/APNQkAFSPZWLCsuB9J3BdO_83KGZHoMO0rl2oy-HttFOWa3VeoXQQyReN-_ZBTzzuNR60vlV-CWTWsV4Yxlr2iAyVK476kkdYR7BJkO5KUoYQsKEVYQoZymnw4oGZvpWmD0bjYaXhHHk=s870-k-no.png" alt="Metropolitan Detail loaner car fleet" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
         <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img loading="lazy" src="uploads/APNQkAH6G3nlaoSi1Jy6PusI0bHq3kjvdT7f7muSzkHVEs_BqKOmzZ7RpNJcmzItAI89AQnO4IkiBZ5vvHq_u4NDmdz5f0JXgIdp3Q8OXyZoEDCRLmohUh0SJNFZVvJHmaegmdzIHtqi=s870-k-no.png" alt="Metropolitan Detail courtesy loaner vehicle" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
@@ -342,14 +572,14 @@
   <section data-reveal="out" data-scrollfade="invert" style="background:var(--md-white); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; padding:var(--md-section-y) 0;">
     <div style="max-width:920px; margin:0 auto; padding:0 40px;">
       <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">FAQ</span></div>
-      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 40px; max-width:20ch; color:var(--sf-fg);">CQuartz SiC questions.</h2>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 40px; max-width:20ch; color:var(--sf-fg);">Questions about CQuartz SiC.</h2>
       <details class="faq-item"><summary>How long does CQuartz SiC last?<span class="faq-plus"></span></summary><p>About a year with proper maintenance.</p></details>
-      <details class="faq-item"><summary>How is it different from Professional and Finest Reserve?<span class="faq-plus"></span></summary><p>It is the entry tier. One coat, one year. Professional lasts 2 to 3 years and Finest Reserve 3 to 5, with more involved processes.</p></details>
-      <details class="faq-item"><summary>Does it stop rock chips?<span class="faq-plus"></span></summary><p>No. It is a chemical layer for gloss and easy cleaning. For impact protection you want <a href="/paint-protection-film" style="font-weight:600;">paint protection film</a>.</p></details>
-      <details class="faq-item"><summary>Do I need paint correction first?<span class="faq-plus"></span></summary><p>Light polishing is included. If you want swirls fully removed, correction can be added, priced after inspection.</p></details>
-      <details class="faq-item"><summary>How do I maintain it?<span class="faq-plus"></span></summary><p>A two bucket hand wash with a coating-safe detergent, and skip wash-and-wax products.</p></details>
-      <p style="font-size:15px; color:var(--sf-muted); margin:30px 0 0;">More questions? See the <a href="/faq" style="font-weight:600;">full FAQ</a>.</p>
-      <div style="margin-top:40px; display:flex; justify-content:center;"><a href="/get-a-quote" class="md-cta lg"><span class="l">Get a Quote</span><span class="t"><span class="arr">→</span></span></a></div>
+      <details class="faq-item"><summary>What is silicon carbide?<span class="faq-plus"></span></summary><p>It is the main ingredient, a tough material that gives the coating strong chemical resistance and helps fight water spots and mineral deposits.</p></details>
+      <details class="faq-item"><summary>How is it different from Professional and Finest Reserve?<span class="faq-plus"></span></summary><p>SiC is the entry tier, 1 coat and 1 year. <a href="/cquartz-professional" style="font-weight:600;">Professional</a> is a nano-ceramic hybrid at 2-3 years with a deeper shine. <a href="/cquartz-finest-reserve" style="font-weight:600;">Finest Reserve</a> is the flagship at 3-5 years, infrared cured.</p></details>
+      <details class="faq-item"><summary>Does it stop rock chips?<span class="faq-plus"></span></summary><p>No. A coating is for gloss and easy cleaning, not impact. For chip protection you want <a href="/paint-protection-film" style="font-weight:600;">paint protection film</a>.</p></details>
+      <details class="faq-item"><summary>Do I need paint correction first?<span class="faq-plus"></span></summary><p>A single stage polish is included, so the coating goes on clean paint. If you want swirls fully removed, <a href="/paint-correction" style="font-weight:600;">correction</a> can be added, quoted after we see the car.</p></details>
+      <details class="faq-item"><summary>How do I take care of it?<span class="faq-plus"></span></summary><p>Hand wash with a coating-safe soap, and skip wash-and-wax products, they gum it up.</p></details>
+      <div style="margin-top:46px;"><a href="/faq" class="md-cta lg"><span class="l">View Full FAQ</span><span class="t"><span class="arr">→</span></span></a></div>
     </div>
   </section>
 
@@ -361,23 +591,28 @@
         <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.1) 60%);"></div>
       </div>
       <div class="md-cta-panel" style="position:absolute; right:clamp(40px,7vw,108px); top:50%; transform:translateY(-50%); background:#0A0A0A; border:1px solid var(--md-border-dark); padding:clamp(34px,4vw,50px); max-width:440px;">
-        <div style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:16px;">Three decades on the Eastside</div>
-        <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(28px,3.4vw,36px); line-height:1.08; letter-spacing:-0.02em; color:#fff; margin:0 0 26px;">Ready for gloss that lasts a year? Bring us your car.</h2>
-        <a href="/get-a-quote" class="md-cta lg"><span class="l">Schedule Appointment</span><span class="t"><span class="arr">→</span></span></a>
+        <div style="font-weight:500; font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,0.55); margin-bottom:16px;">Three decades in Redmond</div>
+        <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(28px,3.4vw,36px); line-height:1.08; letter-spacing:-0.02em; color:#fff; margin:0 0 26px;">Ready for real protection, the easy way?</h2>
+        <a href="/get-a-quote" class="md-cta lg"><span class="l">Get a Quote</span><span class="t"><span class="arr">→</span></span></a>
       </div>
     </div>
   </section>
 
     <footer id="contact" data-reveal="out" style="background:var(--md-ink); border-top:1px solid var(--md-border-dark); padding:72px 0 36px;">
-    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:1fr 1fr 1.2fr 1.2fr; gap:40px;">
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Services</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/paint-protection-film" class="foot-link">DYNOshield</a><a href="/dynomatte" class="foot-link">DYNOmatte</a><a href="/color-change" class="foot-link">Color Change</a></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Company</div><div style="display:flex; flex-direction:column; gap:11px;"><a href="/blog-the-art-of-matte-paint-and-the-magic-of-stek-dynomatte-protection" class="foot-link">Blog</a><a href="/faq" class="foot-link">FAQ</a><a href="/contact" class="foot-link">Contact</a><a href="/get-a-quote" class="foot-link">Get a Quote</a></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Contact</div><div style="display:flex; flex-direction:column; gap:14px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link" style="display:flex; align-items:flex-start; gap:11px; line-height:1.5;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span>8539 152nd Ave NE<br>Redmond, WA 98052</span></a><a href="tel:+14252336068" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--md-red)" style="flex:none;"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.5 21 3 13.5 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.1 2.2z"></path></svg><span>(425) 233-6068</span></a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:flex; align-items:center; gap:11px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none;"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M4 7l8 6 8-6"></path></svg><span>info@metropolitandetail.com</span></a><div style="display:flex; align-items:flex-start; gap:11px; font-size:13.5px; line-height:1.6; color:rgba(255,255,255,0.5); margin-top:2px;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--md-red)" stroke-width="1.8" style="flex:none; margin-top:2px;"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Mon–Fri 8:00 AM – 5:00 PM<br>Sat &amp; Sun Closed</span></div></div></div>
-      <div><div style="font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 20px">Find Us</div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:200px; border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
+    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; display:grid; grid-template-columns:repeat(5,1fr); gap:40px;">
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/paint-protection-film" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Paint Protection Film</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/dynomatte" class="foot-link">DYNOmatte</a><a href="/color-change" class="foot-link">Color Change</a><a href="/ev-protection" class="foot-link">EV Protection</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/ceramic-coatings" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Ceramic Coatings</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/cquartz-sic" class="foot-link">CQuartz SiC</a><a href="/cquartz-professional" class="foot-link">CQuartz Professional</a><a href="/cquartz-finest-reserve" class="foot-link">CQuartz Finest Reserve</a><a href="/glassparency" class="foot-link">Glassparency</a><a href="/dlux-wheels-and-calipers" class="foot-link">DLUX Wheels &amp; Calipers</a><a href="/dlux-trim-coat" class="foot-link">DLUX Trim Coat</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><a href="/exterior-detailing" style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff; text-decoration:none; transition:color .2s;" style-hover="color:var(--md-red);">Detailing</a></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/essential-exterior" class="foot-link">Essential Exterior</a><a href="/ceramic-maintenance-polish" class="foot-link">Ceramic Maintenance Polish</a><a href="/ppf-maintenance-polish" class="foot-link">PPF Maintenance Polish</a><a href="/interior-detailing" class="foot-link">Interior Detailing</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Glass &amp; Paint</span></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/window-tint" class="foot-link">Window Tint</a><a href="/paint-correction" class="foot-link">Paint Correction</a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Company</span></div><div style="display:flex; flex-direction:column; align-items:flex-start; gap:11px;"><a href="/about" class="foot-link">About</a><a href="/portfolio" class="foot-link">Portfolio</a><a href="/blog" class="foot-link">Blog</a><a href="/faq" class="foot-link">FAQ</a><a href="/employment" class="foot-link">Employment</a><a href="/contact" class="foot-link">Contact</a><a href="/get-a-quote" class="foot-link">Get a Quote</a></div></div>
+    </div>
+    <div class="md-footer-grid" style="max-width:var(--md-maxw); margin:48px auto 0; padding:0 40px; display:grid; grid-template-columns:1.45fr 1.05fr; gap:40px;">
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Contact</span></div><div style="border:1px solid var(--md-border-dark); border-radius:2px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));"><div style="display:flex; align-items:center; gap:8px; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:16px;"><span style="width:7px; height:7px; border-radius:50%; background:#3ecf6a;"></span>Open now</div><a href="tel:+14252336068" class="foot-link" style="display:block; font-family:var(--md-font-display); font-weight:700; font-size:clamp(20px,1.7vw,28px); line-height:1.1; color:#fff; margin-bottom:6px; white-space:nowrap;">(425) 233-6068</a><a href="mailto:info@metropolitandetail.com" class="foot-link" style="display:block; font-size:13.5px; margin-bottom:16px;">info@metropolitandetail.com</a><div style="font-size:13.5px; line-height:1.55; color:rgba(255,255,255,0.7); border-top:1px solid var(--md-border-dark); padding-top:16px; margin-bottom:18px;"><a href="https://maps.google.com/?q=8539+152nd+Ave+NE+Redmond+WA+98052" target="_blank" rel="noopener" class="foot-link">8539 152nd Ave NE, Redmond, WA 98052</a><br><span style="color:rgba(255,255,255,0.5);">Mon–Fri 8:00 AM – 5:00 PM</span></div><a href="/get-a-quote" style="display:flex; align-items:center; justify-content:center; gap:9px; background:var(--md-red); color:#fff; font-size:12.5px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; padding:13px 10px; border-radius:2px; text-decoration:none; transition:background .22s; white-space:nowrap;" style-hover="background:#b30018;">Schedule appointment <span>→</span></a></div></div>
+      <div><div style="display:flex; align-items:center; gap:11px; margin-bottom:22px;"><span style="font-weight:600; font-size:13px; letter-spacing:.14em; text-transform:uppercase; color:#fff;">Find Us</span></div><div style="border:1px solid var(--md-border-dark); overflow:hidden;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.222640861574!2d-122.13830279999999!3d47.680096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54901abadc01c37b%3A0xbc37eef341759a1d!2sMetropolitan%20Detail!5e0!3m2!1sen!2s!4v1782503278023!5m2!1sen!2s" title="Metropolitan Detail location map" style="width:100%; height:240px; border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div></div>
     </div>
     <div style="max-width:var(--md-maxw); margin:56px auto 0; padding:0 40px;">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:30px; flex-wrap:wrap; border-top:1px solid var(--md-border-dark); padding-top:36px;">
-        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height: clamp(72px,8vw,120px); width: 350px; display: block"></a>
+        <a href="#home" aria-label="Metropolitan Detail home" style="display:flex; align-items:center;"><img src="uploads/md-logo-white-red-4kK.png" alt="Metropolitan Detail" style="height: clamp(48px,5vw,72px); width: auto; display: block"></a>
         <div style="display:flex; flex-direction:column; align-items:flex-end; gap:18px;">
           <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:10px; background:#fff; border-radius:2px; padding:9px 16px; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:14px; letter-spacing:1px;">★★★★★</span><span style="width:1px; height:14px; background:#e0e0e0;"></span><span style="font-size:12.5px; font-weight:600; color:#0A0A0A; white-space:nowrap;">4.9 · 112+ reviews</span></a>
           <div style="display:flex; gap:12px;"><a href="https://www.facebook.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Facebook" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.5-1.5h1.6V3.6c-.28-.04-1.24-.12-2.36-.12-2.33 0-3.93 1.42-3.93 4.04v2.25H7.5V13h2.81v8h3.19z"></path></svg></a><a href="https://www.instagram.com/metropolitandetail" target="_blank" rel="noopener" aria-label="Instagram" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"></circle></svg></a><a href="https://www.youtube.com/@metropolitandetail" target="_blank" rel="noopener" aria-label="YouTube" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M22 8.2a2.6 2.6 0 0 0-1.8-1.8C18.6 6 12 6 12 6s-6.6 0-8.2.4A2.6 2.6 0 0 0 2 8.2 27 27 0 0 0 1.7 12 27 27 0 0 0 2 15.8a2.6 2.6 0 0 0 1.8 1.8C5.4 18 12 18 12 18s6.6 0 8.2-.4a2.6 2.6 0 0 0 1.8-1.8A27 27 0 0 0 22.3 12 27 27 0 0 0 22 8.2zM10 15V9l5.2 3L10 15z"></path></svg></a><a href="https://www.yelp.com/biz/metropolitan-detail-redmond" target="_blank" rel="noopener" aria-label="Yelp" style="width:38px; height:38px; border:1px solid var(--md-border-dark); border-radius:2px; display:flex; align-items:center; justify-content:center; transition:border-color .25s, background .25s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);"><svg width="15" height="15" viewBox="0 0 24 24" fill="#fff"><path d="M12.3 2.1c-1.6.4-2 .8-2 2.4 0 .5.1 3.6.2 6.9.1 4 .2 6.2.4 6.6.3.6 1.1.8 1.8.4.3-.1 1.6-1.6 3-3.4 2.9-3.7 3-3.9 2.2-4.9-.3-.4-1.3-.8-4.3-1.9-4.4-1.6-4.6-1.6-5.5-1.3zM4.8 11.3c-.7.5-.7 1.5-.1 2.1.3.3 1.3.7 3 1.2 2.6.8 2.9.8 3.4.4.7-.6.6-1.6-.3-2.2-1-.7-4.9-2.2-5.4-2-.2 0-.5.3-.6.5zM12.6 16.6c-.6.3-.7.7-.5 3.1.2 2.5.3 2.8.9 3.1.7.3 1.2.1 1.7-.8 1.3-2.2 1.5-3 1-3.6-.5-.7-2.4-1.4-3.1-1.2zM18.7 15.2c-.4.1-1.4.9-2.6 2-1.6 1.5-1.8 1.8-1.6 2.4.3.8 1 1 2 .6 2.4-.8 4-1.6 4.2-2.1.4-.9-.4-3-1.3-3-.2 0-.5 0-.7.1z"></path></svg></a></div>
@@ -388,6 +623,28 @@
       <span style="font-size:12.5px; color:rgba(255,255,255,0.45);">© 2026 Metropolitan Detail. Celebrating 30 years.</span>
     </div>
   </footer>
+
+  <!-- ============ AVAILABILITY MODAL ============ -->
+  <div id="avail-modal" onClick="{{ closeAvail }}" style="display:none; position:fixed; inset:0; z-index:210; background:rgba(0,0,0,0.84); align-items:center; justify-content:center; padding:24px; overflow:auto;">
+    <div onClick="{{ stopProp }}" style="position:relative; width:100%; max-width:560px; background:#0F0F0F; border:1px solid var(--md-border-dark); padding:40px 40px 36px; text-align:left;">
+      <button onClick="{{ closeAvail }}" aria-label="Close" style="position:absolute; top:16px; right:16px; width:34px; height:34px; background:transparent; border:1px solid var(--md-border-dark); color:#fff; font-size:17px; line-height:1; cursor:pointer; transition:border-color .2s, background .2s;" style-hover="border-color:var(--md-red); background:rgba(213,0,28,0.12);">&times;</button>
+      <div data-av-body="">
+        <div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="display:inline-block; width:26px; height:3px; background:var(--md-red); flex:0 0 auto;"></span><span style="font-weight:600; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Free Loaner Cars</span></div>
+        <h3 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.02em; color:#fff; margin:0 0 10px;">Ask about availability</h3>
+        <p style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.62); margin:0 0 26px;">Tell us what you are booking and when you need the car. We will confirm what is open.</p>
+        <form onSubmit="{{ submitAvail }}" style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div><label class="av-lb" for="av-name">Name</label><input class="av-in" id="av-name" name="name" type="text" placeholder="Full name" required=""></div>
+          <div><label class="av-lb" for="av-phone">Phone</label><input class="av-in" id="av-phone" name="phone" type="tel" placeholder="(425) 000-0000"></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-email">Email</label><input class="av-in" id="av-email" name="email" type="email" placeholder="you@email.com" required=""></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-vehicle">Vehicle</label><input class="av-in" id="av-vehicle" name="vehicle" type="text" placeholder="Year, make and model"></div>
+          <div><label class="av-lb" for="av-service">Service</label><select class="av-in" id="av-service" name="service"><option>Paint Protection Film</option><option>Ceramic Coating</option><option>Window Tint</option><option>Paint Correction</option><option>Detailing</option><option>Not sure yet</option></select></div>
+          <div><label class="av-lb" for="av-date">Preferred drop-off</label><input class="av-in" id="av-date" name="date" type="date"></div>
+          <div style="grid-column:1 / -1;"><label class="av-lb" for="av-notes">Anything else</label><textarea class="av-in" id="av-notes" name="notes" rows="3" placeholder="Timing, questions, or preferences"></textarea></div>
+          <button type="submit" style="grid-column:1 / -1; margin-top:6px; background:var(--md-red); color:#fff; border:none; font:600 12.5px/1 var(--md-font-body); letter-spacing:.06em; text-transform:uppercase; padding:16px 22px; cursor:pointer; transition:background .22s;" style-hover="background:#b30018;">Check availability</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- ============ STICKY MOBILE BOTTOM BAR ============ -->
   <div class="md-bottombar" style="position:fixed; bottom:0; left:0; width:100%; z-index:80; border-top:1px solid var(--md-border-dark); background:rgba(10,10,10,0.96); backdrop-filter:blur(8px);">
@@ -401,21 +658,28 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { menuOpen: false };
+  state = { menuOpen: false, gFilter: 'all', gPage: 0 };
 
   renderVals() {
     this._headerRef = this._headerRef || React.createRef();
     this._scrimRef = this._scrimRef || React.createRef();
     this._galTabsRef = this._galTabsRef || React.createRef();
     this._galGridRef = this._galGridRef || React.createRef();
-    return {
+    return Object.assign({
       headerRef: this._headerRef,
+      revTrackRef: (this._revTrackRef = this._revTrackRef || React.createRef()),
+      revPrev: () => { this._revI = Math.max(0, (this._revI || 0) - 1); this._applyRev(); },
+      revNext: () => { const tr = this._revTrackRef && this._revTrackRef.current; const n = tr ? tr.children.length : 0; const per = (window.innerWidth <= 820) ? 1 : 2; const max = Math.max(0, n - per); this._revI = Math.min(max, (this._revI || 0) + 1); this._applyRev(); },
       scrimRef: this._scrimRef,
       galTabsRef: this._galTabsRef,
       galGridRef: this._galGridRef,
       menuOpen: this.state.menuOpen,
       openMenu: () => this.setState({ menuOpen: true }),
       closeMenu: () => this.setState({ menuOpen: false }),
+      stopProp: (e) => { if(e && e.stopPropagation) e.stopPropagation(); },
+      openAvail: (e) => { if(e && e.preventDefault) e.preventDefault(); var m=document.getElementById('avail-modal'); if(m) m.style.display='flex'; },
+      closeAvail: () => { var m=document.getElementById('avail-modal'); if(m) m.style.display='none'; },
+      submitAvail: (e) => { if(e && e.preventDefault) e.preventDefault(); var m=document.getElementById('avail-modal'); if(!m) return; var b=m.querySelector('[data-av-body]'); if(b) b.innerHTML='<div style="padding:14px 0 6px;"><div style="display:flex; align-items:center; gap:11px; margin-bottom:14px;"><span style="display:inline-block; width:26px; height:3px; background:var(--md-red);"></span><span style="font-weight:600; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Request sent</span></div><h3 style="font-family:var(--md-font-display); font-weight:700; font-size:30px; line-height:1.1; letter-spacing:-0.02em; color:#fff; margin:0 0 10px;">Thank you.</h3><p style="font-size:15px; line-height:1.6; color:rgba(255,255,255,0.62); margin:0;">We will confirm loaner availability for your dates and follow up shortly.</p></div>'; },
       playYt: (e) => {
         const card = e.currentTarget;
         const vid = card.getAttribute('data-vid');
@@ -426,7 +690,7 @@ class Component extends DCLogic {
         this._gFilter = e.currentTarget.getAttribute('data-filter') || 'all';
         this._applyGallery();
       },
-    };
+    }, this._gallery());
   }
 
   componentDidMount() {
@@ -472,6 +736,66 @@ class Component extends DCLogic {
     this._applyGallery();
     this._setupServiceScroll();
     this._setupTextReveal();
+  }
+
+  _galData() {
+    if (this._data) return this._data;
+    const specs = [
+      ['sf90xx', 'Ferrari SF90 XX', null, null, 0],
+      ['raptor', 'Ford Raptor', 'uploads/Ford Raptor CQuartz Finest Reserve (', ').jpg', 6],
+      ['shelby', 'Mustang Shelby GT 500 Super Snake', 'uploads/shelby_gt500_supersnake_ceramic_', '.jpg', 6],
+      ['skyline', 'Nissan Skyline GTR', 'uploads/nissan_skyline_gtr_ceramic_', '.jpg', 5],
+      ['p930', 'Porsche 930', 'uploads/porsche_930_ceramic_', '.jpg', 6],
+      ['gt3', 'Porsche 992 GT3', 'uploads/porsche_992_gt3_dynoshield_', '.jpg', 4],
+      ['porsche', 'Porsche', null, null, 0],
+      ['cayman', 'Porsche Cayman GTS', null, null, 0],
+      ['wrx', 'Subaru WRX', null, null, 0],
+    ];
+    const byKey = {}; const order = [];
+    specs.forEach((s) => {
+      const key = s[0], label = s[1], pre = s[2], post = s[3], count = s[4];
+      const items = [];
+      for (let i = 1; i <= count; i++) items.push({ src: pre + i + post, alt: label + ' ceramic coating at Metropolitan Detail' });
+      if (key === 'cayman') ['IMG_2463-1','IMG_2465-2','IMG_2466-3','IMG_2468-4'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      if (key === 'wrx') ['IMG_2500-1','IMG_2505-2','IMG_2508-3','IMG_2511-4','IMG_2513-5','IMG_2516-6'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      if (key === 'porsche') ['IMG_4439-1','IMG_8137-3','IMG_8143-4','IMG_8147-5','IMG_8150-6','IMG_8151-7','IMG_8153-8','IMG_8155-9','IMG_8157-10','IMG_8158-11','IMG_8161-12','IMG_8165-13'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      if (key === 'sf90xx') ['ferrari_sf90xx (1 of 5)','ferrari_sf90xx (2 of 5)','ferrari_sf90xx (3 of 5)','ferrari_sf90xx (4 of 5)','ferrari_sf90xx (5 of 5)'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      byKey[key] = { key: key, label: label, items: items };
+      order.push(key);
+    });
+    const all = []; order.forEach((k) => byKey[k].items.forEach((it) => all.push(it)));
+    this._data = { byKey: byKey, order: order, all: all };
+    return this._data;
+  }
+
+  _gallery() {
+    const d = this._galData();
+    const PAGE = 8;
+    const filter = this.state.gFilter || 'all';
+    const items = filter === 'all' ? d.all : (d.byKey[filter] ? d.byKey[filter].items : d.all);
+    const totalPages = Math.max(1, Math.ceil(items.length / PAGE));
+    let page = this.state.gPage || 0;
+    if (page > totalPages - 1) page = totalPages - 1;
+    if (page < 0) page = 0;
+    const pageImages = items.slice(page * PAGE, page * PAGE + PAGE);
+    const tabOrder = ['all'].concat(d.order.filter((k) => d.byKey[k].items.length > 0));
+    const tabs = tabOrder.map((k) => ({
+      label: k === 'all' ? 'All' : d.byKey[k].label,
+      active: k === filter,
+      onClick: () => this.setState({ gFilter: k, gPage: 0 }),
+    }));
+    const pages = [];
+    const WIN = 7;
+    let lo = Math.max(0, page - Math.floor(WIN / 2));
+    let hi = Math.min(totalPages - 1, lo + WIN - 1);
+    lo = Math.max(0, Math.min(lo, hi - WIN + 1));
+    for (let i = lo; i <= hi; i++) pages.push({ label: String(i + 1), active: i === page, onClick: () => this.setState({ gPage: i }) });
+    return {
+      tabs: tabs, pageImages: pageImages, pages: pages,
+      showPager: totalPages > 1,
+      prevPage: () => this.setState({ gPage: Math.max(0, page - 1) }),
+      nextPage: () => this.setState({ gPage: Math.min(totalPages - 1, page + 1) }),
+    };
   }
 
   _applyGallery() {
