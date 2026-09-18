@@ -16,18 +16,18 @@
 <meta property="og:site_name" content="Metropolitan Detail">
 <meta property="og:url" content="https://metropolitandetail.argon-devsite.com/paint-correction">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/IMG_6714-7.jpg">
-<meta property="og:image:secure_url" content="https://metropolitandetail.argon-devsite.com/uploads/IMG_6714-7.jpg">
+<meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/Aston Martin DB4-2-24f99152.jpg">
+<meta property="og:image:secure_url" content="https://metropolitandetail.argon-devsite.com/uploads/Aston Martin DB4-2-24f99152.jpg">
 <meta property="og:image:alt" content="Bring back the depth in your paint. | Metropolitan Detail, Redmond WA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Bring back the depth in your paint. | Metropolitan Detail, Redmond WA">
-<meta name="twitter:description" content="Paint correction removes swirls, scratches, and oxidation to restore a deep, flawless finish before coating or film. Our full paint correction page is on the way — contact us for details and pricing.">
-<meta name="twitter:image" content="https://metropolitandetail.argon-devsite.com/uploads/IMG_6714-7.jpg">
-<meta name="description" content="Paint correction removes swirls, scratches, and oxidation to restore a deep, flawless finish before coating or film. Our full paint correction page is on the way — contact us for details and pricing.">
+<meta name="twitter:description" content="A multi stage polishing process that takes swirls, light scratches, and oxidation out of your paint instead of hiding them. Serving Redmond, Bellevue, and Seattle.">
+<meta name="twitter:image" content="https://metropolitandetail.argon-devsite.com/uploads/Aston Martin DB4-2-24f99152.jpg">
+<meta name="description" content="A multi stage polishing process that takes swirls, light scratches, and oxidation out of your paint instead of hiding them. Serving Redmond, Bellevue, and Seattle.">
 <meta property="og:title" content="Bring back the depth in your paint. | Metropolitan Detail, Redmond WA">
-<meta property="og:description" content="Paint correction removes swirls, scratches, and oxidation to restore a deep, flawless finish before coating or film. Our full paint correction page is on the way — contact us for details and pricing.">
+<meta property="og:description" content="A multi stage polishing process that takes swirls, light scratches, and oxidation out of your paint instead of hiding them. Serving Redmond, Bellevue, and Seattle.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/IMG_6714-7.jpg">
+<meta property="og:image" content="https://metropolitandetail.argon-devsite.com/uploads/Aston Martin DB4-2-24f99152.jpg">
 <style>
   @keyframes mdHeroFilm { 0% { transform: translateX(-130%) skewX(-8.5deg); opacity:0; } 18%{opacity:1;} 100% { transform: translateX(150%) skewX(-8.5deg); opacity:0; } }
   @keyframes mdFilmWipe { 0% { transform: translateX(-130%) skewX(-8.5deg); opacity:0; } 22%{opacity:.9;} 100% { transform: translateX(150%) skewX(-8.5deg); opacity:0; } }
@@ -92,6 +92,15 @@
   .faq-plus::after{ left:8px; top:0; width:2px; height:18px; }
   .faq-item[open] .faq-plus{ transform:rotate(45deg); }
   .faq-item p{ margin:0; padding:0 0 28px; font-size:15.5px; line-height:1.7; color:var(--sf-muted); max-width:70ch; }
+  .rev-track{ display:flex; align-items:flex-start; transition:transform .55s var(--md-ease); }
+  .rev-card{ flex:0 0 50%; box-sizing:border-box; padding-right:22px; }
+  @media (max-width: 820px){ .rev-card{ flex:0 0 100%; padding-right:0; } }
+  .gtab-txt{ font-family:var(--md-font-body); font-weight:600; font-size:12px; letter-spacing:.04em; text-transform:uppercase; white-space:nowrap; line-height:1; padding:9px 15px; border:1px solid rgba(255,255,255,0.16); background:#000; color:rgba(255,255,255,0.6); cursor:pointer; border-radius:999px; transition:background .2s var(--md-ease), color .2s, border-color .2s; }
+  .gtab-txt:hover{ color:#fff; border-color:#fff; }
+  .gtab-txt[data-active="true"]{ background:var(--md-red); border-color:var(--md-red); color:#fff; }
+  .gpage{ min-width:40px; height:40px; padding:0 12px; display:inline-flex; align-items:center; justify-content:center; font-family:var(--md-font-body); font-weight:600; font-size:13px; border:1px solid rgba(255,255,255,0.16); background:transparent; color:rgba(255,255,255,0.7); cursor:pointer; border-radius:2px; transition:background .2s var(--md-ease), color .2s, border-color .2s; }
+  .gpage:hover{ color:#fff; border-color:#fff; }
+  .gpage[data-active="true"]{ background:var(--md-red); border-color:var(--md-red); color:#fff; }
   /* Text fade */
   .txt-fade{ opacity:0; transform:translateY(30px); transition:opacity .9s var(--md-ease), transform .9s var(--md-ease); }
   .txt-fade.in{ opacity:1; transform:none; }
@@ -263,26 +272,71 @@
     </div>
   </sc-if>
 
-  <!-- ============ HERO (placeholder) ============ -->
-  <section id="home" data-screen-label="Paint Correction" style="position:relative; min-height:80vh; display:flex; align-items:center; overflow:hidden; background:#0A0A0A;">
-    <img src="uploads/IMG_6714-7.jpg" alt="Paint correction and polishing at Metropolitan Detail" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5;">
-    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,10,10,.82) 0%, rgba(10,10,10,.7) 55%, rgba(10,10,10,.96) 100%);"></div>
-    <span style="position:absolute; top:-20%; left:0; width:55%; height:140%; pointer-events:none; background:linear-gradient(115deg, transparent 38%, rgba(255,255,255,.14) 48%, rgba(255,255,255,.03) 54%, transparent 66%); animation:mdHeroFilm 1.9s cubic-bezier(.22,.61,.36,1) .25s both;"></span>
-    <div style="position:relative; z-index:2; width:100%; max-width:var(--md-maxw); margin:0 auto; padding:120px 40px;">
+  <!-- ============ HERO ============ -->
+  <section id="home" data-screen-label="Paint Correction" style="position:relative; min-height:100vh; display:flex; flex-direction:column; justify-content:flex-end; overflow:hidden; background:#000;">
+    <img src="uploads/Aston Martin DB4-2-24f99152.jpg" alt="Machine polishing the hood of an Aston Martin DB4 during paint correction at Metropolitan Detail in Redmond" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 38%;">
+    <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.22) 38%, rgba(0,0,0,.9) 100%);"></div>
+    <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 55%);"></div>
+    <span style="position:absolute; top:-20%; left:0; width:55%; height:140%; pointer-events:none; background:linear-gradient(115deg, transparent 38%, rgba(255,255,255,.22) 48%, rgba(255,255,255,.05) 54%, transparent 66%); animation:mdHeroFilm 1.9s cubic-bezier(.22,.61,.36,1) .25s both;"></span>
+    <div class="md-hero-inner" style="position:relative; z-index:2; width:100%; max-width:var(--md-maxw); margin:0 auto; padding:120px 40px 44px;">
       <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px; animation:mdFadeUp .85s var(--md-ease) .1s both;">
         <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
-        <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.7);">Paint Correction</span>
+        <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.75);">Bring back the depth in your paint.</span>
       </div>
-      <h1 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h1); line-height:1.02; letter-spacing:var(--md-tracking-tight); margin:0 0 22px; max-width:16ch; animation:mdFadeUp .85s var(--md-ease) .26s both;">Bring back the depth in your paint.</h1>
-      <p style="font-size:18px; line-height:1.6; color:rgba(255,255,255,0.82); max-width:58ch; margin:0 0 20px; animation:mdFadeUp .85s var(--md-ease) .4s both;">Paint correction removes swirls, scratches, and oxidation to restore a deep, flawless finish before coating or film. Our full paint correction page is on the way — contact us for details and pricing.</p>
-      <div style="display:inline-flex; align-items:center; gap:11px; font-weight:600; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--md-red); margin-bottom:34px; animation:mdFadeUp .85s var(--md-ease) .48s both;"><span style="width:8px; height:8px; border-radius:50%; background:var(--md-red);"></span>Full page coming soon</div>
-      <div style="display:flex; gap:20px; align-items:center; flex-wrap:wrap; animation:mdFadeUp .85s var(--md-ease) .56s both;">
-        <a href="/get-a-quote" class="md-cta lg"><span class="l">Get a Quote</span><span class="t"><span class="arr">→</span></span></a>
-        <a href="tel:+14252336068" style="font-size:14px; font-weight:600; color:#fff; text-decoration:none;">or call (425) 233-6068</a>
-      </div>
+      <h1 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(34px,4.4vw,58px); line-height:1.05; letter-spacing:var(--md-tracking-tight); margin:0 0 14px; max-width:20ch; animation:mdFadeUp .85s var(--md-ease) .26s both;">Professional Paint Correction Services</h1>
+      <p style="font-size:17px; line-height:1.65; color:rgba(255,255,255,0.82); max-width:66ch; margin:0 0 30px; animation:mdFadeUp .85s var(--md-ease) .5s both;">A multi stage polishing process that takes swirls, light scratches, and oxidation out of your paint instead of hiding them. Serving Redmond, Bellevue, and Seattle.</p>
+      <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; animation:mdFadeUp .85s var(--md-ease) .54s both;"><a href="/get-a-quote" class="md-cta lg"><span class="l">Request a Quote</span><span class="t"><span class="arr">→</span></span></a></div>
+    </div>
+    <div class="md-4col" style="position:relative; z-index:3; width:100%; background:rgba(10,10,10,.72); backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px); border-top:1px solid var(--md-border-dark); display:grid; grid-template-columns:repeat(4,1fr);">
+      <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark); display:flex; align-items:center; gap:11px;"><svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg><span style="color:#FFC400; font-size:15px; letter-spacing:1px;">★★★★★</span><span style="color:#fff; font-size:13.5px; font-weight:600; white-space:nowrap;">4.9 Google · 112+ reviews</span></div>
+      <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">Paint Depth Measured</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">Before we cut</div></div>
+      <div style="padding:22px clamp(24px,3vw,40px); border-right:1px solid var(--md-border-dark);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">Two to Three Stages</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">Cut, refine, seal</div></div>
+      <div style="padding:22px clamp(24px,3vw,40px);"><div style="color:#fff; font-weight:700; font-family:var(--md-font-display); font-size:16px;">20 Years</div><div style="color:rgba(255,255,255,.6); font-size:12.5px;">In Redmond</div></div>
     </div>
   </section>
 
+
+  <!-- ============ HOW DAMAGE HAPPENS ============ -->
+  <section id="how" data-reveal="out" data-film="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="display:flex; align-items:center; justify-content:center; gap:14px; margin-bottom:18px;"><span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span><span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--sf-muted);">The Problem &amp; The Fix</span></div>
+      <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 auto 40px; max-width:22ch; text-align:center; color:var(--sf-fg);">How the damage happens, and how we take it out</h2>
+      <div onClick="{{ playYt }}" data-vid="VSr1zRlrtYk" role="button" tabindex="0" aria-label="Play paint correction walkthrough" style="position:relative; aspect-ratio:16/9; max-width:940px; margin:0 auto 46px; background:#000; border:1px solid var(--sf-border); cursor:pointer; overflow:hidden; border-radius:14px;">
+        <img loading="lazy" src="https://i.ytimg.com/vi/VSr1zRlrtYk/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/VSr1zRlrtYk/hqdefault.jpg';" alt="Paint correction walkthrough at Metropolitan Detail" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.42));"></div>
+        <span style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:64px; height:44px; background:var(--md-red); border-radius:8px; display:flex; align-items:center; justify-content:center;"><span style="width:0; height:0; border-left:14px solid #fff; border-top:9px solid transparent; border-bottom:9px solid transparent; margin-left:3px;"></span></span>
+      </div>
+      <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:14px 44px; max-width:940px; margin:0 auto;">
+        <p style="font-size:15.5px; line-height:1.75; color:var(--sf-muted); margin:0;">Paint doesn't get ruined in one day. It wears down slowly. Automatic car washes drag stiff brushes across your clear coat. A dirty mitt or a single bucket pulls grit back over the panel. Rain leaves mineral spots that eat into the surface once they sit in the sun. Sap, bird droppings, and pollen do their own damage while they wait to be cleaned off. You never see any of it happen. It just builds up, until your paint looks flat in the sunlight.</p>
+        <p style="font-size:15.5px; line-height:1.75; color:var(--sf-muted); margin:0;">We check your paint first. Your clear coat is thin, and correcting it means removing a small amount each time, so there's a limit to how much your car can take. We measure how much you have before we start. That tells us how hard we can cut and where to stop. It's the step that separates a proper correction from a shop that buffs first and finds out later.</p>
+        <p style="font-size:15.5px; line-height:1.75; color:var(--sf-muted); margin:0;">Every one of those marks is a tiny groove in your clear coat. Wax and glaze fill the groove and hide it for a few weeks. We take a different approach. We smooth the surface down so there's nothing left to catch the light.</p>
+        <p style="font-size:15.5px; line-height:1.75; color:var(--sf-muted); margin:0;">Then we work in stages. The first stage cuts, taking out the damaged layer. The next refines, clearing any haze the cutting left and bringing back the shine. Some cars need two stages, some need three. We test a small area first to find the right pad and polish for your paint, then work panel by panel. When we're done, we seal it, because fresh clear coat is exposed and your results should last.</p>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:center; gap:22px; flex-wrap:wrap; margin-top:40px;"><a href="/get-a-quote" class="md-cta"><span class="l">Request a Quote</span><span class="t"><span class="arr">→</span></span></a></div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT IT REMOVES ============ -->
+  <section id="removes" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); border-top:1px solid var(--md-border-dark); padding:calc(var(--md-section-y) * 0.7) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div class="md-row" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+        <div>
+          <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:var(--md-h2); line-height:1.08; letter-spacing:var(--md-tracking-tight); margin:0 0 28px; max-width:16ch; color:var(--sf-fg);">What paint correction removes</h2>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <div style="display:flex; align-items:flex-start; gap:12px; font-size:15.5px; line-height:1.5; color:var(--sf-fg);"><span style="flex:none; width:6px; height:6px; margin-top:8px; background:var(--md-red);"></span>Swirl marks and wash haze</div>
+            <div style="display:flex; align-items:flex-start; gap:12px; font-size:15.5px; line-height:1.5; color:var(--sf-fg);"><span style="flex:none; width:6px; height:6px; margin-top:8px; background:var(--md-red);"></span>Light and moderate scratches</div>
+            <div style="display:flex; align-items:flex-start; gap:12px; font-size:15.5px; line-height:1.5; color:var(--sf-fg);"><span style="flex:none; width:6px; height:6px; margin-top:8px; background:var(--md-red);"></span>Water spot etching from rain and sprinklers</div>
+            <div style="display:flex; align-items:flex-start; gap:12px; font-size:15.5px; line-height:1.5; color:var(--sf-fg);"><span style="flex:none; width:6px; height:6px; margin-top:8px; background:var(--md-red);"></span>Oxidation and dull, faded paint</div>
+            <div style="display:flex; align-items:flex-start; gap:12px; font-size:15.5px; line-height:1.5; color:var(--sf-fg);"><span style="flex:none; width:6px; height:6px; margin-top:8px; background:var(--md-red);"></span>Buffer trails left by other shops</div>
+            <div style="display:flex; align-items:flex-start; gap:12px; font-size:15.5px; line-height:1.5; color:var(--sf-fg);"><span style="flex:none; width:6px; height:6px; margin-top:8px; background:var(--md-red);"></span>Sap, bird dropping, and bug etching</div>
+          </div>
+          <div style="font-size:14px; line-height:1.6; color:var(--sf-muted); max-width:56ch; margin-top:28px;">Scratches that have gone through the clear coat can't be polished out. If your fingernail catches in it, we'll tell you before we start, not after.</div>
+          <div style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:30px;"><a href="/get-a-quote" class="md-cta"><span class="l">Request a Quote</span><span class="t"><span class="arr">→</span></span></a></div>
+        </div>
+        <div class="md-media-col md-figure" style="border-radius:14px; overflow:hidden; background:#000;"><img class="md-img" loading="lazy" src="uploads/pasted-1789754631141-0.png" alt="Before and after paint correction on a blue Audi trunk lid, swirls and scratches polished out" style="display:block; width:100%; aspect-ratio:1920/1180; object-fit:cover;"></div>
+      </div>
+    </div>
+  </section>
 
   <!-- ============ PAINT CORRECTION VIDEOS ============ -->
   <section id="videos" data-reveal="out" data-film="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:var(--md-section-y) 0;">
@@ -311,11 +365,86 @@
     </div>
   </section>
 
+  <!-- ============ REVIEWS (light) ============ -->
+  <section data-reveal="out" data-scrollfade="invert" style="background:var(--md-white); --sf-fg:#0A0A0A; --sf-muted:#6B6B6B; --sf-border:#E5E5E5; padding:var(--md-section-y) 0;">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="display:flex; align-items:center; gap:14px; margin-bottom:22px;">
+        <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--sf-muted);">What People Say</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.04; letter-spacing:var(--md-tracking-tight); margin:0 0 18px; max-width:18ch; color:var(--sf-fg);">20 Years of Earning Trust Across Redmond, Bellevue &amp; Seattle</h2>
+      
+
+      <div style="border:1px solid var(--sf-border); background:transparent; padding:34px 36px; display:flex; align-items:center; justify-content:space-between; gap:30px; flex-wrap:wrap; margin-bottom:22px;">
+        <div style="display:flex; align-items:center; gap:28px;">
+          <div style="font-family:var(--md-font-display); font-weight:700; font-size:58px; line-height:.9; color:var(--sf-fg);">4.9</div>
+          <div>
+            <div style="color:#FFC400; font-size:18px; letter-spacing:3px; margin-bottom:8px;">★★★★★</div>
+            <div style="font-size:14px; color:var(--sf-muted);"><span style="color:var(--sf-fg); font-weight:600;">Rated on Google</span> · 112+ reviews</div>
+            <div style="display:flex; align-items:center; gap:8px; margin-top:8px; color:var(--sf-muted); font-size:13px;"><span style="width:14px; height:14px; background:var(--md-red); display:inline-block;"></span>STEK &amp; CarPro certified installer in Redmond</div>
+          </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:11px; color:var(--sf-muted); font-size:14px;"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg>Powered by Google</div>
+      </div>
+
+      <div style="position:relative; overflow:hidden;">
+        <div class="rev-track" ref="{{ revTrackRef }}">
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:transparent; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#5b3fa8; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">C</span><div><div style="font-weight:600; font-size:15px; color:var(--sf-fg);">Colby Gregory</div><div style="font-size:12.5px; color:var(--sf-muted); margin-top:2px;">1 review · 1 photo · a year ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:0;">Phenomenal job. Took my 9 year old black truck here that has turned many miles on gravel roads and construction sites for a <strong style="color:var(--sf-fg); font-weight:600;">paint correction</strong> and ceramic coating and let me tell you it's unreal how well it turned out!</p>
+        </div></div>
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:transparent; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#2f6f8f; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">B</span><div><div style="font-weight:600; font-size:15px; color:var(--sf-fg);">Ben Connel</div><div style="font-size:12.5px; color:var(--sf-muted); margin-top:2px;">Local Guide · 349 reviews · 84 photos · Edited 7 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:0;">This is that kind of company that you can always rely on doing the right thing by you. Charles is a class act and the kind of employee any company should want working for them.</p>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:14px 0 0;">I'm very happy with the results of the <strong style="color:var(--sf-fg); font-weight:600;">paint correction service</strong> on my Rivian R1T and the loaner car was a lifesaver.</p>
+        </div></div>
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:transparent; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#7a4a3a; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">H</span><div><div style="font-weight:600; font-size:15px; color:var(--sf-fg);">Harsha Lella</div><div style="font-size:12.5px; color:var(--sf-muted); margin-top:2px;">Local Guide · 50 reviews · 7 photos · 2 months ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:0;">Best in town. I have a brand new car where I took for detailing to another shop and when they detailed they made lot of swirls. Took it to Metropolitan and these guys were amazing. Detailed the car and polished it and removed 90% of swirls. Its not perfect but, a lot better than what it was earlier. Since its a daily driver, I am not bothered about remaining swirls as they are virtually invisible unless seen in very bright light at an angle and it definitely requires deeper <strong style="color:var(--sf-fg); font-weight:600;">paint correction</strong>. Folks here are passionate about what they do and that shows in the output.</p>
+        </div></div>
+          <div class="rev-card"><div style="border:1px solid var(--sf-border); background:transparent; padding:30px 30px 32px; height:100%; box-sizing:border-box;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;"><div style="display:flex; align-items:center; gap:14px;"><span style="width:44px; height:44px; border-radius:50%; background:#2f6f5f; display:flex; align-items:center; justify-content:center; font-weight:600; font-size:17px; color:#fff;">J</span><div><div style="font-weight:600; font-size:15px; color:var(--sf-fg);">Jake</div><div style="font-size:12.5px; color:var(--sf-muted); margin-top:2px;">4 reviews · 1 photo · 4 years ago</div></div></div><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4a5.5 5.5 0 0 1-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"></path><path fill="#34A853" d="M12 24c3.2 0 6-1.1 8-3l-3.9-3a7.2 7.2 0 0 1-10.7-3.8H1.3v3.1A12 12 0 0 0 12 24z"></path><path fill="#FBBC05" d="M5.3 14.3a7.1 7.1 0 0 1 0-4.6V6.6H1.3a12 12 0 0 0 0 10.8l4-3.1z"></path><path fill="#EA4335" d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4A12 12 0 0 0 1.3 6.6l4 3.1A7.2 7.2 0 0 1 12 4.8z"></path></svg></div>
+          <div style="color:#FFC400; font-size:14px; letter-spacing:2px; margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:0;">The team of reps at this shop are truly iconic. I brought in my car after some damage on my PPF and ceramic coating. It actually pierced through and onto my <strong style="color:var(--sf-fg); font-weight:600;">cars paint</strong>.</p>
+          <p style="font-size:15px; line-height:1.65; color:var(--sf-muted); margin:14px 0 0;">The somehow made my care look BETTER than when I picked it up from BMW. I custom ordered and picked out everything about my 22' X4 - So I am extremely picky when work is done on it. (they're probably well aware) - but this is actually flawless. I've attached a photo from when I picked it up today! A BIG thank you to Lee and his team. As well as Jamar for being so helpful and knowledgeable about the process! Jamar also got along so well with my little pup (her butt is photo'd) while I was picking it up and paying for their services. So, bonus points for that!</p>
+        </div></div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px; margin-top:26px;">
+        <button onClick="{{ revPrev }}" aria-label="Previous review" style="width:46px; height:46px; border:1px solid var(--sf-border); background:transparent; color:var(--sf-fg); cursor:pointer; font-size:16px; transition:background .25s var(--md-ease), border-color .25s;" style-hover="background:transparent; border-color:var(--sf-fg);">←</button>
+        <button onClick="{{ revNext }}" aria-label="Next review" style="width:46px; height:46px; border:none; background:var(--md-red); color:#fff; cursor:pointer; font-size:16px; transition:background .25s var(--md-ease);" style-hover="background:var(--md-red-hover);">→</button>
+      </div>
+      <div style="margin-top:34px;">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Metropolitan+Detail+Redmond+WA" target="_blank" rel="noopener" class="md-cta"><span class="l">Read Google Reviews</span><span class="t"><span class="arr">→</span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FREE LOANER CAR ============ -->
+  <section data-reveal="out" style="background:#0A0A0A; padding:calc(var(--md-section-y) * 0.45) 0 var(--md-section-y);">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px; text-align:center;">
+      <div style="display:inline-flex; align-items:center; gap:14px; margin-bottom:18px;">
+        <span style="display:inline-block; width:34px; height:3px; background:var(--md-red);"></span>
+        <span style="font-weight:500; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,0.6);">Free Loaner Cars</span>
+      </div>
+      <h2 style="font-family:var(--md-font-display); font-weight:700; font-size:var(--md-h2); line-height:1.05; letter-spacing:var(--md-tracking-tight); color:#fff; margin:0 auto 18px; max-width:20ch;">Drop off, grab a free loaner, drive away protected.</h2>
+      <p style="font-size:17px; line-height:1.6; color:rgba(255,255,255,0.7); margin:0 auto 32px; max-width:54ch;">Quality work takes time, and you should not have to wait around for it. We keep a small free fleet, based on availability, so your day keeps moving.</p>
+      <div style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><a href="#" onClick="{{ openAvail }}" class="md-cta"><span class="l">Ask About Availability</span><span class="t"><span class="arr">→</span></span></a></div>
+      <div class="md-2col" style="display:grid; grid-template-columns:1fr 1fr; gap:22px; max-width:840px; margin:52px auto 0;">
+        <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img loading="lazy" src="uploads/APNQkAFSPZWLCsuB9J3BdO_83KGZHoMO0rl2oy-HttFOWa3VeoXQQyReN-_ZBTzzuNR60vlV-CWTWsV4Yxlr2iAyVK476kkdYR7BJkO5KUoYQsKEVYQoZymnw4oGZvpWmD0bjYaXhHHk=s870-k-no.png" alt="Metropolitan Detail loaner car fleet" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
+        <div class="md-figure" style="overflow:hidden; border-radius:14px;"><img loading="lazy" src="uploads/APNQkAH6G3nlaoSi1Jy6PusI0bHq3kjvdT7f7muSzkHVEs_BqKOmzZ7RpNJcmzItAI89AQnO4IkiBZ5vvHq_u4NDmdz5f0JXgIdp3Q8OXyZoEDCRLmohUh0SJNFZVvJHmaegmdzIHtqi=s870-k-no.png" alt="Metropolitan Detail courtesy loaner vehicle" style="display:block; width:100%; aspect-ratio:16/10; object-fit:cover; transition:transform .8s var(--md-ease);"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FINAL CTA ============ -->
   <section style="position:relative; background:var(--md-black); padding:var(--md-section-y) 0; overflow:hidden;">
     <div data-reveal="out" style="position:relative; max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
       <div style="position:relative; overflow:hidden; background:#000; height:clamp(420px,52vh,520px);">
-        <img src="uploads/IMG_6714-7.jpg" alt="Paint correction and polishing at Metropolitan Detail" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9;">
+        <img loading="lazy" src="uploads/porsche-detail-1920w.webp" alt="Machine polishing a classic Porsche during paint correction at Metropolitan Detail" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.9;">
         <div style="position:absolute; inset:0; background:linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.1) 60%);"></div>
       </div>
       <div class="md-cta-panel" style="position:absolute; right:clamp(40px,7vw,108px); top:50%; transform:translateY(-50%); background:#0A0A0A; border:1px solid var(--md-border-dark); padding:clamp(34px,4vw,50px); max-width:440px;">
@@ -386,15 +515,18 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { menuOpen: false };
+  state = { menuOpen: false, gFilter: 'all', gPage: 0 };
 
   renderVals() {
     this._headerRef = this._headerRef || React.createRef();
     this._scrimRef = this._scrimRef || React.createRef();
     this._galTabsRef = this._galTabsRef || React.createRef();
     this._galGridRef = this._galGridRef || React.createRef();
-    return {
+    return Object.assign({
       headerRef: this._headerRef,
+      revTrackRef: (this._revTrackRef = this._revTrackRef || React.createRef()),
+      revPrev: () => { this._revI = Math.max(0, (this._revI || 0) - 1); this._applyRev(); },
+      revNext: () => { const tr = this._revTrackRef && this._revTrackRef.current; const n = tr ? tr.children.length : 0; const per = (window.innerWidth <= 820) ? 1 : 2; const max = Math.max(0, n - per); this._revI = Math.min(max, (this._revI || 0) + 1); this._applyRev(); },
       scrimRef: this._scrimRef,
       galTabsRef: this._galTabsRef,
       galGridRef: this._galGridRef,
@@ -415,10 +547,14 @@ class Component extends DCLogic {
         this._gFilter = e.currentTarget.getAttribute('data-filter') || 'all';
         this._applyGallery();
       },
-    };
+    }, this._gallery());
   }
 
   componentDidMount() {
+    const syncRev = () => this._applyRev();
+    requestAnimationFrame(() => requestAnimationFrame(syncRev));
+    window.addEventListener('resize', syncRev);
+    setTimeout(syncRev, 600);
     const revealAll = () => document.querySelectorAll('[data-reveal]').forEach(el => el.setAttribute('data-reveal', 'in'));
     const filmAll = () => document.querySelectorAll('[data-film]').forEach(el => el.setAttribute('data-film', 'in'));
     if ('IntersectionObserver' in window) {
@@ -463,6 +599,48 @@ class Component extends DCLogic {
     this._setupTextReveal();
   }
 
+  _galData() {
+    if (this._data) return this._data;
+    const mk = (pre, n, label) => { const a = []; for (let i = 1; i <= n; i++) a.push({ src: pre(i), alt: label + ' paint correction at Metropolitan Detail' }); return a; };
+    const polish = ['IMG_6700-1','IMG_6702-2','IMG_6704-3','IMG_6705-4','IMG_6709-6','IMG_6714-7','IMG_6720-8','IMG_6724-9','IMG_6729-10','IMG_6731-11','IMG_6733-12','IMG_6740-13'].map((f) => ({ src: 'uploads/' + f + '.jpg', alt: 'Paint correction and polishing at Metropolitan Detail' }));
+    const p930 = mk((i) => 'uploads/porsche_930_ceramic_' + i + '.jpg', 6, 'Porsche 930');
+    const gts = mk((i) => 'uploads/Porsche 911 Carrera 4 GTS (' + i + ').jpg', 8, 'Porsche 911 Carrera 4 GTS');
+    const byKey = { polish: { key: 'polish', label: 'In the Shop', items: polish }, p930: { key: 'p930', label: 'Porsche 930', items: p930 }, gts: { key: 'gts', label: 'Porsche 911 GTS', items: gts } };
+    const order = ['polish', 'p930', 'gts'];
+    this._data = { byKey: byKey, order: order, all: polish.concat(p930, gts) };
+    return this._data;
+  }
+
+  _gallery() {
+    const d = this._galData();
+    const PAGE = 8;
+    const filter = this.state.gFilter || 'all';
+    const items = filter === 'all' ? d.all : (d.byKey[filter] ? d.byKey[filter].items : d.all);
+    const totalPages = Math.max(1, Math.ceil(items.length / PAGE));
+    let page = this.state.gPage || 0;
+    if (page > totalPages - 1) page = totalPages - 1;
+    if (page < 0) page = 0;
+    const pageImages = items.slice(page * PAGE, page * PAGE + PAGE);
+    const tabOrder = ['all'].concat(d.order.filter((k) => d.byKey[k].items.length > 0));
+    const tabs = tabOrder.map((k) => ({
+      label: k === 'all' ? 'All' : d.byKey[k].label,
+      active: k === filter,
+      onClick: () => this.setState({ gFilter: k, gPage: 0 }),
+    }));
+    const pages = [];
+    const WIN = 7;
+    let lo = Math.max(0, page - Math.floor(WIN / 2));
+    let hi = Math.min(totalPages - 1, lo + WIN - 1);
+    lo = Math.max(0, Math.min(lo, hi - WIN + 1));
+    for (let i = lo; i <= hi; i++) pages.push({ label: String(i + 1), active: i === page, onClick: () => this.setState({ gPage: i }) });
+    return {
+      tabs: tabs, pageImages: pageImages, pages: pages,
+      showPager: totalPages > 1,
+      prevPage: () => this.setState({ gPage: Math.max(0, page - 1) }),
+      nextPage: () => this.setState({ gPage: Math.min(totalPages - 1, page + 1) }),
+    };
+  }
+
   _applyGallery() {
     const tabs = this._galTabsRef && this._galTabsRef.current;
     const grid = this._galGridRef && this._galGridRef.current;
@@ -478,6 +656,21 @@ class Component extends DCLogic {
         item.style.display = (f === 'all' || b === f) ? '' : 'none';
       });
     }
+  }
+
+  _applyRev() {
+    const tr = this._revTrackRef && this._revTrackRef.current;
+    if (!tr) return;
+    const per = (window.innerWidth <= 820) ? 1 : 2;
+    const n = tr.children.length;
+    const max = Math.max(0, n - per);
+    this._revI = Math.min(max, Math.max(0, this._revI || 0));
+    tr.style.transform = 'translateX(-' + (this._revI * (100 / per)) + '%)';
+    const vis = [];
+    for (let k = this._revI; k < Math.min(n, this._revI + per); k++) vis.push(tr.children[k]);
+    const h = vis.reduce((a, c) => Math.max(a, c.offsetHeight), 0);
+    const wrap = tr.parentElement;
+    if (wrap && h) { wrap.style.height = h + 'px'; wrap.style.transition = 'height .55s var(--md-ease)'; }
   }
 
   _setupTextReveal() {
