@@ -100,6 +100,26 @@
   .pf-tab{ font:600 12.5px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.6); background:transparent; border:1px solid var(--md-border-dark); border-radius:999px; padding:11px 18px; cursor:pointer; transition:color .25s, border-color .25s, background .25s; }
   .pf-tab:hover{ color:#fff; border-color:#fff; }
   .pf-tab[data-active="true"]{ background:var(--md-red); border-color:var(--md-red); color:#fff; }
+  .pf-chiprow{ -ms-overflow-style:none; scrollbar-width:none; }
+  .pf-chiprow::-webkit-scrollbar{ display:none; }
+  .pf-chip{ flex:0 0 auto; font:600 12.5px/1 var(--md-font-body); letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.55); background:transparent; border:none; border-bottom:2px solid transparent; padding:20px 2px 18px; cursor:pointer; white-space:nowrap; transition:color .2s, border-color .2s; }
+  .pf-chip:hover{ color:#fff; }
+  .pf-chip[data-active="true"]{ color:#fff; border-bottom-color:var(--md-red); }
+  .pf-sub{ flex:0 0 auto; font:600 11.5px/1 var(--md-font-body); letter-spacing:.09em; text-transform:uppercase; color:rgba(255,255,255,.5); background:transparent; border:1px solid var(--md-border-dark); border-radius:999px; padding:9px 16px; cursor:pointer; white-space:nowrap; transition:color .2s, border-color .2s, background .2s; }
+  .pf-sub:hover{ color:#fff; border-color:#fff; }
+  .pf-sub[data-active="true"]{ color:#fff; background:var(--md-red); border-color:var(--md-red); }
+  .pf-grid{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+  @media (max-width:1100px){ .pf-grid{ grid-template-columns:repeat(3,minmax(0,1fr)); } }
+  @media (max-width:820px){ .pf-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+  @media (max-width:560px){ .pf-grid{ grid-template-columns:1fr; } }
+  .pf-cell{ overflow:hidden; border-radius:8px; background:#111; cursor:zoom-in; }
+  .pf-page{ min-width:38px; height:38px; padding:0 12px; font:600 12.5px/1 var(--md-font-body); letter-spacing:.06em; color:rgba(255,255,255,.6); background:transparent; border:1px solid var(--md-border-dark); border-radius:2px; cursor:pointer; transition:color .2s, border-color .2s, background .2s; }
+  .pf-page:hover{ color:#fff; border-color:#fff; }
+  .pf-page[data-active="true"]{ background:var(--md-red); border-color:var(--md-red); color:#fff; }
+  .pf-lb-nav{ position:absolute; top:50%; transform:translateY(-50%); width:54px; height:54px; border-radius:50%; border:1px solid rgba(255,255,255,.25); background:rgba(0,0,0,.5); color:#fff; font-size:28px; line-height:0; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, border-color .2s; }
+  .pf-lb-nav:hover{ background:var(--md-red); border-color:var(--md-red); }
+  .pf-lb-close{ position:absolute; top:clamp(14px,3vw,30px); right:clamp(14px,3vw,34px); width:44px; height:44px; border-radius:50%; border:1px solid rgba(255,255,255,.25); background:rgba(0,0,0,.5); color:#fff; font-size:15px; line-height:0; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s, border-color .2s; }
+  .pf-lb-close:hover{ background:var(--md-red); border-color:var(--md-red); }
   .pf-track{ display:flex; gap:14px; transition:transform .55s var(--md-ease); }
   .pf-shot{ flex:0 0 calc(33.333% - 10px); }
   @media (max-width: 900px){ .pf-shot{ flex:0 0 calc(50% - 7px); } }
@@ -165,7 +185,7 @@
 </style>
 </helmet>
 
-<div data-screen-label="CQuartz Professional" style="background:var(--md-ink); color:var(--md-white); font-family:var(--md-font-body); overflow-x:hidden;">
+<div data-screen-label="Portfolio" style="background:var(--md-ink); color:var(--md-white); font-family:var(--md-font-body); overflow-x:clip;">
 
   <!-- Top scrim -->
   <div ref="{{ scrimRef }}" aria-hidden="true" style="position:fixed; top:0; left:0; width:100%; height:150px; z-index:89; pointer-events:none; background:linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.32) 45%, rgba(0,0,0,0) 100%); transition:opacity .4s var(--md-ease);"></div>
@@ -311,33 +331,65 @@
 
   <!-- ============ FILTER BAR ============ -->
   <div class="pf-filter" style="position:sticky; top:78px; z-index:40; background:rgba(10,10,10,.92); backdrop-filter:saturate(140%) blur(10px); -webkit-backdrop-filter:saturate(140%) blur(10px); border-bottom:1px solid var(--md-border-dark);">
-    <div style="max-width:var(--md-maxw); margin:0 auto; padding:14px 40px; display:flex; flex-wrap:wrap; gap:8px;">
-      <button onClick="{{ setFilter }}" data-tag="All" class="pf-tab" data-active="true">All</button>
-      <button onClick="{{ setFilter }}" data-tag="Paint Protection Film" class="pf-tab" data-active="false">Paint Protection Film</button>
-      <button onClick="{{ setFilter }}" data-tag="Ceramic Coatings" class="pf-tab" data-active="false">Ceramic Coatings</button>
-      <button onClick="{{ setFilter }}" data-tag="Window Tint" class="pf-tab" data-active="false">Window Tint</button>
-      <button onClick="{{ setFilter }}" data-tag="Paint Correction" class="pf-tab" data-active="false">Paint Correction</button>
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div class="pf-chiprow" style="display:flex; gap:32px; overflow-x:auto;">
+        <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+          <button onClick="{{ c.onClick }}" class="pf-chip" data-active="{{ c.active }}">{{ c.label }}</button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ hasSubs }}" hint-placeholder-val="{{ false }}">
+        <div class="pf-chiprow" style="display:flex; gap:10px; overflow-x:auto; border-top:1px solid var(--md-border-dark); padding:12px 0;">
+          <sc-for list="{{ subChips }}" as="sb" hint-placeholder-count="3">
+            <button onClick="{{ sb.onClick }}" class="pf-sub" data-active="{{ sb.active }}">{{ sb.label }}</button>
+          </sc-for>
+        </div>
+      </sc-if>
     </div>
   </div>
 
   <!-- ============ PROJECTS ============ -->
-  <section id="projects" data-reveal="out" style="background:#0A0A0A; --sf-fg:#FFFFFF; --sf-muted:rgba(255,255,255,0.62); --sf-border:rgba(255,255,255,0.14); padding:calc(var(--md-section-y) * 0.4) 0 var(--md-section-y);">
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
+  <section id="projects" data-reveal="out" style="background:#0A0A0A; padding:calc(var(--md-section-y) * 0.5) 0 var(--md-section-y);">
+    <div style="max-width:var(--md-maxw); margin:0 auto; padding:0 40px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap; margin-bottom:28px;">
+        <h2 style="font-family:var(--md-font-display); font-weight:600; font-size:clamp(24px,2.4vw,32px); line-height:1.1; letter-spacing:var(--md-tracking-tight); color:#fff; margin:0;">{{ galTitle }}</h2>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:56px;">
+        <sc-for list="{{ groups }}" as="g" hint-placeholder-count="4">
+          <div>
+            <div style="border-top:1px solid var(--md-border-dark); padding-top:18px; margin-bottom:20px;">
+              <h3 style="font-family:var(--md-font-display); font-weight:700; font-size:clamp(22px,1.9vw,27px); line-height:1.15; letter-spacing:-0.015em; color:#fff; margin:0;">{{ g.label }}</h3>
+            </div>
+            <div class="pf-grid">
+              <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="8">
+                <div class="pf-cell md-figure" onClick="{{ s.onClick }}">
+                  <img class="md-img" src="{{ s.src }}" alt="{{ s.alt }}" loading="lazy" style="display:block; width:100%; aspect-ratio:4/3; object-fit:cover;">
+                </div>
+              </sc-for>
+            </div>
+            <sc-if value="{{ g.showPager }}" hint-placeholder-val="{{ false }}">
+              <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:24px;">
+                <button onClick="{{ g.prev }}" class="pf-page">‹ Prev</button>
+                <sc-for list="{{ g.pages }}" as="p" hint-placeholder-count="3">
+                  <button onClick="{{ p.onClick }}" class="pf-page" data-active="{{ p.active }}">{{ p.label }}</button>
+                </sc-for>
+                <button onClick="{{ g.next }}" class="pf-page">Next ›</button>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
   </section>
+
+  <sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ lbClose }}" style="position:fixed; inset:0; z-index:200; background:rgba(0,0,0,.95); display:flex; align-items:center; justify-content:center; padding:clamp(20px,5vw,72px); cursor:zoom-out;">
+      <img src="{{ lbSrc }}" alt="{{ lbAlt }}" style="max-width:92vw; max-height:84vh; object-fit:contain;">
+      <button onClick="{{ lbPrev }}" class="pf-lb-nav" aria-label="Previous photo" style="left:clamp(14px,3vw,34px);">‹</button>
+      <button onClick="{{ lbNext }}" class="pf-lb-nav" aria-label="Next photo" style="right:clamp(14px,3vw,34px);">›</button>
+      <button onClick="{{ lbClose }}" class="pf-lb-close" aria-label="Close">✕</button>
+      <div style="position:absolute; bottom:28px; left:50%; transform:translateX(-50%); font:500 13px/1 var(--md-font-body); letter-spacing:.1em; color:rgba(255,255,255,0.6);">{{ lbCounter }}</div>
+    </div>
+  </sc-if>
 
   <!-- ============ FINAL CTA ============ -->
   <section style="position:relative; background:var(--md-black); padding:var(--md-section-y) 0; overflow:hidden;">
@@ -450,7 +502,7 @@ class Component extends DCLogic {
         this._gFilter = e.currentTarget.getAttribute('data-filter') || 'all';
         this._applyGallery();
       },
-    }, this._gallery());
+    }, this._gallery(), this._pf());
   }
 
   componentDidMount() {
@@ -494,8 +546,422 @@ class Component extends DCLogic {
 
     this._gFilter = 'all';
     this._applyGallery();
+    this._pfKey = (e) => {
+      const i = typeof this.state.lbI === 'number' ? this.state.lbI : -1;
+      if (i < 0) return;
+      const n = this._pfList().length;
+      if (e.key === 'Escape') this.setState({ lbG: -1, lbI: -1 });
+      else if (e.key === 'ArrowLeft') this.setState({ lbI: (i - 1 + n) % n });
+      else if (e.key === 'ArrowRight') this.setState({ lbI: (i + 1) % n });
+    };
+    window.addEventListener('keydown', this._pfKey);
     this._setupServiceScroll();
     this._setupTextReveal();
+  }
+
+  _src_ppf() {
+    if (this._d_ppf) return this._d_ppf;
+    const pad = (n) => String(n).padStart(5, '0');
+    const specs = [
+      ['acura','Acura','uploads/Acura',3],
+      ['nsx','Acura NSX',null,0],
+      ['audi','Audi','uploads/audi',12],
+      ['rs6','Audi RS6 Avant',null,0],
+      ['aston','Aston Martin','uploads/Aston Martin',6],
+      ['bmw','BMW','uploads/BMW',31],
+      ['bmwm2','BMW M2',null,0],
+      ['m340i','BMW M340i',null,0],
+      ['chevy','Chevy','uploads/Chevy',11],
+      ['c7','Corvette C7',null,0],
+      ['dodge','Dodge','uploads/Dodge',3],
+      ['ferrari','Ferrari','uploads/Ferrari',11],
+      ['cilindri','Ferrari 12 Cilindri',null,0],
+      ['ford','Ford','uploads/Ford',9],
+      ['darkhorse','Ford Mustang Dark Horse',null,0],
+      ['hyundai','Hyundai','uploads/Hyundai',2],
+      ['kia','KIA',null,0],
+      ['lambo','Lamborghini',null,0],
+      ['lexus','Lexus','uploads/Lexus',9],
+      ['lucid','Lucid','uploads/Lucid',2],
+      ['maserati','Maserati','uploads/Maserati',4],
+      ['mazda','Mazda','uploads/Mazda',4],
+      ['miata','Mazda Miata MX-5',null,0],
+      ['mercedes','Mercedes','uploads/Mercedes',5],
+      ['gt63','Mercedes AMG GT 63',null,0],
+      ['gwagon','Mercedes G-Wagon',null,0],
+      ['porsche','Porsche','uploads/porsche',98],
+      ['c4gts','Porsche 911 Carrera 4GTS',null,0],
+      ['dakar','Porsche Dakar',null,0],
+      ['dakaracid','Porsche Dakar Acid Green',null,0],
+      ['dakarmartini','Porsche Dakar Martini',null,0],
+      ['gt3chroma','Porsche GT3 Chromaflare',null,0],
+      ['gt3viola','Porsche GT3 Touring Violablau',null,0],
+      ['spyderrs','Porsche Spyder RS',null,0],
+      ['rivian','Rivian','uploads/Rivian',4],
+      ['r1s','Rivian R1S',null,0],
+      ['subaru','Subaru','uploads/Subaru',3],
+      ['suzuki','Suzuki','uploads/suzuki',4],
+      ['tesla','Tesla','uploads/tesla',4],
+      ['toyota','Toyota','uploads/toyota',13],
+      ['landcruiser','Toyota Land Cruiser',null,0],
+      ['supra','Toyota Supra',null,0],
+    ];
+    const byKey = {}; const order = [];
+    specs.forEach((s) => {
+      const key = s[0], label = s[1], prefix = s[2], count = s[3];
+      const items = [];
+      for (let i = 1; i <= count; i++) items.push({ src: prefix + pad(i) + '.jpeg', alt: label + ' paint protection film at Metropolitan Detail' });
+      if (key === 'kia') items.push({ src: 'uploads/kia.jpeg', alt: 'KIA paint protection film at Metropolitan Detail' });
+      if (key === 'aston') ['IMG_2905-1-c29dabd3','IMG_2917-3'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Aston Martin paint protection film at Metropolitan Detail' }));
+      if (key === 'dodge') ['1928_dodge_truck (1)','1928_dodge_truck (2)','1928_dodge_truck (3)','1928_dodge_truck_tint'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Dodge paint protection film at Metropolitan Detail' }));
+      if (key === 'ferrari') items.push({ src: 'uploads/IMG_3068-1.jpg', alt: 'Ferrari paint protection film at Metropolitan Detail' });
+      if (key === 'nsx') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/honda_nsx_ceramic_' + i + '.jpg', alt: 'Acura NSX paint protection film at Metropolitan Detail' });
+      if (key === 'bmwm2') for (let i = 1; i <= 8; i++) items.push({ src: 'uploads/BMW M2 (' + i + ').jpg', alt: 'BMW M2 paint protection film at Metropolitan Detail' });
+      if (key === 'm340i') ['BMW M340i Brooklyn Grey','BMW M340i Brooklyn Grey-2','BMW M340i Brooklyn Grey-3','BMW M340i Brooklyn Grey-4','BMW M340i Brooklyn Grey-5','BMW M340i Brooklyn Grey-6'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'BMW M340i paint protection film at Metropolitan Detail' }));
+      if (key === 'c7') ['chevy_c7 (1 of 4)-ff60b4f0','chevy_c7 (2 of 4)-4a8657c4','chevy_c7 (3 of 4)-9e1816ae','chevy_c7 (4 of 4)-d80c8a71'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Corvette C7 paint protection film at Metropolitan Detail' }));
+      if (key === 'darkhorse') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/mustang_dark_horse_' + i + '.jpg', alt: 'Ford Mustang Dark Horse paint protection film at Metropolitan Detail' });
+      if (key === 'miata') ['IMG_2524-1','IMG_2526-2','IMG_2530-3','IMG_2532-4','IMG_2536-5'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Mazda Miata MX-5 paint protection film at Metropolitan Detail' }));
+      if (key === 'gt63') { items.push({ src: 'uploads/Mercedes AMG GT63.jpg', alt: 'Mercedes AMG GT 63 paint protection film at Metropolitan Detail' }); for (let i = 2; i <= 14; i++) items.push({ src: 'uploads/Mercedes AMG GT63-' + i + '.jpg', alt: 'Mercedes AMG GT 63 paint protection film at Metropolitan Detail' }); }
+      if (key === 'gwagon') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/mercedes_g_wagon (' + i + ' of 4).jpg', alt: 'Mercedes G-Wagon paint protection film at Metropolitan Detail' });
+      if (key === 'c4gts') for (let i = 1; i <= 8; i++) items.push({ src: 'uploads/Porsche 911 Carrera 4 GTS (' + i + ').jpg', alt: 'Porsche 911 Carrera 4GTS paint protection film at Metropolitan Detail' });
+      if (key === 'dakar') for (let i = 1; i <= 3; i++) items.push({ src: 'uploads/porsche_dakar_dynoshield_' + i + '.jpg', alt: 'Porsche Dakar paint protection film at Metropolitan Detail' });
+      if (key === 'dakaracid') for (let i = 1; i <= 4; i++) items.push({ src: 'uploads/porsche_dakar_acidgreen_dynoshield_' + i + '.jpg', alt: 'Porsche Dakar Acid Green paint protection film at Metropolitan Detail' });
+      if (key === 'dakarmartini') for (let i = 1; i <= 5; i++) items.push({ src: 'uploads/porsche_dakar_martini_dynoshield_' + i + '.jpg', alt: 'Porsche Dakar Martini paint protection film at Metropolitan Detail' });
+      if (key === 'gt3chroma') for (let i = 1; i <= 9; i++) items.push({ src: 'uploads/GT3_DYNOshield_Chromaflare (' + i + ').jpg', alt: 'Porsche GT3 Chromaflare paint protection film at Metropolitan Detail' });
+      if (key === 'gt3viola') for (let i = 1; i <= 8; i++) items.push({ src: 'uploads/Porsche GT3 Touring Violablau (' + i + ').jpg', alt: 'Porsche GT3 Touring Violablau paint protection film at Metropolitan Detail' });
+      if (key === 'spyderrs') for (let i = 1; i <= 5; i++) items.push({ src: 'uploads/porsche_spyder_rs_dynoshield_' + i + '.jpg', alt: 'Porsche Spyder RS paint protection film at Metropolitan Detail' });
+      if (key === 'r1s') ['IMG_2245-2','IMG_2247-3','IMG_2250-4','IMG_2252-5'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Rivian R1S paint protection film at Metropolitan Detail' }));
+      if (key === 'landcruiser') for (let i = 1; i <= 6; i++) items.push({ src: 'uploads/toyota_land_cruiser_dynoshield_' + i + '.jpg', alt: 'Toyota Land Cruiser paint protection film at Metropolitan Detail' });
+      if (key === 'supra') for (let i = 1; i <= 5; i++) items.push({ src: 'uploads/toyota_gr_supra_dynoshield_' + i + '.jpg', alt: 'Toyota Supra paint protection film at Metropolitan Detail' });
+      if (key === 'cilindri') for (let i = 1; i <= 23; i++) items.push({ src: 'uploads/ferrari_12_cillindri (' + i + ').jpg', alt: 'Ferrari 12 Cilindri paint protection film at Metropolitan Detail' });
+      if (key === 'lambo') items.push({ src: 'uploads/IMG_2355-1.jpg', alt: 'Lamborghini paint protection film at Metropolitan Detail' });
+      if (key === 'suzuki') ['IMG_5185-1','IMG_5190-1'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Suzuki paint protection film at Metropolitan Detail' }));
+      if (key === 'toyota') items.push({ src: 'uploads/IMG_4283-1.jpg', alt: 'Toyota paint protection film at Metropolitan Detail' });
+      if (key === 'rs6') [1,2,3,4,7,10,11].forEach((n) => items.push({ src: 'uploads/Audi RS6 Avant (' + n + ').jpg', alt: 'Audi RS6 Avant paint protection film at Metropolitan Detail' }));
+      if (key === 'lexus') items.unshift({ src: 'uploads/Lexus.jpeg', alt: 'Lexus paint protection film at Metropolitan Detail' });
+      if (key === 'porsche') { ['00012','00013','00016'].forEach((n) => items.push({ src: 'uploads/porche' + n + '.jpeg', alt: 'Porsche paint protection film at Metropolitan Detail' })); ['IMG_2618-1','IMG_2691-2','IMG_2708-1','IMG_4035-1'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: 'Porsche paint protection film at Metropolitan Detail' })); }
+      byKey[key] = { key: key, label: label, items: items };
+      order.push(key);
+    });
+    const all = []; order.forEach((k) => byKey[k].items.forEach((it) => all.push(it)));
+    this._d_ppf = { byKey: byKey, order: order, all: all };
+    return this._d_ppf;
+  }
+
+  _src_ceramic() {
+    if (this._d_ceramic) return this._d_ceramic;
+    const specs = [
+      ['sf90xx', 'Ferrari SF90 XX', null, null, 0],
+      ['raptor', 'Ford Raptor', 'uploads/Ford Raptor CQuartz Finest Reserve (', ').jpg', 6],
+      ['shelby', 'Mustang Shelby GT 500 Super Snake', 'uploads/shelby_gt500_supersnake_ceramic_', '.jpg', 6],
+      ['skyline', 'Nissan Skyline GTR', 'uploads/nissan_skyline_gtr_ceramic_', '.jpg', 5],
+      ['p930', 'Porsche 930', 'uploads/porsche_930_ceramic_', '.jpg', 6],
+      ['gt3', 'Porsche 992 GT3', 'uploads/porsche_992_gt3_dynoshield_', '.jpg', 4],
+      ['porsche', 'Porsche', null, null, 0],
+      ['cayman', 'Porsche Cayman GTS', null, null, 0],
+      ['wrx', 'Subaru WRX', null, null, 0],
+    ];
+    const byKey = {}; const order = [];
+    specs.forEach((s) => {
+      const key = s[0], label = s[1], pre = s[2], post = s[3], count = s[4];
+      const items = [];
+      for (let i = 1; i <= count; i++) items.push({ src: pre + i + post, alt: label + ' ceramic coating at Metropolitan Detail' });
+      if (key === 'cayman') ['IMG_2463-1','IMG_2465-2','IMG_2466-3','IMG_2468-4'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      if (key === 'wrx') ['IMG_2500-1','IMG_2505-2','IMG_2508-3','IMG_2511-4','IMG_2513-5','IMG_2516-6'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      if (key === 'porsche') ['IMG_4439-1','IMG_8137-3','IMG_8143-4','IMG_8147-5','IMG_8150-6','IMG_8151-7','IMG_8153-8','IMG_8155-9','IMG_8157-10','IMG_8158-11','IMG_8161-12','IMG_8165-13'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      if (key === 'sf90xx') ['ferrari_sf90xx (1 of 5)','ferrari_sf90xx (2 of 5)','ferrari_sf90xx (3 of 5)','ferrari_sf90xx (4 of 5)','ferrari_sf90xx (5 of 5)'].forEach((n) => items.push({ src: 'uploads/' + n + '.jpg', alt: label + ' ceramic coating at Metropolitan Detail' }));
+      byKey[key] = { key: key, label: label, items: items };
+      order.push(key);
+    });
+    const all = []; order.forEach((k) => byKey[k].items.forEach((it) => all.push(it)));
+    this._d_ceramic = { byKey: byKey, order: order, all: all };
+    return this._d_ceramic;
+  }
+
+  _src_tint() {
+    if (this._d_tint) return this._d_tint;
+    const specs = [
+      ['integra', 'Acura Integra', 'uploads/Acura_Integra_Type_S', 16],
+      ['bmw330', 'BMW 330i', 'uploads/BMW 330i', 10],
+      ['mustang', 'Ford Mustang GT', null, 5, (i) => 'uploads/Ford Mustang GT Tint (' + i + ').jpg'],
+      ['typer', 'Honda Civic Type R', 'uploads/Civic_Type_R', 15],
+      ['hyundai', 'Hyundai', null, 7, (i) => 'uploads/' + ['IMG_8029-1','IMG_8031-2','IMG_8042-3','IMG_8045-4','IMG_8049-5','IMG_8050-6','IMG_8052-7'][i - 1] + '.jpg'],
+      ['taycan', 'Porsche Taycan', null, 1, () => 'uploads/Porsche Taycan Tint.jpg'],
+      ['milktruck', 'Vintage Milk Truck', null, 4, (i) => 'uploads/' + ['IMG_2487-1','IMG_2493-1','IMG_2494-2-34b844e0','IMG_2497-3'][i - 1] + '.jpg'],
+    ];
+    const byKey = {}; const order = [];
+    specs.forEach((s) => {
+      const key = s[0], label = s[1], pre = s[2], count = s[3], fn = s[4];
+      const items = [];
+      for (let i = 1; i <= count; i++) items.push({ src: fn ? fn(i) : pre + (i === 1 ? '' : '-' + i) + '.jpg', alt: label + ' window tint at Metropolitan Detail' });
+      byKey[key] = { key: key, label: label, items: items };
+      order.push(key);
+    });
+    const all = []; order.forEach((k) => byKey[k].items.forEach((it) => all.push(it)));
+    this._d_tint = { byKey: byKey, order: order, all: all };
+    return this._d_tint;
+  }
+
+  _src_correction() {
+    if (this._d_correction) return this._d_correction;
+    const mk = (pre, n, label) => { const a = []; for (let i = 1; i <= n; i++) a.push({ src: pre(i), alt: label + ' paint correction at Metropolitan Detail' }); return a; };
+    const polish = ['IMG_6700-1','IMG_6702-2','IMG_6704-3','IMG_6705-4','IMG_6709-6','IMG_6714-7','IMG_6720-8','IMG_6724-9','IMG_6729-10','IMG_6731-11','IMG_6733-12','IMG_6740-13'].map((f) => ({ src: 'uploads/' + f + '.jpg', alt: 'Paint correction and polishing at Metropolitan Detail' }));
+    const p930 = mk((i) => 'uploads/porsche_930_ceramic_' + i + '.jpg', 6, 'Porsche 930');
+    const gts = mk((i) => 'uploads/Porsche 911 Carrera 4 GTS (' + i + ').jpg', 8, 'Porsche 911 Carrera 4 GTS');
+    const byKey = { polish: { key: 'polish', label: 'In the Shop', items: polish }, p930: { key: 'p930', label: 'Porsche 930', items: p930 }, gts: { key: 'gts', label: 'Porsche 911 GTS', items: gts } };
+    const order = ['polish', 'p930', 'gts'];
+    this._d_correction = { byKey: byKey, order: order, all: polish.concat(p930, gts) };
+    return this._d_correction;
+  }
+
+  _src_color() {
+    if (this._d_color) return this._d_color;
+    const mk = (label, files) => files.map((f) => ({ src: 'uploads/' + f, alt: label + ' color change film at Metropolitan Detail' }));
+    const specs = [
+      ['tesla','Tesla', ['tesla00001-9848918e.jpeg','tesla00002-f308c4cf.jpeg','tesla00003-ab61b1a3.jpeg','tesla00004-21ab58fb.jpeg','tesla00005-5180f287.jpeg','tesla00006-3dd5a9bb.jpeg','tesla00007-0c763e5f.jpeg','tesla00008-a9cddefa.jpeg','tesla00009-1d8ec42c.jpeg','tesla00010-8267388d.jpeg','tesla00011-5f44a60c.jpeg','tesla00012-6cb9bef0.jpeg','tesla00013-2eb3a31f.jpeg','tesla00014-3a3a7aa7.jpeg','tesla00015-78718e6e.jpeg','tesla00016-30b3cbce.jpeg','tesla00017-4950e5dc.jpeg','tesla00018-dbf9fb08.jpeg','tesla00019-689d2ebd.jpeg','tesla00020-a711db4a.jpeg','tesla00021-b47e53ca.jpeg','tesla00022-7a13b7b5.jpeg']],
+      ['porsche','Porsche', ['porsche00001-3fc4e260.jpeg','porsche00002-d1365155.jpeg','porsche00003-03521776.jpeg','porsche00004-133ca418.jpeg','porsche00005-26614982.jpeg','porsche00006-0cf81ffe.jpeg']],
+      ['ford','Ford', ['ford00001-d4521b55.jpg','ford00002-a6700436.jpg','ford00003-4354a51b.jpg']],
+      ['nissan','Nissan', ['nissan00001-ce6e7108.jpg','nissan00002-c511d472.jpg','nissan00003-334c6132.jpg']],
+      ['m2rubystone','BMW M2 Rubystone', ['BMW M2 Ruby Stone (1).jpg','BMW M2 Ruby Stone (2)-77b4d85e.jpg','BMW M2 Ruby Stone (3).jpg','BMW M2 Ruby Stone (4).jpg','BMW M2 Ruby Stone (5).jpg','BMW M2 Ruby Stone (6).jpg','BMW M2 Ruby Stone (7).jpg','BMW M2 Ruby Stone (8).jpg','BMW M2 Ruby Stone (9).jpg','BMW M2 Ruby Stone (10).jpg']],
+      ['boxstermiami','Porsche Boxster Miami', ['boxster-1.jpg','boxster-2.jpg','boxster-3.jpg','boxster-4.jpg','boxster-5.jpg','boxster-6.jpg','boxster-7.jpg','boxster-8.jpg','boxster-9.jpg','boxster-10.jpg']],
+      ['model3','Tesla Model 3', ['tesla_model_3_dynogrey_1.jpg','tesla_model_3_dynogrey_2.jpg','tesla_model_3_dynogrey_3.jpg']],
+    ];
+    const byKey = {}; const order = [];
+    specs.forEach((s) => { byKey[s[0]] = { key: s[0], label: s[1], items: mk(s[1], s[2]) }; order.push(s[0]); });
+    const all = []; order.forEach((k) => byKey[k].items.forEach((it) => all.push(it)));
+    this._d_color = { byKey: byKey, order: order, all: all };
+    return this._d_color;
+  }
+
+  _src_matte() {
+    if (this._d_matte) return this._d_matte;
+    const mk = (label, files) => files.map((f) => ({ src: 'uploads/' + f, alt: label + ' matte film work at Metropolitan Detail' }));
+    const specs = [
+      ['tesla','Tesla', ['Tesla00001.jpeg','Tesla00002.jpeg','Tesla00003.jpeg','Tesla00004.jpeg','Tesla00005.jpeg','Tesla00006.jpeg','Tesla00007.jpeg','Tesla00008.jpeg','Tesla00009.jpeg','Tesla00010-48534c3d.jpeg','Tesla00011.jpeg','Tesla00012.jpeg','Tesla00013.jpeg','Tesla00014.jpeg','Tesla00015.jpeg','dynomatte-black-1.jpg','dynomatte-black-4.jpg','dynomatte-ultra-red-4.jpg']],
+      ['dbxs','Aston Martin DBX S', ['DBXS DYNOmatte Full Body.jpg','DBXS DYNOmatte Full Body-2.jpg','DBXS DYNOmatte Full Body-3.jpg','DBXS DYNOmatte Full Body-4.jpg','DBXS DYNOmatte Full Body-5.jpg','DBXS DYNOmatte Full Body-6.jpg','DBXS DYNOmatte Full Body-7.jpg','DBXS DYNOmatte Full Body-8.jpg','DBXS DYNOmatte Full Body-9.jpg','DBXS DYNOmatte Full Body-10.jpg','DBXS DYNOmatte Full Body-11.jpg','DBXS DYNOmatte Full Body-12.jpg','DBXS DYNOmatte Full Body-13.jpg','DBXS DYNOmatte Full Body-14.jpg','DBXS DYNOmatte Full Body-15.jpg','DBXS DYNOmatte Full Body-16.jpg','DBXS DYNOmatte Full Body-17.jpg','DBXS DYNOmatte Full Body-18.jpg','DBXS DYNOmatte Full Body-19.jpg','DBXS DYNOmatte Full Body-20.jpg','DBXS DYNOmatte Full Body-21.jpg','DBXS DYNOmatte Full Body-22.jpg']],
+      ['bmwz4','BMW Z4', ['BMW Z4 DYNOmatte (1).jpg','BMW Z4 DYNOmatte (2).jpg','BMW Z4 DYNOmatte (3).jpg','BMW Z4 DYNOmatte (4).jpg','BMW Z4 DYNOmatte (5).jpg','BMW Z4 DYNOmatte (6).jpg','BMW Z4 DYNOmatte (7).jpg','BMW Z4 DYNOmatte (8).jpg','BMW Z4 DYNOmatte (9).jpg']],
+      ['rangerraptor','Ford Ranger Raptor', ['Ford Raptor Ranger DYNOmatte Full Body.jpg','Ford Raptor Ranger DYNOmatte Full Body-2.jpg','Ford Raptor Ranger DYNOmatte Full Body-3.jpg','Ford Raptor Ranger DYNOmatte Full Body-4.jpg','Ford Raptor Ranger DYNOmatte Full Body-5.jpg','Ford Raptor Ranger DYNOmatte Full Body-6.jpg','Ford Raptor Ranger DYNOmatte Full Body-7.jpg','Ford Raptor Ranger DYNOmatte Full Body-8.jpg','Ford Raptor Ranger DYNOmatte Full Body-9.jpg','Ford Raptor Ranger DYNOmatte Full Body-10.jpg','Ford Raptor Ranger DYNOmatte Full Body-11.jpg','Ford Raptor Ranger DYNOmatte Full Body-12.jpg','Ford Raptor Ranger DYNOmatte Full Body-13.jpg','Ford Raptor Ranger DYNOmatte Full Body-14.jpg','Ford Raptor Ranger DYNOmatte Full Body-15.jpg','Ford Raptor Ranger DYNOmatte Full Body-16.jpg','Ford Raptor Ranger DYNOmatte Full Body-17.jpg','Ford Raptor Ranger DYNOmatte Full Body-18.jpg','Ford Raptor Ranger DYNOmatte Full Body-19.jpg','Ford Raptor Ranger DYNOmatte Full Body-20.jpg']],
+      ['amgsl63','Mercedes AMG SL 63', ['mercedes_sl_63_dynomatte_1.jpg','mercedes_sl_63_dynomatte_2.jpg','mercedes_sl_63_dynomatte_3.jpg','mercedes_sl_63_dynomatte_4.jpg']],
+      ['bmw','BMW', ['BMW00001-41bf325e.jpeg','BMW00002-098cf2bb.jpeg','BMW00003-d7ca992d.jpeg','BMW00004-8fc4feb4.jpeg','BMW00005-b8a12d92.jpeg','BMW00006-b0a8b67d.jpeg','BMW00007-61ad60ed.jpeg','BMW00008-f5641c6e.jpeg','BMW00009-8605488c.jpeg']],
+      ['mercedes','Mercedes', ['Mercedes00001-955bf9ed.jpeg','Mercedes00002-2f997270.jpeg','Mercedes00003-6eba06a7.jpeg','Mercedes00004-6e0ccbd1.jpeg','Mercedes00005-634ec3ae.jpeg','Mercedes00006.jpeg','Mercedes00007.jpeg','Mercedes00008.jpeg','Mercedes00009.jpeg','Mercedes00010.jpeg','Mercedes00011.jpeg','Mercedes00012.jpeg','Mercedes00013.jpeg','Mercedes00014.jpeg','Mercedes00015.jpeg','Mercedes00016.jpeg','Mercedes00017.jpeg']],
+      ['porsche','Porsche', ['Porsche00001.jpeg','Porsche00002.jpeg','Porsche00003.jpeg','Porsche00004.jpeg','Porsche00005.jpeg','Porsche00006.jpeg','Porsche00007.jpeg','Porsche00008.jpeg','Porsche00009.jpeg']],
+      ['rivian','Rivian', ['Rivian00001-ded632f9.jpeg','Rivian00002-d5dd62ba.jpeg','Rivian00003-e7a60da5.jpeg','Rivian00004-ace4f2fc.jpeg','Rivian00005.jpeg','Rivian00006.jpeg','Rivian00007.jpeg','Rivian00008.jpeg','Rivian00009.jpeg','Rivian00010.jpeg','Rivian00011.jpeg','Rivian00012.jpeg']],
+      ['genesis','Genesis', ['Genesis00001.jpeg','Genesis00002.jpeg','Genesis00003.jpeg','Genesis00004.jpeg']],
+      ['jaguar','Jaguar', ['Jaguar00001.jpeg','Jaguar00002.jpeg','Jaguar00003.jpeg']],
+      ['kia','KIA', ['KIA00001.jpeg','KIA00002.jpeg','KIA00003.jpeg']],
+      ['gm','GM', ['GM00001.jpeg','GM00002.jpeg']],
+    ];
+    const byKey = {}; const order = [];
+    specs.forEach((sp) => { byKey[sp[0]] = { key: sp[0], label: sp[1], items: mk(sp[1], sp[2]) }; order.push(sp[0]); });
+    const all = []; order.forEach((k) => byKey[k].items.forEach((it) => all.push(it)));
+    this._d_matte = { byKey: byKey, order: order, all: all };
+    return this._d_matte;
+  }
+
+  _src_interior() {
+    if (this._d_interior) return this._d_interior;
+    const alfa = [
+      { src: 'uploads/IMG_6062-Enhanced-NR-1-2a5f0d3c.jpg', alt: 'Alfa Romeo cabin with tan woven leather seats after an interior detail' },
+      { src: 'uploads/IMG_6063-Enhanced-NR-2-5f1d3af6.jpg', alt: 'Alfa Romeo dashboard, gauges and leather seats cleaned and conditioned' },
+      { src: 'uploads/IMG_6069-Enhanced-NR-3-fa199421.jpg', alt: 'Alfa Romeo centre console and passenger seat detailed at Metropolitan Detail' },
+    ];
+    const porsche = [
+      { src: 'uploads/IMG_3323-1-ee84f3d1.jpg', alt: 'Porsche 718 Spyder cockpit with red leather after an interior detail' },
+      { src: 'uploads/IMG_3318-1-fcc36607.jpg', alt: 'Porsche 718 Spyder red leather interior detailed at Metropolitan Detail' },
+    ];
+    const byKey = { alfa: { key: 'alfa', label: 'Alfa Romeo', items: alfa }, porsche: { key: 'porsche', label: 'Porsche', items: porsche } };
+    const order = ['alfa', 'porsche'];
+    const all = alfa.concat(porsche);
+    this._d_interior = { byKey: byKey, order: order, all: all };
+    return this._d_interior;
+  }
+
+  _src_exterior() {
+    if (this._d_exterior) return this._d_exterior;
+    const items = [
+      { src: 'uploads/Aston Martin DB4-2-24f99152.jpg', alt: 'Hand polishing the hood of a white Aston Martin DB4 at Metropolitan Detail' },
+      { src: 'uploads/Aston Martin DB4-3-a69bad05.jpg', alt: 'White Aston Martin DB4 in the Metropolitan Detail studio in Redmond' },
+      { src: 'uploads/Aston Martin DB4-4-f0a7c55e.jpg', alt: 'Aston Martin DB4 dashboard and wood steering wheel after detailing' },
+      { src: 'uploads/Aston Martin DB4-5-4c1c19de.jpg', alt: 'Saint Christopher medallion on the Aston Martin DB4 dashboard' },
+      { src: 'uploads/Aston Martin DB4-6-f2550e9e.jpg', alt: 'Wood shifter knob in the Aston Martin DB4' },
+      { src: 'uploads/Aston Martin DB4-7-f7fa45ba.jpg', alt: 'Aston Martin DB4 dash and gauges detailed at Metropolitan Detail' },
+      { src: 'uploads/Aston Martin DB4-8-189a9979.jpg', alt: 'Aston Martin wing badge on the polished hood of a DB4' },
+      { src: 'uploads/Aston Martin DB4-9-1b7e0392.jpg', alt: 'Vantage badge on the door handle of an Aston Martin DB4' },
+      { src: 'uploads/Aston Martin DB4-10-15c54c73.jpg', alt: 'Aston Martin DB4 straight six engine bay' },
+      { src: 'uploads/Aston Martin DB4-11-b1f07a8d.jpg', alt: 'Aston Martin DB4 engine bay detailed at Metropolitan Detail' },
+    ];
+    const gt2rs = [
+      { src: 'uploads/Porsche GT2 RS Lava Orange-2ed2d47c.jpg', alt: 'GT2 RS badge on the rear quarter of a Lava Orange Porsche' },
+      { src: 'uploads/Porsche GT2 RS Lava Orange-2-63bdedfc.jpg', alt: 'Lava Orange Porsche GT2 RS in the Metropolitan Detail studio' },
+      { src: 'uploads/Porsche GT2 RS Lava Orange-3-57edf88f.jpg', alt: 'Porsche GT2 RS front three quarter after an exterior detail' },
+      { src: 'uploads/Porsche GT2 RS Lava Orange-4-9a20f428.jpg', alt: 'Porsche GT2 RS head on with polished carbon hood' },
+      { src: 'uploads/Porsche GT2 RS Lava Orange-5-1fe705ef.jpg', alt: 'Porsche GT2 RS detailed alongside other cars in the Redmond shop' },
+      { src: 'uploads/Porsche GT2 RS Lava Orange-6-b8773f36.jpg', alt: 'Carbon fibre rear wing detail on the Porsche GT2 RS' },
+      { src: 'uploads/Porsche GT2 RS Lava Orange-7-e9e3c4e6.jpg', alt: 'Front wheel and bumper of the Lava Orange Porsche GT2 RS' },
+    ];
+    const cappuccino = [
+      { src: 'uploads/suzuki_cappuccino_dynoshield_1-807add37.jpg', alt: 'Suzuki Cappuccino in British Racing Green after paint protection film' },
+      { src: 'uploads/suzuki_cappuccino_dynoshield_2-7bf2ff7e.jpg', alt: 'Suzuki Cappuccino from above alongside a Miata and Boxster in the shop' },
+      { src: 'uploads/suzuki_cappuccino_dynoshield_3-e42420e6.jpg', alt: 'Polished hood and headlights of the Suzuki Cappuccino' },
+      { src: 'uploads/suzuki_cappuccino_dynoshield_4-2b0fc179.jpg', alt: 'Suzuki Cappuccino in the Metropolitan Detail studio in Redmond' },
+    ];
+    const byKey = { db4: { key: 'db4', label: 'Aston Martin DB4', items: items }, gt2rs: { key: 'gt2rs', label: 'Porsche GT2 RS Lava Orange', items: gt2rs }, cappuccino: { key: 'cappuccino', label: 'Suzuki Cappuccino', items: cappuccino } };
+    const order = ['db4', 'gt2rs', 'cappuccino'];
+    const all = items.concat(gt2rs, cappuccino);
+    this._d_exterior = { byKey: byKey, order: order, all: all };
+    return this._d_exterior;
+  }
+
+  _pfCats() {
+    if (this._pfCache) return this._pfCache;
+    const build = (src) => {
+      const data = this[src]();
+      return data.order
+        .filter((k) => data.byKey[k].items.length > 0)
+        .map((k) => ({ key: k, label: data.byKey[k].label, items: data.byKey[k].items }));
+    };
+    const one = (src) => [{ key: 'main', label: null, groups: build(src) }];
+    const INTERIOR_SHOTS = [
+      'uploads/Aston Martin DB4-4-f0a7c55e.jpg',
+      'uploads/Aston Martin DB4-5-4c1c19de.jpg',
+      'uploads/Aston Martin DB4-6-f2550e9e.jpg',
+      'uploads/Aston Martin DB4-7-f7fa45ba.jpg',
+    ];
+    const EXT_HIDDEN = ['uploads/Aston Martin DB4-2-24f99152.jpg'];
+    const rawExt = build('_src_exterior').map((g) => ({ key: g.key, label: g.label, items: g.items.filter((it) => EXT_HIDDEN.indexOf(it.src) < 0) }));
+    const moved = [];
+    rawExt.forEach((g) => g.items.forEach((it) => { if (INTERIOR_SHOTS.indexOf(it.src) >= 0) moved.push(it); }));
+    const extGroups = rawExt
+      .map((g) => ({ key: g.key, label: g.label, items: g.items.filter((it) => INTERIOR_SHOTS.indexOf(it.src) < 0) }))
+      .filter((g) => g.items.length > 0);
+    const intGroups = build('_src_interior').slice();
+    if (moved.length) intGroups.push({ key: 'db4int', label: 'Aston Martin DB4', items: moved });
+    const cats = [
+      { key: 'ppf', label: 'Paint Protection', subs: [
+        { key: 'dynoshield', label: 'DYNOshield', groups: build('_src_ppf') },
+        { key: 'dynomatte', label: 'DYNOmatte', groups: build('_src_matte') },
+        { key: 'colorchange', label: 'Color Change', groups: build('_src_color') },
+      ] },
+      { key: 'ceramic', label: 'Ceramic Coating', subs: one('_src_ceramic') },
+      { key: 'tint', label: 'Window Tint', subs: one('_src_tint') },
+      { key: 'exterior', label: 'Exterior Detailing', subs: [{ key: 'main', label: null, groups: extGroups }] },
+      { key: 'interior', label: 'Interior Detailing', subs: [{ key: 'main', label: null, groups: intGroups }] },
+    ];
+    this._pfCache = { cats: cats };
+    return this._pfCache;
+  }
+
+  _pfActive() {
+    const d = this._pfCats();
+    const catKey = this.state.pfFilter || 'ppf';
+    const cat = d.cats.filter((c) => c.key === catKey)[0] || d.cats[0];
+    const subKey = this.state.pfSub || cat.subs[0].key;
+    const sub = cat.subs.filter((s) => s.key === subKey)[0] || cat.subs[0];
+    return { cat: cat, sub: sub };
+  }
+
+  _pfGroups() {
+    return this._pfActive().sub.groups;
+  }
+
+  _pfList() {
+    const gi = typeof this.state.lbG === 'number' ? this.state.lbG : -1;
+    if (gi < 0) return [];
+    const g = this._pfGroups()[gi];
+    return g ? g.items : [];
+  }
+
+  _pfScrollToGrid() {
+    const el = document.getElementById('projects');
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.pageYOffset - 132;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+
+  _pfChipIntoView(idx) {
+    const row = document.querySelector('.pf-chiprow');
+    if (!row) return;
+    const btn = row.querySelectorAll('.pf-chip')[idx];
+    if (!btn) return;
+    const br = btn.getBoundingClientRect();
+    const rr = row.getBoundingClientRect();
+    const pad = 40;
+    const max = Math.max(0, row.scrollWidth - row.clientWidth);
+    let target = null;
+    if (br.left < rr.left + pad) target = row.scrollLeft + (br.left - rr.left) - pad;
+    else if (br.right > rr.right - pad) target = row.scrollLeft + (br.right - rr.right) + pad;
+    if (target === null) return;
+    row.scrollLeft = Math.max(0, Math.min(max, target));
+  }
+
+  _pf() {
+    const PER = 8;
+    const d = this._pfCats();
+    const act = this._pfActive();
+    const groupData = act.sub.groups;
+    const pageMap = this.state.pfPages || {};
+    const chips = d.cats.map((c, ci) => ({
+      label: c.label,
+      active: c.key === act.cat.key,
+      onClick: () => {
+        this.setState({ pfFilter: c.key, pfSub: c.subs[0].key, lbG: -1, lbI: -1, pfPages: {} });
+        this._pfScrollToGrid();
+        this._pfChipIntoView(ci);
+      },
+    }));
+    const subChips = act.cat.subs[0].label === null ? [] : act.cat.subs.map((sb) => ({
+      label: sb.label,
+      active: sb.key === act.sub.key,
+      onClick: () => { this.setState({ pfSub: sb.key, lbG: -1, lbI: -1, pfPages: {} }); this._pfScrollToGrid(); },
+    }));
+    const groups = groupData.map((g, gi) => {
+      const pkey = act.cat.key + ':' + act.sub.key + ':' + gi;
+      const total = Math.max(1, Math.ceil(g.items.length / PER));
+      let p = pageMap[pkey] || 0;
+      if (p > total - 1) p = total - 1;
+      if (p < 0) p = 0;
+      const setPage = (np) => {
+        const next = Object.assign({}, this.state.pfPages || {});
+        next[pkey] = Math.max(0, Math.min(total - 1, np));
+        this.setState({ pfPages: next });
+      };
+      const nums = [];
+      const WIN = 5;
+      let lo = Math.max(0, p - 2);
+      let hi = Math.min(total - 1, lo + WIN - 1);
+      lo = Math.max(0, Math.min(lo, hi - WIN + 1));
+      for (let i = lo; i <= hi; i++) nums.push({ label: String(i + 1), active: i === p, onClick: () => setPage(i) });
+      return {
+        label: g.label,
+        items: g.items.slice(p * PER, p * PER + PER).map((it, si) => {
+          const abs = p * PER + si;
+          return { src: it.src, alt: it.alt, onClick: () => this.setState({ lbG: gi, lbI: abs }) };
+        }),
+        showPager: total > 1,
+        pages: nums,
+        prev: () => setPage(p - 1),
+        next: () => setPage(p + 1),
+      };
+    });
+    const gi = typeof this.state.lbG === 'number' ? this.state.lbG : -1;
+    const lbGroup = gi >= 0 ? groupData[gi] : null;
+    const list = lbGroup ? lbGroup.items : [];
+    const i = typeof this.state.lbI === 'number' ? this.state.lbI : -1;
+    const open = !!lbGroup && i >= 0 && !!list[i];
+    return {
+      chips: chips,
+      subChips: subChips,
+      hasSubs: subChips.length > 0,
+      groups: groups,
+      galTitle: act.sub.label ? act.cat.label + ' · ' + act.sub.label : act.cat.label,
+      lbOpen: open,
+      lbSrc: open ? list[i].src : '',
+      lbAlt: open ? list[i].alt : '',
+      lbCounter: open ? lbGroup.label : '',
+      lbClose: (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); this.setState({ lbG: -1, lbI: -1 }); },
+      lbPrev: (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); this.setState({ lbI: (i - 1 + list.length) % list.length }); },
+      lbNext: (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); this.setState({ lbI: (i + 1) % list.length }); },
+    };
   }
 
   _galData() {
