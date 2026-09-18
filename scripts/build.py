@@ -169,10 +169,21 @@ def resolve_uploads(export, out, copy=False):
         if os.path.isfile(p):
             tracked.add("uploads/" + os.path.relpath(p, os.path.join(REPO, "uploads")))
     refs = set()
+    EXT = r"(?:jpe?g|png|webp|gif|svg|mp4|webm|avif)"
     for p in glob.glob(os.path.join(out, "*.html")):
         s = open(p, encoding="utf-8", errors="replace").read()
-        for m in re.findall(r'uploads/([^\s"\')]+\.(?:jpe?g|png|webp|gif|svg|mp4|webm|avif))', s, re.I):
+        # quote-delimited attrs (space-safe: filenames like "BMW Z4 (2) (1).jpg" are common)
+        for m in re.findall(r'(?:src|href|content|data-src|poster)="(uploads/[^"]+\.' + EXT + r')"', s, re.I):
+            refs.add(m)
+        for m in re.findall(r"(?:src|href|content|data-src|poster)='(uploads/[^']+\." + EXT + r")'", s, re.I):
+            refs.add(m)
+        # css url(...) with optional quotes
+        for m in re.findall(r"url\(\s*['\"]?(uploads/[^)'\"]+\." + EXT + r")['\"]?\s*\)", s, re.I):
+            refs.add(m)
+        # bare tokens as a fallback (no spaces) — catches odd inline refs
+        for m in re.findall(r'uploads/([^\s"\')]+\.' + EXT + r')', s, re.I):
             refs.add("uploads/" + m)
+        # gallery JS bare-stem arrays: ['IMG_2463-1','BMW Z4 (2)'].forEach(...'uploads/'+n+'.jpg')
         for arr in re.findall(r"\[([^\]]*?)\]\s*\.\s*(?:forEach|map)", s):
             for st in re.findall(r"['\"]([^'\"/]+)['\"]", arr):
                 if "." not in st and st in exp_stem:
